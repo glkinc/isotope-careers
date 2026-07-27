@@ -1,0 +1,465 @@
+{
+  "careerCategories": [
+    {
+      "id": 1,
+      "slug": "reactor-operations",
+      "name": "Reactor Operations & Power Engineering",
+      "description": "Careers that keep nuclear power stations and research reactors running safely — operating controls, maintaining equipment, and designing plant systems."
+    },
+    {
+      "id": 2,
+      "slug": "radiopharmaceutical-nuclear-medicine",
+      "name": "Radiopharmaceutical & Nuclear Medicine Sciences",
+      "description": "Careers that produce, handle, and use radioactive materials for medical diagnosis and treatment, from lab-based radiochemistry to hospital imaging and radiopharmacy."
+    },
+    {
+      "id": 3,
+      "slug": "regulatory-radiation-safety",
+      "name": "Regulatory & Radiation Safety",
+      "description": "Careers focused on protecting people and the environment from radiation risk, from hospital and plant health-physics roles to industrial inspection."
+    }
+  ],
+  "careers": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "slug": "nuclear-reactor-operator",
+      "title": "Nuclear Reactor Operator (Power Engineer)",
+      "summary": "Runs and monitors the control-room equipment that keeps a nuclear power station generating electricity safely.",
+      "description": "Nuclear reactor operators are power engineers who work in the control rooms of nuclear generating stations, running and monitoring reactors, turbines, boilers, and auxiliary equipment. They watch instruments and alarms for signs of malfunction, adjust plant systems to keep operations within safe limits, and log everything that happens on shift. Control room operators must be licensed by the Canadian Nuclear Safety Commission (CNSC), and Ontario power engineers work their way up through provincial certification classes as they gain experience.",
+      "nocCode": "92100",
+      "salaryMin": 69400,
+      "salaryMax": 180900,
+      "responsibilities": [
+        "Operate automated and computerized control systems for reactors, turbines, boilers, and generators",
+        "Start up and shut down plant equipment and regulate transmission loads and voltages",
+        "Monitor instruments, gauges, and alarms to detect leaks or malfunctions",
+        "Record instrument readings and log operation, maintenance, and safety activities",
+        "Respond to abnormal conditions and coordinate with other plant systems operators",
+        "Assist in developing operating, maintenance, and safety procedures"
+      ],
+      "dayToDay": "Most of the shift is spent in a control room watching screens and gauges, making small adjustments, and responding quickly if something drifts outside its normal range.",
+      "sources": [
+        "https://noc.esdc.gc.ca/English/NOC/ProfileQuickSearch.aspx?val=9&val1=9241&ver=11",
+        "https://www.jobbank.gc.ca/wagereport/occupation/26861",
+        "https://www.jobbank.gc.ca/marketreport/requirements/26811/ON",
+        "https://www.jobbank.gc.ca/marketreport/outlook-occupation/26811/ON"
+      ]
+    },
+    {
+      "id": 2,
+      "categoryId": 3,
+      "slug": "health-physicist",
+      "title": "Health / Radiation Physicist",
+      "summary": "Studies and manages radiation exposure to keep workers, patients, and the public safe in hospitals, nuclear plants, and research labs.",
+      "description": "Health and medical physicists apply the physics of radiation to protect people. In hospitals they work alongside radiation oncologists on cancer-treatment planning and equipment safety; in the nuclear industry they monitor and model radiation levels around plants and fuel-handling operations. The role falls under Canada's broader 'Physicists and astronomers' occupational group, and growth in nuclear power investment plus oncology and nuclear-medicine departments is expected to create more demand for health-physics specialists specifically.",
+      "nocCode": "21100",
+      "salaryMin": 77000,
+      "salaryMax": 193400,
+      "responsibilities": [
+        "Measure and model radiation levels and doses in clinical or industrial settings",
+        "Calibrate and test radiation-producing and radiation-detecting equipment",
+        "Develop radiation-safety procedures and threat-detection protocols",
+        "Support cancer treatment planning alongside radiation oncologists",
+        "Investigate and report on abnormal radiation readings or exposures",
+        "Advise on shielding, containment, and emergency-response design"
+      ],
+      "dayToDay": "Work mixes hands-on equipment checks and dose calculations with writing safety reports, and some roles (especially in hospitals) involve regular contact with clinical treatment teams.",
+      "sources": [
+        "https://www.jobbank.gc.ca/wagereport/occupation/2495",
+        "https://www.jobbank.gc.ca/marketreport/outlook-occupation/2495/ON",
+        "https://www.services.labour.gov.on.ca/labourmarket-ui/jobProfile?nocCode=21100"
+      ]
+    },
+    {
+      "id": 3,
+      "categoryId": 2,
+      "slug": "radiochemist",
+      "title": "Radiochemist / Nuclear Chemistry Technologist",
+      "summary": "Analyzes and handles radioactive materials and compounds, supporting everything from radiopharmaceutical production to nuclear plant water chemistry.",
+      "description": "Chemists in the isotope industry — sometimes called radiochemists or nuclear lab technologists depending on the employer — conduct research and quality-control analysis involving radioactive and non-radioactive compounds. They work in university and government research labs, radiopharmaceutical manufacturers, and nuclear generating stations, where they monitor coolant and fuel chemistry and support radioactive-materials handling. A bachelor's degree is the typical entry point, with a master's or doctorate usually required for research-chemist roles; licensing is voluntary in Ontario.",
+      "nocCode": "21101",
+      "salaryMin": 56300,
+      "salaryMax": 138700,
+      "responsibilities": [
+        "Analyze, synthesize, purify, and characterize chemical and radiochemical compounds",
+        "Run quality-control programs on raw materials, intermediates, and final radiopharmaceutical products",
+        "Conduct research into new chemical and radiochemical processes",
+        "Monitor and report on nuclear plant or lab water and materials chemistry",
+        "Maintain radiation-safety and containment procedures in the lab",
+        "Supervise chemical or nuclear lab technicians and technologists"
+      ],
+      "dayToDay": "Days are spent largely at the bench or in an instrumentation lab running tests and interpreting results, balanced with documentation to satisfy safety and regulatory requirements.",
+      "sources": [
+        "https://www23.statcan.gc.ca/imdb/p3VD.pl?Function=getVD&TVD=1322554&CVD=1322870&CPV=21101&CST=01052021&CLV=5&MLV=5",
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/20049/ON",
+        "https://durhamcollege.ca/programs/chemical-engineering-technology"
+      ]
+    },
+    {
+      "id": 4,
+      "categoryId": 2,
+      "slug": "nuclear-medicine-technologist",
+      "title": "Nuclear Medicine Technologist",
+      "summary": "Prepares and administers radioactive tracers and operates imaging cameras to help diagnose disease in hospital patients.",
+      "description": "Nuclear medicine technologists are medical radiation technologists who prepare radiopharmaceuticals, inject tracers into patients, and operate gamma cameras, SPECT/CT, and PET/CT scanners to produce diagnostic images. The images show how organs and tissues are functioning at a cellular level, which helps doctors diagnose and plan treatment for cancer and other diseases. Registration with the College of Medical Radiation and Imaging Technologists of Ontario (CMRITO) is required to practise in the province.",
+      "nocCode": "32121",
+      "salaryMin": 72800,
+      "salaryMax": 108200,
+      "responsibilities": [
+        "Prepare and safely handle radioactive tracers and radiopharmaceuticals",
+        "Administer tracers to patients and monitor them during the procedure",
+        "Operate gamma cameras, SPECT/CT, and related imaging equipment",
+        "Follow radiation-safety precautions to protect patients, themselves, and colleagues",
+        "Process and quality-check diagnostic images for the interpreting physician",
+        "Maintain patient records and equipment calibration logs"
+      ],
+      "dayToDay": "The role is patient-facing and hands-on: explaining the procedure, injecting tracers, positioning patients at the scanner, and keeping to a tight imaging schedule.",
+      "sources": [
+        "https://noc.esdc.gc.ca/Structure/NOCProfile?GocTemplateCulture=en-CA&code=32121&version=2021.0",
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/18254/ON",
+        "https://www.services.labour.gov.on.ca/labourmarket-ui/jobProfile?nocCode=32121"
+      ]
+    },
+    {
+      "id": 5,
+      "categoryId": 3,
+      "slug": "ndt-technician",
+      "title": "Non-Destructive Testing (NDT) Technician",
+      "summary": "Uses X-ray, ultrasonic, and other techniques to check welds, pipes, and structures for hidden flaws without damaging them.",
+      "description": "Non-destructive testers and inspectors examine manufactured parts and structures — from pipelines to aircraft to nuclear plant components — for cracks or defects using radiographic, ultrasonic, magnetic-particle, liquid-penetrant, and eddy-current methods. Industrial radiographers who use a radioactive isotope source must pass a CNSC exam to become a certified exposure-device operator. Certification through Natural Resources Canada is available in three levels and is usually required by employers, and welding-inspector certification through the Canadian Welding Bureau is common as well.",
+      "nocCode": "22230",
+      "salaryMin": 42300,
+      "salaryMax": 99500,
+      "responsibilities": [
+        "Set up, calibrate, and operate radiographic, ultrasonic, and other NDT equipment",
+        "Conduct tests to detect discontinuities or defects in materials and welds",
+        "Interpret radiographs, digital readouts, and other test results",
+        "Follow radiation-safety rules when using isotope-based radiographic sources",
+        "Document findings in inspection and compliance reports",
+        "Advise on repair, rejection, or further testing of inspected components"
+      ],
+      "dayToDay": "Work is often on-site at a plant, pipeline, or fabrication shop, moving between test locations and combining physical inspection work with report writing.",
+      "sources": [
+        "https://www23.statcan.gc.ca/imdb/p3VD.pl?Function=getVD&TVD=1322554&CVD=1322870&CPV=22230&CST=01052021&CLV=5&MLV=5",
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/3554/ON",
+        "https://durhamcollege.ca/programs/mechanical-engineering-technician-non-destructive-evaluation-compressed-fast-track"
+      ]
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "slug": "nuclear-engineer",
+      "title": "Nuclear Engineer",
+      "summary": "Designs, analyzes, and improves the systems that make nuclear reactors and fuel cycles work safely and efficiently.",
+      "description": "Nuclear engineers are classified within Canada's broader Mechanical engineers occupational group. They research, design, and develop the reactors, fuel-handling systems, and safety systems used in nuclear power generation, and can also work on non-power applications of nuclear technology such as isotope production. Nuclear engineers are employed by utilities, engineering consulting firms, national laboratories, and equipment manufacturers, and typically hold a bachelor's degree in nuclear or mechanical engineering plus professional engineering (P.Eng.) licensure for senior roles.",
+      "nocCode": "21301",
+      "salaryMin": 63300,
+      "salaryMax": 150800,
+      "responsibilities": [
+        "Design and analyze reactor cores, fuel systems, and plant safety systems",
+        "Model reactor physics, heat transport, and thermal-hydraulic performance",
+        "Evaluate and improve the operation and maintenance of nuclear plant equipment",
+        "Support licensing submissions and regulatory compliance work with the CNSC",
+        "Investigate non-power applications of nuclear technology, including isotope production",
+        "Collaborate with operations, health-physics, and waste-management teams"
+      ],
+      "dayToDay": "Most work happens at a desk doing engineering analysis, modelling, and documentation, punctuated by site visits, design reviews, and meetings with operations and regulatory staff.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/occupation/2758/ON",
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/2757/ON",
+        "https://www.services.labour.gov.on.ca/labourmarket-ui/jobProfile?nocCode=21301"
+      ]
+    },
+    {
+      "id": 7,
+      "categoryId": 2,
+      "slug": "radiopharmacist",
+      "title": "Radiopharmacist",
+      "summary": "A hospital or industrial pharmacist specialized in compounding, quality-testing, and dispensing radioactive drugs used in nuclear medicine.",
+      "description": "Radiopharmacists are pharmacists (Canada's Pharmacists occupational group) who focus on radiopharmaceuticals: drugs that contain a radioactive isotope, used to diagnose and treat disease in nuclear medicine departments. They compound and quality-test these products under strict radiation-safety rules, dispense them to nuclear medicine technologists, and advise clinical staff on dosing, handling, and interactions. The role requires a pharmacy degree and pharmacist licensure, plus additional specialized training and often certification in nuclear pharmacy.",
+      "nocCode": "31120",
+      "salaryMin": 77000,
+      "salaryMax": 135200,
+      "responsibilities": [
+        "Compound and quality-test radiopharmaceutical products before release",
+        "Calculate and verify radioactive doses for individual patients",
+        "Maintain radiation-safety, shielding, and waste-handling procedures in the pharmacy",
+        "Advise physicians and technologists on radiopharmaceutical selection and interactions",
+        "Maintain regulatory records for radioactive material use and inventory",
+        "Participate in research on new radiopharmaceutical products and protocols"
+      ],
+      "dayToDay": "Work centres on a shielded compounding lab, preparing and checking doses against strict deadlines tied to each isotope's short half-life, alongside regulatory paperwork and consults with clinical teams.",
+      "sources": [
+        "https://noc.esdc.gc.ca/Structure/NOCProfile?GocTemplateCulture=en-CA&code=31120&version=2021.0",
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/18196/ON"
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "id": 1,
+      "name": "Ontario Tech University",
+      "city": "Oshawa",
+      "province": "ON",
+      "description": "Public university offering Canada's only accredited undergraduate Nuclear Engineering program, an undergraduate Health Physics and Radiation Science program, and graduate nuclear engineering degrees.",
+      "website": "https://ontariotechu.ca"
+    },
+    {
+      "id": 2,
+      "name": "McMaster University",
+      "city": "Hamilton",
+      "province": "ON",
+      "description": "Research university with a Department of Physics & Astronomy offering an Honours Physics program with a Medical and Biological Physics option, and home to the McMaster Nuclear Reactor.",
+      "website": "https://mcmaster.ca"
+    },
+    {
+      "id": 3,
+      "name": "Durham College",
+      "city": "Oshawa",
+      "province": "ON",
+      "description": "Public college offering applied-science and engineering-technology diplomas, including chemical engineering technology (with nuclear-physics content) and a non-destructive evaluation program, situated near Ontario's nuclear generating stations.",
+      "website": "https://durhamcollege.ca"
+    },
+    {
+      "id": 4,
+      "name": "The Michener Institute of Education at UHN",
+      "city": "Toronto",
+      "province": "ON",
+      "description": "Applied health-sciences college that delivers clinical medical-radiation-sciences education jointly with the University of Toronto, including the Nuclear Medicine and Molecular Imaging Technology program.",
+      "website": "https://michener.ca"
+    },
+    {
+      "id": 5,
+      "name": "University of Toronto",
+      "city": "Toronto",
+      "province": "ON",
+      "description": "Research university whose Faculty of Applied Science and Engineering offers Engineering Science, an extremely competitive program with majors including Engineering Physics that feeds into nuclear engineering and health-physics careers.",
+      "website": "https://utoronto.ca"
+    },
+    {
+      "id": 6,
+      "name": "Toronto Metropolitan University (TMU)",
+      "city": "Toronto",
+      "province": "ON",
+      "description": "Public university whose Faculty of Science offers one of only five undergraduate Medical Physics programs in Canada, plus a CAMPEP-accredited graduate Medical Physics program.",
+      "website": "https://torontomu.ca"
+    },
+    {
+      "id": 7,
+      "name": "University of Waterloo",
+      "city": "Waterloo",
+      "province": "ON",
+      "description": "Research university whose School of Pharmacy runs Canada's only co-op Doctor of Pharmacy (PharmD) program, with a direct-from-high-school Conditional Admission to Pharmacy (CAP) pathway via its Honours Science program.",
+      "website": "https://uwaterloo.ca"
+    }
+  ],
+  "educationPrograms": [
+    {
+      "id": 1,
+      "institutionId": 1,
+      "slug": "nuclear-engineering-ontariotech",
+      "name": "Bachelor of Engineering (Honours) in Nuclear Engineering",
+      "level": "undergraduate",
+      "description": "Canada's only accredited undergraduate Nuclear Engineering program, covering the full nuclear fuel cycle, plant design, radiation protection, nuclear chemistry and materials, and reactor physics, with a direct-entry co-op option.",
+      "duration": "4 years",
+      "requirements": "OSSD with six 4U/4M credits including English (ENG4U, minimum 60%), Advanced Functions (MHF4U), Calculus and Vectors (MCV4U), Chemistry (SCH4U), and Physics (SPH4U); combined minimum 70% average across the prerequisite math and science courses, with no individual grade below 60%. Admission is competitive and the effective cutoff varies by year.",
+      "programUrl": "https://ontariotechu.ca/programs/undergraduate/engineering/nuclear-engineering/index.php",
+      "sources": [
+        "https://ontariotechu.ca/programs/undergraduate/engineering/nuclear-engineering/index.php"
+      ]
+    },
+    {
+      "id": 2,
+      "institutionId": 2,
+      "slug": "honours-physics-mcmaster",
+      "name": "Honours Physics (Medical and Biological Physics option available)",
+      "level": "undergraduate",
+      "description": "McMaster's physics degree lets students pursue a Medical and Biological Physics concentration alongside general Honours Physics and Astrophysics, a common pathway toward health-physics and medical-physics careers.",
+      "duration": "4 years",
+      "requirements": "Ontario high school requirements: ENG4U, MCV4U, MHF4U, SCH4U, SPH4U. The Physics & Astronomy department lists an admission average in the low-to-high 80s depending on the specific first-year gateway chosen (e.g., life-sciences vs. math/physics entry); exact cutoffs vary by year and are not published as a single fixed number.",
+      "programUrl": "https://physics.mcmaster.ca/undergraduate-studies/prospective-students/",
+      "sources": [
+        "https://physics.mcmaster.ca/undergraduate-studies/prospective-students/",
+        "https://physics.mcmaster.ca/undergraduate-studies/prospective-students/admissions-and-expectations/"
+      ]
+    },
+    {
+      "id": 3,
+      "institutionId": 3,
+      "slug": "chemical-engineering-technology-durham",
+      "name": "Chemical Engineering Technology (Co-op option available)",
+      "level": "diploma",
+      "description": "Ontario College Advanced Diploma covering analytical chemistry, organic chemistry, nuclear physics, and instrumental analysis; graduates work as chemical, nuclear-lab, and radio-chemical technologists, including a dedicated Nuclear Physics course in the final semester.",
+      "duration": "6 semesters (3 years), plus optional 8-month co-op work terms",
+      "requirements": "Ontario Secondary School Diploma (OSSD) or Mature Student Status, plus Grade 12 English (College or University level) and Grade 12 Mathematics (College, Mixed, or University level). Grade 12 Chemistry, Grade 12 Physics, and Technical Mathematics are recommended but not mandatory.",
+      "programUrl": "https://durhamcollege.ca/programs/chemical-engineering-technology",
+      "sources": [
+        "https://durhamcollege.ca/programs/chemical-engineering-technology"
+      ]
+    },
+    {
+      "id": 4,
+      "institutionId": 3,
+      "slug": "ndt-fast-track-durham",
+      "name": "Mechanical Engineering Technician — Non-Destructive Evaluation (fast-track)",
+      "level": "diploma",
+      "description": "Ontario College Diploma covering liquid-penetrant, ultrasonic, magnetic-particle, eddy-current, and radiographic (including radiation-safety) testing methods, leading to NDT personnel certification eligibility under CGSB standard 48.9712.",
+      "duration": "2 semesters (post-diploma fast-track)",
+      "requirements": "This is a second-entry, post-diploma program, not a direct-from-high-school program: applicants need an existing college diploma or university degree in engineering, industrial trades, or science, plus proof of English proficiency. Applicants whose prior credential is more than 10 years old may instead qualify with 3+ years of related industry experience plus specific post-secondary math and science coursework. There is no direct Ontario Grade 12 (4U) course-code pathway into this specific program.",
+      "programUrl": "https://durhamcollege.ca/programs/mechanical-engineering-technician-non-destructive-evaluation-compressed-fast-track",
+      "sources": [
+        "https://durhamcollege.ca/programs/mechanical-engineering-technician-non-destructive-evaluation-compressed-fast-track"
+      ]
+    },
+    {
+      "id": 5,
+      "institutionId": 4,
+      "slug": "nuclear-medicine-molecular-imaging-michener-uoft",
+      "name": "Nuclear Medicine and Molecular Imaging Technology (University of Toronto Joint Program)",
+      "level": "undergraduate",
+      "description": "Joint program between the University of Toronto and The Michener Institute leading to a Bachelor of Science in Medical Radiation Sciences plus an Advanced Diploma; includes radiopharmaceutical preparation, gamma-camera and SPECT/CT/PET-CT imaging, and 48 weeks of clinical placement.",
+      "duration": "3 years",
+      "requirements": "Second-entry program: applicants need a minimum of one year (10 single-semester courses) of university education with a CGPA of at least 2.70 (B-), including one single-semester university-level course in each of Biology, Mathematics, Physics, and Social Science, plus Grade 12 U-level Chemistry (SCH4U) or equivalent. Because entry requires a prior year of university rather than direct high-school admission, the underlying Ontario high-school preparation (typically SBI4U, SCH4U, SPH4U, and MHF4U/MCV4U to gain that university admission in the first place) is an inference, not a directly stated program requirement.",
+      "programUrl": "https://michener.ca/programs-courses/nuclear-medicine-and-molecular-imaging-technology-university-of-toronto-joint-program/",
+      "sources": [
+        "https://michener.ca/programs-courses/nuclear-medicine-and-molecular-imaging-technology-university-of-toronto-joint-program/"
+      ]
+    },
+    {
+      "id": 6,
+      "institutionId": 5,
+      "slug": "engsci-uoft",
+      "name": "Engineering Science (Engineering Physics and other majors)",
+      "level": "undergraduate",
+      "description": "One of Canada's most competitive engineering programs, entering all students into a shared first two years before they choose a major in third year, including Engineering Physics and Energy Systems Engineering, both relevant to nuclear-engineer and health-physicist career paths.",
+      "duration": "4 years",
+      "requirements": "All applicants to U of T Engineering (including Engineering Science) must complete senior-level Advanced Functions (MHF4U), Calculus & Vectors (MCV4U), Chemistry (SCH4U), and Physics (SPH4U), plus English (ENG4U) and one additional 4U/M course. Admission is extremely competitive: reported competitive averages for Engineering Science are in the mid-to-high 90s, though U of T does not publish a single official minimum cutoff, as the effective bar varies year to year with applicant volume.",
+      "programUrl": "https://engineering.calendar.utoronto.ca/admission-requirements",
+      "sources": [
+        "https://engineering.calendar.utoronto.ca/admission-requirements",
+        "https://discover.engineering.utoronto.ca/faqs/"
+      ]
+    },
+    {
+      "id": 7,
+      "institutionId": 6,
+      "slug": "medical-physics-tmu",
+      "name": "Medical Physics - BSc (Hons)",
+      "level": "undergraduate",
+      "description": "One of only 5 undergraduate Medical Physics programs in Canada, covering medical imaging, radiation therapy, radiation protection, and health physics, with an optional 5-year co-op. Career possibilities listed by TMU include clinical medical physicist and radiation therapist.",
+      "duration": "4 years (5-year co-op option available)",
+      "requirements": "OSSD with completion of 6 Grade 12 U or M courses and a minimum overall average of 70%, including required Grade 12 U courses (minimum grade of 65% in each): English (ENG4U/EAE4U preferred), Advanced Functions (MHF4U), and 2 of Physics (SPH4U), Chemistry (SCH4U), or Biology (SBI4U). TMU notes the average needed for admission fluctuates year to year; recent grade ranges have been in the mid-70s.",
+      "programUrl": "https://www.torontomu.ca/programs/undergraduate/medical-physics/",
+      "sources": [
+        "https://www.torontomu.ca/programs/undergraduate/medical-physics/"
+      ]
+    },
+    {
+      "id": 8,
+      "institutionId": 7,
+      "slug": "honours-science-cap-waterloo",
+      "name": "Honours Science (Conditional Admission to Pharmacy pathway)",
+      "level": "undergraduate",
+      "description": "Waterloo's Honours Science program offers outstanding high school students pre-admission to Waterloo's Doctor of Pharmacy (PharmD) program -- Canada's only co-op PharmD -- through Conditional Admission to Pharmacy (CAP) status, a direct pathway toward radiopharmacist and other pharmacy careers.",
+      "duration": "4 years (Honours Science) leading into the 4-year PharmD",
+      "requirements": "A final grade of at least 70% is required in English (ENG4U), Advanced Functions (MHF4U), and Calculus and Vectors (MCV4U), plus any 2 of Biology (SBI4U), Chemistry (SCH4U), Earth and Space Science (SES4U), Data Management (MDM4U), or Physics (SPH4U), and one additional 4U/M course. SBI4U, SCH4U, SES4U, and SPH4U are all recommended even though only 2 of them are formally required.",
+      "programUrl": "https://uwaterloo.ca/pharmacy/future-students/doctor-pharmacy-pharmd/pharmd-application-process",
+      "sources": [
+        "https://www.ouinfo.ca/programs/waterloo/ws",
+        "https://uwaterloo.ca/pharmacy/future-students/doctor-pharmacy-pharmd/pharmd-application-process"
+      ]
+    },
+    {
+      "id": 9,
+      "institutionId": 1,
+      "slug": "health-physics-radiation-science-ontariotech",
+      "name": "Bachelor of Science (Honours) in Health Physics and Radiation Science",
+      "level": "undergraduate",
+      "description": "One of a limited number of Health Physics and Radiation Science programs in Canada, run by Ontario Tech's Department of Energy and Nuclear Engineering, covering radiation detection and measurement, medical imaging, radiation biophysics/dosimetry, and industrial and therapeutic applications of radiation, with two thesis projects in the final year.",
+      "duration": "4 years",
+      "requirements": "Ontario Tech's own program page for Health Physics and Radiation Science did not display a distinct admission-requirements table when checked; the figures here are inferred from the identical admission-requirement template published for Ontario Tech's sibling Physics-family programs (Physics, Astrophysics, Nanophysics), which are run by the same Faculty and explicitly cross-promote the Health Physics and Radiation Science program: OSSD with six 4U/4M credits including English (ENG4U), Advanced Functions (MHF4U), and two of Biology (SBI4U), Calculus and Vectors (MCV4U), Chemistry (SCH4U), or Physics (SPH4U); combined minimum 70% average in prerequisite math and science courses. This should be verified directly with Ontario Tech admissions before publishing to end users.",
+      "programUrl": "https://engineering.ontariotechu.ca/departments/energy-and-nuclear-engineering/health-physics-and-radiation-science.php",
+      "sources": [
+        "https://engineering.ontariotechu.ca/departments/energy-and-nuclear-engineering/health-physics-and-radiation-science.php",
+        "https://ontariotechu.ca/programs/undergraduate/science/physics/index.php"
+      ]
+    }
+  ],
+  "subjects": [
+    { "id": 1, "slug": "eng4u", "name": "English", "code": "ENG4U", "category": "language" },
+    { "id": 2, "slug": "mhf4u", "name": "Advanced Functions", "code": "MHF4U", "category": "math" },
+    { "id": 3, "slug": "mcv4u", "name": "Calculus and Vectors", "code": "MCV4U", "category": "math" },
+    { "id": 4, "slug": "sch4u", "name": "Chemistry", "code": "SCH4U", "category": "science" },
+    { "id": 5, "slug": "sph4u", "name": "Physics", "code": "SPH4U", "category": "science" },
+    { "id": 6, "slug": "sbi4u", "name": "Biology", "code": "SBI4U", "category": "science" },
+    { "id": 7, "slug": "mdm4u", "name": "Mathematics of Data Management", "code": "MDM4U", "category": "math" },
+    { "id": 8, "slug": "ses4u", "name": "Earth and Space Science", "code": "SES4U", "category": "science" }
+  ],
+  "programRequirements": [
+    { "programId": 1, "subjectId": 1, "minGrade": 60 },
+    { "programId": 1, "subjectId": 2, "minGrade": 60 },
+    { "programId": 1, "subjectId": 3, "minGrade": 60 },
+    { "programId": 1, "subjectId": 4, "minGrade": 60 },
+    { "programId": 1, "subjectId": 5, "minGrade": 60 },
+
+    { "programId": 2, "subjectId": 1, "minGrade": null },
+    { "programId": 2, "subjectId": 2, "minGrade": null },
+    { "programId": 2, "subjectId": 3, "minGrade": null },
+    { "programId": 2, "subjectId": 4, "minGrade": null },
+    { "programId": 2, "subjectId": 5, "minGrade": null },
+
+    { "programId": 3, "subjectId": 1, "minGrade": null },
+    { "programId": 3, "subjectId": 4, "minGrade": null },
+    { "programId": 3, "subjectId": 5, "minGrade": null },
+
+    { "programId": 5, "subjectId": 4, "minGrade": null },
+    { "programId": 5, "subjectId": 5, "minGrade": null },
+    { "programId": 5, "subjectId": 6, "minGrade": null },
+    { "programId": 5, "subjectId": 2, "minGrade": null },
+
+    { "programId": 6, "subjectId": 1, "minGrade": null },
+    { "programId": 6, "subjectId": 2, "minGrade": null },
+    { "programId": 6, "subjectId": 3, "minGrade": null },
+    { "programId": 6, "subjectId": 4, "minGrade": null },
+    { "programId": 6, "subjectId": 5, "minGrade": null },
+
+    { "programId": 7, "subjectId": 1, "minGrade": 65 },
+    { "programId": 7, "subjectId": 2, "minGrade": 65 },
+    { "programId": 7, "subjectId": 5, "minGrade": 65 },
+    { "programId": 7, "subjectId": 4, "minGrade": 65 },
+    { "programId": 7, "subjectId": 6, "minGrade": 65 },
+
+    { "programId": 8, "subjectId": 1, "minGrade": 70 },
+    { "programId": 8, "subjectId": 2, "minGrade": 70 },
+    { "programId": 8, "subjectId": 3, "minGrade": 70 },
+    { "programId": 8, "subjectId": 6, "minGrade": null },
+    { "programId": 8, "subjectId": 4, "minGrade": null },
+    { "programId": 8, "subjectId": 8, "minGrade": null },
+    { "programId": 8, "subjectId": 7, "minGrade": null },
+    { "programId": 8, "subjectId": 5, "minGrade": null },
+
+    { "programId": 9, "subjectId": 1, "minGrade": null },
+    { "programId": 9, "subjectId": 2, "minGrade": null },
+    { "programId": 9, "subjectId": 6, "minGrade": null },
+    { "programId": 9, "subjectId": 3, "minGrade": null },
+    { "programId": 9, "subjectId": 4, "minGrade": null },
+    { "programId": 9, "subjectId": 5, "minGrade": null }
+  ],
+  "careerEducationLinks": [
+    { "careerSlug": "nuclear-reactor-operator", "programSlug": "nuclear-engineering-ontariotech" },
+    { "careerSlug": "nuclear-reactor-operator", "programSlug": "chemical-engineering-technology-durham" },
+    { "careerSlug": "health-physicist", "programSlug": "honours-physics-mcmaster" },
+    { "careerSlug": "health-physicist", "programSlug": "nuclear-engineering-ontariotech" },
+    { "careerSlug": "health-physicist", "programSlug": "engsci-uoft" },
+    { "careerSlug": "health-physicist", "programSlug": "medical-physics-tmu" },
+    { "careerSlug": "health-physicist", "programSlug": "health-physics-radiation-science-ontariotech" },
+    { "careerSlug": "radiochemist", "programSlug": "chemical-engineering-technology-durham" },
+    { "careerSlug": "nuclear-medicine-technologist", "programSlug": "nuclear-medicine-molecular-imaging-michener-uoft" },
+    { "careerSlug": "ndt-technician", "programSlug": "ndt-fast-track-durham" },
+    { "careerSlug": "ndt-technician", "programSlug": "health-physics-radiation-science-ontariotech" },
+    { "careerSlug": "nuclear-engineer", "programSlug": "nuclear-engineering-ontariotech" },
+    { "careerSlug": "nuclear-engineer", "programSlug": "engsci-uoft" },
+    { "careerSlug": "radiopharmacist", "programSlug": "honours-science-cap-waterloo" }
+  ]
+}

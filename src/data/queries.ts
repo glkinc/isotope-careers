@@ -1,17 +1,18 @@
-// Data-access layer. Currently backed by static seed data; swap the bodies of
-// these functions for Drizzle queries against src/db once a database is connected.
-// Callers (pages) should not need to change.
+// Data-access layer, backed by Postgres (Neon) via Drizzle. Callers (pages)
+// depend only on the types in ./types, not on the shape of the db schema.
 
+import { eq } from "drizzle-orm";
+import { db } from "@/db";
 import {
-  careerCategories,
-  careerEducationLinks,
-  careers,
-  educationPrograms,
-  institutions,
-  programRequirements,
-  skillTreeNodes,
-  subjects,
-} from "./seed-data";
+  careerCategories as careerCategoriesTable,
+  careerEducationPrograms,
+  careers as careersTable,
+  educationPrograms as educationProgramsTable,
+  institutions as institutionsTable,
+  programRequirements as programRequirementsTable,
+  skillTreeNodes as skillTreeNodesTable,
+  subjects as subjectsTable,
+} from "@/db/schema";
 import type {
   Career,
   CareerCategory,
@@ -22,76 +23,141 @@ import type {
   Subject,
 } from "./types";
 
+function toCareer(row: typeof careersTable.$inferSelect): Career {
+  return {
+    ...row,
+    responsibilities: row.responsibilities ?? [],
+    sources: row.sources ?? [],
+  };
+}
+
+function toEducationProgram(
+  row: typeof educationProgramsTable.$inferSelect,
+): EducationProgram {
+  return {
+    ...row,
+    sources: row.sources ?? [],
+  };
+}
+
 export async function getCareerCategories(): Promise<CareerCategory[]> {
-  return careerCategories;
+  return db.select().from(careerCategoriesTable);
 }
 
 export async function getCareers(): Promise<Career[]> {
-  return careers;
+  const rows = await db.select().from(careersTable);
+  return rows.map(toCareer);
 }
 
-export async function getCareerBySlug(slug: string): Promise<Career | undefined> {
-  return careers.find((c) => c.slug === slug);
+export async function getCareerBySlug(
+  slug: string,
+): Promise<Career | undefined> {
+  const rows = await db
+    .select()
+    .from(careersTable)
+    .where(eq(careersTable.slug, slug));
+  return rows[0] ? toCareer(rows[0]) : undefined;
 }
 
 export async function getCareerCategory(
   categoryId: number,
 ): Promise<CareerCategory | undefined> {
-  return careerCategories.find((c) => c.id === categoryId);
+  const rows = await db
+    .select()
+    .from(careerCategoriesTable)
+    .where(eq(careerCategoriesTable.id, categoryId));
+  return rows[0];
 }
 
 export async function getEducationPrograms(): Promise<EducationProgram[]> {
-  return educationPrograms;
+  const rows = await db.select().from(educationProgramsTable);
+  return rows.map(toEducationProgram);
 }
 
 export async function getEducationProgramBySlug(
   slug: string,
 ): Promise<EducationProgram | undefined> {
-  return educationPrograms.find((p) => p.slug === slug);
+  const rows = await db
+    .select()
+    .from(educationProgramsTable)
+    .where(eq(educationProgramsTable.slug, slug));
+  return rows[0] ? toEducationProgram(rows[0]) : undefined;
 }
 
 export async function getInstitution(
   institutionId: number,
 ): Promise<Institution | undefined> {
-  return institutions.find((i) => i.id === institutionId);
+  const rows = await db
+    .select()
+    .from(institutionsTable)
+    .where(eq(institutionsTable.id, institutionId));
+  return rows[0];
 }
 
 export async function getProgramsForCareer(
   careerSlug: string,
 ): Promise<EducationProgram[]> {
-  const programSlugs = careerEducationLinks
-    .filter((link) => link.careerSlug === careerSlug)
-    .map((link) => link.programSlug);
-  return educationPrograms.filter((p) => programSlugs.includes(p.slug));
+  const rows = await db
+    .select({ program: educationProgramsTable })
+    .from(careerEducationPrograms)
+    .innerJoin(
+      educationProgramsTable,
+      eq(careerEducationPrograms.programId, educationProgramsTable.id),
+    )
+    .innerJoin(
+      careersTable,
+      eq(careerEducationPrograms.careerId, careersTable.id),
+    )
+    .where(eq(careersTable.slug, careerSlug));
+  return rows.map((r) => toEducationProgram(r.program));
 }
 
 export async function getCareersForProgram(
   programSlug: string,
 ): Promise<Career[]> {
-  const careerSlugs = careerEducationLinks
-    .filter((link) => link.programSlug === programSlug)
-    .map((link) => link.careerSlug);
-  return careers.filter((c) => careerSlugs.includes(c.slug));
+  const rows = await db
+    .select({ career: careersTable })
+    .from(careerEducationPrograms)
+    .innerJoin(careersTable, eq(careerEducationPrograms.careerId, careersTable.id))
+    .innerJoin(
+      educationProgramsTable,
+      eq(careerEducationPrograms.programId, educationProgramsTable.id),
+    )
+    .where(eq(educationProgramsTable.slug, programSlug));
+  return rows.map((r) => toCareer(r.career));
 }
 
 export async function getSkillTreeForCareer(
   careerId: number,
 ): Promise<SkillTreeNode[]> {
-  return skillTreeNodes
-    .filter((n) => n.careerId === careerId)
-    .sort((a, b) => a.tier - b.tier);
+  const rows = await db
+    .select()
+    .from(skillTreeNodesTable)
+    .where(eq(skillTreeNodesTable.careerId, careerId));
+  return rows.sort((a, b) => a.tier - b.tier);
 }
 
 export async function getSubjects(): Promise<Subject[]> {
-  return subjects;
+  return db.select().from(subjectsTable);
 }
 
 export async function getProgramRequirements(): Promise<ProgramRequirement[]> {
-  return programRequirements;
+  return db.select().from(programRequirementsTable);
 }
 
 export async function getCareerEducationLinks(): Promise<
   { careerSlug: string; programSlug: string }[]
 > {
-  return careerEducationLinks;
+  const rows = await db
+    .select({
+      careerSlug: careersTable.slug,
+      programSlug: educationProgramsTable.slug,
+    })
+    .from(careerEducationPrograms)
+    .innerJoin(careersTable, eq(careerEducationPrograms.careerId, careersTable.id))
+    .innerJoin(
+      educationProgramsTable,
+      eq(careerEducationPrograms.programId, educationProgramsTable.id),
+    );
+  return rows;
 }

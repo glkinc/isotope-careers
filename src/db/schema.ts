@@ -16,6 +16,13 @@ export const educationLevelEnum = pgEnum("education_level", [
   "graduate",
 ]);
 
+export const subjectCategoryEnum = pgEnum("subject_category", [
+  "math",
+  "science",
+  "language",
+  "other",
+]);
+
 export const careerCategories = pgTable("career_categories", {
   id: serial("id").primaryKey(),
   slug: text("slug").notNull().unique(),
@@ -32,10 +39,12 @@ export const careers = pgTable("careers", {
   title: text("title").notNull(),
   summary: text("summary").notNull(),
   description: text("description").notNull(),
+  nocCode: text("noc_code"),
   salaryMin: integer("salary_min"),
   salaryMax: integer("salary_max"),
-  responsibilities: text("responsibilities"),
+  responsibilities: text("responsibilities").array(),
   dayToDay: text("day_to_day"),
+  sources: text("sources").array(),
 });
 
 export const institutions = pgTable("institutions", {
@@ -58,6 +67,8 @@ export const educationPrograms = pgTable("education_programs", {
   description: text("description").notNull(),
   duration: text("duration"),
   requirements: text("requirements"),
+  programUrl: text("program_url"),
+  sources: text("sources").array(),
 });
 
 export const careerEducationPrograms = pgTable(
@@ -83,6 +94,28 @@ export const skillTreeNodes = pgTable("skill_tree_nodes", {
   tier: integer("tier").notNull(),
   prerequisiteNodeId: integer("prerequisite_node_id"),
 });
+
+export const subjects = pgTable("subjects", {
+  id: serial("id").primaryKey(),
+  slug: text("slug").notNull().unique(),
+  name: text("name").notNull(),
+  code: text("code"),
+  category: subjectCategoryEnum("category").notNull(),
+});
+
+export const programRequirements = pgTable(
+  "program_requirements",
+  {
+    programId: integer("program_id")
+      .notNull()
+      .references(() => educationPrograms.id),
+    subjectId: integer("subject_id")
+      .notNull()
+      .references(() => subjects.id),
+    minGrade: integer("min_grade"),
+  },
+  (table) => [primaryKey({ columns: [table.programId, table.subjectId] })],
+);
 
 export const careerCategoriesRelations = relations(
   careerCategories,
@@ -112,6 +145,7 @@ export const educationProgramsRelations = relations(
       references: [institutions.id],
     }),
     careerLinks: many(careerEducationPrograms),
+    subjectRequirements: many(programRequirements),
   }),
 );
 
@@ -139,6 +173,24 @@ export const skillTreeNodesRelations = relations(
     prerequisite: one(skillTreeNodes, {
       fields: [skillTreeNodes.prerequisiteNodeId],
       references: [skillTreeNodes.id],
+    }),
+  }),
+);
+
+export const subjectsRelations = relations(subjects, ({ many }) => ({
+  programRequirements: many(programRequirements),
+}));
+
+export const programRequirementsRelations = relations(
+  programRequirements,
+  ({ one }) => ({
+    program: one(educationPrograms, {
+      fields: [programRequirements.programId],
+      references: [educationPrograms.id],
+    }),
+    subject: one(subjects, {
+      fields: [programRequirements.subjectId],
+      references: [subjects.id],
     }),
   }),
 );

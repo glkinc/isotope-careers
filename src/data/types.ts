@@ -19,10 +19,12 @@ export type Career = {
   title: string;
   summary: string;
   description: string;
+  nocCode: string | null;
   salaryMin: number | null;
   salaryMax: number | null;
   responsibilities: string[];
   dayToDay: string | null;
+  sources: string[];
 };
 
 export type Institution = {
@@ -46,6 +48,7 @@ export type EducationProgram = {
   // Direct link to this program's page on the institution's website (falls
   // back to the institution's homepage if not set).
   programUrl: string | null;
+  sources: string[];
 };
 
 export type SkillTreeNode = {
@@ -63,10 +66,12 @@ export type Subject = {
   id: number;
   slug: string;
   name: string;
+  code: string | null;
   category: SubjectCategory;
 };
 
 export type ProgramRequirement = {
   programId: number;
   subjectId: number;
+  minGrade: number | null;
 };
