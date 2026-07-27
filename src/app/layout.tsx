@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cabin, Open_Sans } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cabin = Cabin({
+  variable: "--font-cabin",
+  weight: ["700"],
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -23,6 +25,7 @@ export const metadata: Metadata = {
 };
 
 const navLinks = [
+  { href: "/path-finder", label: "Find My Path" },
   { href: "/careers", label: "Careers" },
   { href: "/education", label: "Education" },
   { href: "/about", label: "About" },
@@ -36,20 +39,23 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${cabin.variable} ${openSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-slate-900">
-        <header className="border-b border-slate-200">
-          <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-            <Link href="/" className="text-lg font-semibold tracking-tight">
-              Isotope Careers <span className="text-teal-600">Canada</span>
+      <body className="min-h-full flex flex-col bg-white text-brand font-sans">
+        <header className="bg-brand">
+          <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
+            <Link
+              href="/"
+              className="font-heading text-xl font-bold tracking-tight text-white"
+            >
+              Isotope Careers <span className="text-accent">Canada</span>
             </Link>
-            <nav className="flex gap-6 text-sm font-medium text-slate-600">
+            <nav className="flex gap-8 text-sm font-bold text-white">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="hover:text-teal-600"
+                  className="transition-colors hover:text-accent"
                 >
                   {link.label}
                 </Link>
@@ -58,7 +64,7 @@ export default function RootLayout({
           </div>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="border-t border-slate-200 py-8 text-center text-sm text-slate-500">
+        <footer className="bg-brand py-8 text-center text-sm text-white/70">
           Isotope Careers Canada — an independent guide to careers in isotope
           production and use.
         </footer>

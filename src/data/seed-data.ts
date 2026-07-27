@@ -6,9 +6,11 @@
 import type {
   Career,
   CareerCategory,
+  CareerRequirement,
   EducationProgram,
   Institution,
   SkillTreeNode,
+  Subject,
 } from "./types";
 
 export const careerCategories: CareerCategory[] = [
@@ -254,6 +256,46 @@ export const careerEducationLinks: { careerSlug: string; programSlug: string }[]
   { careerSlug: "nuclear-medicine-physicist", programSlug: "engineering-physics-medical-physics" },
   { careerSlug: "radiation-safety-officer", programSlug: "radiation-safety-certificate" },
   { careerSlug: "radiation-safety-officer", programSlug: "nuclear-radiation-technologist-diploma" },
+];
+
+// High-school-level subjects a user might have completed. Used by the
+// path-finder tool to match education history against career requirements.
+export const subjects: Subject[] = [
+  { id: 1, slug: "math", name: "Math", category: "math" },
+  { id: 2, slug: "physics", name: "Physics", category: "science" },
+  { id: 3, slug: "chemistry", name: "Chemistry", category: "science" },
+  { id: 4, slug: "biology", name: "Biology", category: "science" },
+  { id: 5, slug: "english", name: "English", category: "language" },
+  { id: 6, slug: "computer-science", name: "Computer Science", category: "other" },
+  { id: 7, slug: "statistics", name: "Statistics", category: "math" },
+  { id: 8, slug: "french", name: "French", category: "language" },
+  { id: 9, slug: "technology-shop", name: "Technology / Shop", category: "other" },
+];
+
+// Subjects required to be a realistic candidate for each career. Intentionally
+// illustrative, not sourced from real program calendars.
+export const careerRequirements: CareerRequirement[] = [
+  // Nuclear Reactor Operator
+  { careerId: 1, subjectId: 1 }, // Math
+  { careerId: 1, subjectId: 2 }, // Physics
+  // Nuclear Engineer
+  { careerId: 2, subjectId: 1 }, // Math
+  { careerId: 2, subjectId: 2 }, // Physics
+  { careerId: 2, subjectId: 3 }, // Chemistry
+  // Radiopharmaceutical Chemist
+  { careerId: 3, subjectId: 3 }, // Chemistry
+  { careerId: 3, subjectId: 1 }, // Math
+  { careerId: 3, subjectId: 4 }, // Biology
+  // Medical Physicist (Nuclear Medicine)
+  { careerId: 4, subjectId: 1 }, // Math
+  { careerId: 4, subjectId: 2 }, // Physics
+  { careerId: 4, subjectId: 4 }, // Biology
+  // Radiation Safety Officer
+  { careerId: 5, subjectId: 2 }, // Physics
+  { careerId: 5, subjectId: 3 }, // Chemistry
+  // Isotope Logistics Specialist
+  { careerId: 6, subjectId: 1 }, // Math
+  { careerId: 6, subjectId: 5 }, // English
 ];
 
 export const skillTreeNodes: SkillTreeNode[] = [

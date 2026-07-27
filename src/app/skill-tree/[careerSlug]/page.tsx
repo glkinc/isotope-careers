@@ -38,45 +38,45 @@ export default async function SkillTreePage({
     <div className="mx-auto max-w-3xl px-6 py-16">
       <Link
         href={`/careers/${career.slug}`}
-        className="text-sm font-medium text-teal-600 hover:underline"
+        className="text-sm font-medium text-primary hover:underline"
       >
         ← Back to {career.title}
       </Link>
-      <h1 className="mt-4 text-3xl font-semibold text-slate-900">
+      <h1 className="mt-4 text-3xl font-semibold text-brand">
         Skill tree: {career.title}
       </h1>
-      <p className="mt-3 text-slate-600">
+      <p className="mt-3 text-brand/70">
         A step-by-step path from foundational education to this role.
       </p>
 
       {tiers.length === 0 ? (
-        <p className="mt-10 text-slate-500">
+        <p className="mt-10 text-brand/60">
           A skill tree for this career hasn&apos;t been added yet.
         </p>
       ) : (
         <ol className="mt-10 space-y-6">
           {tiers.map(([tier, tierNodes]) => (
             <li key={tier} className="relative pl-8">
-              <span className="absolute left-0 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-teal-600 text-xs font-semibold text-white">
+              <span className="absolute left-0 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-semibold text-white">
                 {tier}
               </span>
               {tier < tiers.length && (
                 <span
                   aria-hidden
-                  className="absolute left-3 top-7 h-full w-px bg-slate-200"
+                  className="absolute left-3 top-7 h-full w-px bg-brand/10"
                 />
               )}
               <div className="space-y-3">
                 {tierNodes.map((node) => (
                   <div
                     key={node.id}
-                    className="rounded-lg border border-slate-200 p-4"
+                    className="rounded-lg border border-brand/10 p-4"
                   >
-                    <h2 className="font-semibold text-slate-900">
+                    <h2 className="font-semibold text-brand">
                       {node.title}
                     </h2>
                     {node.description && (
-                      <p className="mt-1 text-sm text-slate-600">
+                      <p className="mt-1 text-sm text-brand/70">
                         {node.description}
                       </p>
                     )}

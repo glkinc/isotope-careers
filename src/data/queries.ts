@@ -5,17 +5,21 @@
 import {
   careerCategories,
   careerEducationLinks,
+  careerRequirements,
   careers,
   educationPrograms,
   institutions,
   skillTreeNodes,
+  subjects,
 } from "./seed-data";
 import type {
   Career,
   CareerCategory,
+  CareerRequirement,
   EducationProgram,
   Institution,
   SkillTreeNode,
+  Subject,
 } from "./types";
 
 export async function getCareerCategories(): Promise<CareerCategory[]> {
@@ -76,4 +80,12 @@ export async function getSkillTreeForCareer(
   return skillTreeNodes
     .filter((n) => n.careerId === careerId)
     .sort((a, b) => a.tier - b.tier);
+}
+
+export async function getSubjects(): Promise<Subject[]> {
+  return subjects;
+}
+
+export async function getCareerRequirements(): Promise<CareerRequirement[]> {
+  return careerRequirements;
 }

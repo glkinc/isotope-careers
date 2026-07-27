@@ -46,31 +46,31 @@ export default async function EducationDetailPage({
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
-      <span className="text-xs font-semibold uppercase tracking-wide text-teal-600">
+      <span className="text-xs font-semibold uppercase tracking-wide text-primary">
         {levelLabels[program.level] ?? program.level}
       </span>
-      <h1 className="mt-2 text-3xl font-semibold text-slate-900">
+      <h1 className="mt-2 text-3xl font-semibold text-brand">
         {program.name}
       </h1>
       {institution && (
-        <p className="mt-2 text-slate-500">
+        <p className="mt-2 text-brand/60">
           {institution.name}
           {institution.city ? ` — ${institution.city}, ${institution.province}` : ""}
         </p>
       )}
-      <p className="mt-4 text-lg text-slate-600">{program.description}</p>
+      <p className="mt-4 text-lg text-brand/70">{program.description}</p>
 
       <dl className="mt-8 grid grid-cols-2 gap-4 text-sm">
         {program.duration && (
           <div>
-            <dt className="font-semibold text-slate-900">Duration</dt>
-            <dd className="mt-1 text-slate-600">{program.duration}</dd>
+            <dt className="font-semibold text-brand">Duration</dt>
+            <dd className="mt-1 text-brand/70">{program.duration}</dd>
           </div>
         )}
         {program.requirements && (
           <div>
-            <dt className="font-semibold text-slate-900">Requirements</dt>
-            <dd className="mt-1 text-slate-600">{program.requirements}</dd>
+            <dt className="font-semibold text-brand">Requirements</dt>
+            <dd className="mt-1 text-brand/70">{program.requirements}</dd>
           </div>
         )}
       </dl>
@@ -80,7 +80,7 @@ export default async function EducationDetailPage({
           href={institution.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-block text-sm font-medium text-teal-600 hover:underline"
+          className="mt-6 inline-block text-sm font-medium text-primary hover:underline"
         >
           Visit {institution.name} →
         </a>
@@ -88,7 +88,7 @@ export default async function EducationDetailPage({
 
       {relatedCareers.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-lg font-semibold text-slate-900">
+          <h2 className="text-lg font-semibold text-brand">
             Careers this leads to
           </h2>
           <div className="mt-3 flex flex-wrap gap-3">
@@ -96,7 +96,7 @@ export default async function EducationDetailPage({
               <Link
                 key={career.id}
                 href={`/careers/${career.slug}`}
-                className="rounded-md border border-slate-200 px-4 py-2 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-600"
+                className="rounded-md border border-brand/10 px-4 py-2 text-sm text-brand/80 hover:border-primary hover:text-accent"
               >
                 {career.title}
               </Link>

@@ -14,8 +14,8 @@ export default async function CareersPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="text-3xl font-semibold text-slate-900">Careers</h1>
-      <p className="mt-3 max-w-2xl text-slate-600">
+      <h1 className="text-3xl font-semibold text-brand">Careers</h1>
+      <p className="mt-3 max-w-2xl text-brand/70">
         Careers in isotope production and use, across reactor operations,
         radiopharmaceutical sciences, and regulatory & safety.
       </p>
@@ -27,19 +27,19 @@ export default async function CareersPage() {
             <Link
               key={career.id}
               href={`/careers/${career.slug}`}
-              className="rounded-lg border border-slate-200 p-6 hover:border-teal-600"
+              className="rounded-lg border border-brand/10 p-6 hover:border-primary"
             >
               {category && (
-                <span className="text-xs font-semibold uppercase tracking-wide text-teal-600">
+                <span className="text-xs font-semibold uppercase tracking-wide text-primary">
                   {category.name}
                 </span>
               )}
-              <h2 className="mt-2 font-semibold text-slate-900">
+              <h2 className="mt-2 font-semibold text-brand">
                 {career.title}
               </h2>
-              <p className="mt-2 text-sm text-slate-600">{career.summary}</p>
+              <p className="mt-2 text-sm text-brand/70">{career.summary}</p>
               {career.salaryMin && career.salaryMax && (
-                <p className="mt-3 text-sm text-slate-500">
+                <p className="mt-3 text-sm text-brand/60">
                   ${career.salaryMin.toLocaleString()} – $
                   {career.salaryMax.toLocaleString()} / year (estimate)
                 </p>

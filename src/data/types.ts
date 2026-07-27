@@ -53,3 +53,17 @@ export type SkillTreeNode = {
   tier: number;
   prerequisiteNodeId: number | null;
 };
+
+export type SubjectCategory = "math" | "science" | "language" | "other";
+
+export type Subject = {
+  id: number;
+  slug: string;
+  name: string;
+  category: SubjectCategory;
+};
+
+export type CareerRequirement = {
+  careerId: number;
+  subjectId: number;
+};

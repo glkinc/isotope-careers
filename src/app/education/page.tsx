@@ -24,8 +24,8 @@ export default async function EducationPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="text-3xl font-semibold text-slate-900">Education</h1>
-      <p className="mt-3 max-w-2xl text-slate-600">
+      <h1 className="text-3xl font-semibold text-brand">Education</h1>
+      <p className="mt-3 max-w-2xl text-brand/70">
         Programs that prepare you for careers in isotope production and use,
         from technical diplomas to graduate specializations.
       </p>
@@ -35,21 +35,21 @@ export default async function EducationPage() {
           <Link
             key={program.id}
             href={`/education/${program.slug}`}
-            className="rounded-lg border border-slate-200 p-6 hover:border-teal-600"
+            className="rounded-lg border border-brand/10 p-6 hover:border-primary"
           >
-            <span className="text-xs font-semibold uppercase tracking-wide text-teal-600">
+            <span className="text-xs font-semibold uppercase tracking-wide text-primary">
               {levelLabels[program.level] ?? program.level}
             </span>
-            <h2 className="mt-2 font-semibold text-slate-900">
+            <h2 className="mt-2 font-semibold text-brand">
               {program.name}
             </h2>
             {institution && (
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-brand/60">
                 {institution.name}
                 {institution.city ? ` — ${institution.city}, ${institution.province}` : ""}
               </p>
             )}
-            <p className="mt-2 text-sm text-slate-600">{program.description}</p>
+            <p className="mt-2 text-sm text-brand/70">{program.description}</p>
           </Link>
         ))}
       </div>
