@@ -1,41 +1,57 @@
 import type { Metadata } from "next";
 import {
   getCareerCategories,
-  getCareerRequirements,
+  getCareerEducationLinks,
   getCareers,
+  getEducationPrograms,
+  getInstitution,
+  getProgramRequirements,
   getSubjects,
 } from "@/data/queries";
-import PathFinderTool from "./PathFinderTool";
+import CareerFinderTool from "./CareerFinderTool";
 
 export const metadata: Metadata = {
-  title: "Find My Path",
+  title: "Find a Career",
   description:
-    "Enter the subjects and courses you've completed to find isotope-industry careers you qualify for, or are close to qualifying for.",
+    "Tell us where you are in school and we'll show you the isotope-industry programs and careers already within reach.",
 };
 
 export default async function PathFinderPage() {
-  const [subjects, careers, requirements, categories] = await Promise.all([
-    getSubjects(),
-    getCareers(),
-    getCareerRequirements(),
-    getCareerCategories(),
-  ]);
+  const [subjects, programs, requirements, careers, categories, links] =
+    await Promise.all([
+      getSubjects(),
+      getEducationPrograms(),
+      getProgramRequirements(),
+      getCareers(),
+      getCareerCategories(),
+      getCareerEducationLinks(),
+    ]);
+
+  const institutions = await Promise.all(
+    programs.map((p) => getInstitution(p.institutionId)),
+  );
+  const institutionByProgramId = new Map(
+    programs.map((p, i) => [p.id, institutions[i]]),
+  );
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="max-w-2xl text-4xl">Find your path</h1>
+      <h1 className="max-w-2xl text-4xl">Find a career</h1>
       <p className="mt-4 max-w-xl text-brand/80">
-        Most people have never heard of half these careers. Tell us what
-        you&apos;ve studied and we&apos;ll show you what&apos;s already
-        within reach.
+        Most people have never heard of half these careers. Tell us where
+        you&apos;re at and we&apos;ll show you what&apos;s already within
+        reach.
       </p>
 
       <div className="mt-10">
-        <PathFinderTool
+        <CareerFinderTool
           subjects={subjects}
-          careers={careers}
+          programs={programs}
           requirements={requirements}
+          careers={careers}
           categories={categories}
+          careerEducationLinks={links}
+          institutionByProgramId={Object.fromEntries(institutionByProgramId)}
         />
       </div>
     </div>

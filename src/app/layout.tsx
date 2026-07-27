@@ -43,9 +43,9 @@ export const viewport: Viewport = {
 };
 
 const navLinks = [
-  { href: "/path-finder", label: "Find My Path" },
-  { href: "/careers", label: "Careers" },
-  { href: "/education", label: "Education" },
+  { href: "/path-finder", label: "Find a Career" },
+  { href: "/careers", label: "All Careers" },
+  { href: "/education", label: "Browse Programs" },
   { href: "/about", label: "About" },
 ];
 
@@ -59,8 +59,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-white text-brand font-sans">
         <Header navLinks={navLinks} />
         <main className="flex-1">{children}</main>
-        <footer className="border-t border-brand/10 bg-white py-12">
-          <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 text-center">
+        <footer className="border-t border-brand/10 bg-white py-12 print:hidden">
+          <div className="mx-auto flex max-w-5xl flex-col items-start gap-4 px-6 text-left">
             <Image
               src="/logo-full.svg"
               alt="Sabertree"

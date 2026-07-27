@@ -1,14 +1,15 @@
 // Placeholder content for the isotope-careers MVP.
 // Institution names are real Canadian institutions with genuinely related programs,
-// but program durations/requirements and salary ranges here are illustrative estimates,
-// not sourced figures — verify before treating any of this as authoritative.
+// but program durations/requirements, program URLs, and salary ranges here are
+// illustrative estimates, not sourced figures — verify before treating any of
+// this as authoritative.
 
 import type {
   Career,
   CareerCategory,
-  CareerRequirement,
   EducationProgram,
   Institution,
+  ProgramRequirement,
   SkillTreeNode,
   Subject,
 } from "./types";
@@ -202,6 +203,7 @@ export const educationPrograms: EducationProgram[] = [
       "Undergraduate engineering program covering reactor physics, thermodynamics, and nuclear systems design.",
     duration: "~4 years",
     requirements: "High school diploma with strong math/physics background",
+    programUrl: "https://ontariotechu.ca/programs/engineering/nuclear-engineering",
   },
   {
     id: 2,
@@ -213,6 +215,7 @@ export const educationPrograms: EducationProgram[] = [
       "College diploma preparing graduates for reactor operations and radiation-monitoring technician roles.",
     duration: "~2-3 years",
     requirements: "High school diploma with math/science credits",
+    programUrl: null,
   },
   {
     id: 3,
@@ -224,6 +227,7 @@ export const educationPrograms: EducationProgram[] = [
       "Undergraduate engineering physics followed by graduate specialization in medical physics for nuclear medicine roles.",
     duration: "~4 years undergrad + 2-3 years graduate",
     requirements: "Undergraduate physics/engineering degree for graduate entry",
+    programUrl: "https://engphys.utoronto.ca",
   },
   {
     id: 4,
@@ -235,6 +239,7 @@ export const educationPrograms: EducationProgram[] = [
       "Chemistry degree with coursework and research opportunities in radiochemistry, supported by on-campus reactor access.",
     duration: "~4 years",
     requirements: "High school diploma with strong chemistry/math background",
+    programUrl: "https://chemistry.mcmaster.ca",
   },
   {
     id: 5,
@@ -246,6 +251,7 @@ export const educationPrograms: EducationProgram[] = [
       "Short professional certificate covering radiation protection principles and regulatory compliance.",
     duration: "~3-6 months",
     requirements: "Typically requires a related science/engineering background",
+    programUrl: null,
   },
 ];
 
@@ -259,7 +265,7 @@ export const careerEducationLinks: { careerSlug: string; programSlug: string }[]
 ];
 
 // High-school-level subjects a user might have completed. Used by the
-// path-finder tool to match education history against career requirements.
+// career-finder tool to match education history against program requirements.
 export const subjects: Subject[] = [
   { id: 1, slug: "math", name: "Math", category: "math" },
   { id: 2, slug: "physics", name: "Physics", category: "science" },
@@ -272,30 +278,26 @@ export const subjects: Subject[] = [
   { id: 9, slug: "technology-shop", name: "Technology / Shop", category: "other" },
 ];
 
-// Subjects required to be a realistic candidate for each career. Intentionally
-// illustrative, not sourced from real program calendars.
-export const careerRequirements: CareerRequirement[] = [
-  // Nuclear Reactor Operator
-  { careerId: 1, subjectId: 1 }, // Math
-  { careerId: 1, subjectId: 2 }, // Physics
-  // Nuclear Engineer
-  { careerId: 2, subjectId: 1 }, // Math
-  { careerId: 2, subjectId: 2 }, // Physics
-  { careerId: 2, subjectId: 3 }, // Chemistry
-  // Radiopharmaceutical Chemist
-  { careerId: 3, subjectId: 3 }, // Chemistry
-  { careerId: 3, subjectId: 1 }, // Math
-  { careerId: 3, subjectId: 4 }, // Biology
-  // Medical Physicist (Nuclear Medicine)
-  { careerId: 4, subjectId: 1 }, // Math
-  { careerId: 4, subjectId: 2 }, // Physics
-  { careerId: 4, subjectId: 4 }, // Biology
-  // Radiation Safety Officer
-  { careerId: 5, subjectId: 2 }, // Physics
-  { careerId: 5, subjectId: 3 }, // Chemistry
-  // Isotope Logistics Specialist
-  { careerId: 6, subjectId: 1 }, // Math
-  { careerId: 6, subjectId: 5 }, // English
+// Subjects a high schooler realistically needs to be a strong candidate for
+// each program. Intentionally illustrative, not sourced from real program
+// admission requirements.
+export const programRequirements: ProgramRequirement[] = [
+  // Nuclear Engineering (BEng)
+  { programId: 1, subjectId: 1 }, // Math
+  { programId: 1, subjectId: 2 }, // Physics
+  // Nuclear/Radiation Technologist Diploma
+  { programId: 2, subjectId: 1 }, // Math
+  { programId: 2, subjectId: 2 }, // Physics
+  // Engineering Physics / Medical Physics stream
+  { programId: 3, subjectId: 1 }, // Math
+  { programId: 3, subjectId: 2 }, // Physics
+  { programId: 3, subjectId: 4 }, // Biology
+  // Chemistry (Radiochemistry focus)
+  { programId: 4, subjectId: 3 }, // Chemistry
+  { programId: 4, subjectId: 1 }, // Math
+  // Radiation Safety Certificate
+  { programId: 5, subjectId: 2 }, // Physics
+  { programId: 5, subjectId: 3 }, // Chemistry
 ];
 
 export const skillTreeNodes: SkillTreeNode[] = [

@@ -8,6 +8,7 @@ import {
   getSkillTreeForCareer,
 } from "@/data/queries";
 import Button from "@/components/Button";
+import PageActions from "@/components/PageActions";
 
 export async function generateStaticParams() {
   const careers = await getCareers();
@@ -41,14 +42,19 @@ export default async function CareerDetailPage({
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
-      {category && (
-        <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">
-          {category.name}
-        </span>
-      )}
-      <h1 className="mt-2 text-3xl font-semibold text-brand">
-        {career.title}
-      </h1>
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          {category && (
+            <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">
+              {category.name}
+            </span>
+          )}
+          <h1 className="mt-2 text-3xl font-semibold text-brand">
+            {career.title}
+          </h1>
+        </div>
+        <PageActions title={career.title} />
+      </div>
       <p className="mt-4 text-lg text-brand/80">{career.description}</p>
 
       {career.salaryMin && career.salaryMax && (

@@ -1,25 +1,27 @@
-import Link from "next/link";
-import { getEducationPrograms, getInstitution } from "@/data/queries";
+import {
+  getCareerEducationLinks,
+  getCareers,
+  getEducationPrograms,
+  getInstitution,
+} from "@/data/queries";
+import ProgramsBrowser from "./ProgramsBrowser";
 
 export const metadata = {
   title: "Education",
 };
 
-const levelLabels: Record<string, string> = {
-  high_school: "High School",
-  certificate: "Certificate",
-  diploma: "Diploma",
-  undergraduate: "Undergraduate",
-  graduate: "Graduate",
-};
-
 export default async function EducationPage() {
-  const programs = await getEducationPrograms();
-  const withInstitutions = await Promise.all(
-    programs.map(async (program) => ({
-      program,
-      institution: await getInstitution(program.institutionId),
-    })),
+  const [programs, careers, careerEducationLinks] = await Promise.all([
+    getEducationPrograms(),
+    getCareers(),
+    getCareerEducationLinks(),
+  ]);
+
+  const institutions = await Promise.all(
+    programs.map((p) => getInstitution(p.institutionId)),
+  );
+  const institutionsById = Object.fromEntries(
+    programs.map((p, i) => [p.institutionId, institutions[i]]),
   );
 
   return (
@@ -30,29 +32,12 @@ export default async function EducationPage() {
         from technical diplomas to graduate specializations.
       </p>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        {withInstitutions.map(({ program, institution }) => (
-          <Link
-            key={program.id}
-            href={`/education/${program.slug}`}
-            className="rounded-lg border border-brand/10 p-6 hover:border-primary"
-          >
-            <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">
-              {levelLabels[program.level] ?? program.level}
-            </span>
-            <h2 className="mt-2 font-semibold text-brand">
-              {program.name}
-            </h2>
-            {institution && (
-              <p className="mt-1 text-sm text-brand/80">
-                {institution.name}
-                {institution.city ? ` — ${institution.city}, ${institution.province}` : ""}
-              </p>
-            )}
-            <p className="mt-2 text-sm text-brand/80">{program.description}</p>
-          </Link>
-        ))}
-      </div>
+      <ProgramsBrowser
+        programs={programs}
+        institutionsById={institutionsById}
+        careers={careers}
+        careerEducationLinks={careerEducationLinks}
+      />
     </div>
   );
 }

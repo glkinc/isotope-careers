@@ -25,7 +25,7 @@ export default function Header({ navLinks }: { navLinks: NavLink[] }) {
   }, []);
 
   return (
-    <header className="relative z-50 bg-brand">
+    <header className="relative z-50 bg-brand print:hidden">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
         <Link href="/" className="block" onClick={() => setOpen(false)}>
           <Image
@@ -55,7 +55,7 @@ export default function Header({ navLinks }: { navLinks: NavLink[] }) {
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-[6px] md:hidden"
+          className="relative z-50 flex h-10 w-10 cursor-pointer flex-col items-center justify-center gap-[6px] md:hidden"
         >
           <span
             aria-hidden

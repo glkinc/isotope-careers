@@ -5,19 +5,19 @@
 import {
   careerCategories,
   careerEducationLinks,
-  careerRequirements,
   careers,
   educationPrograms,
   institutions,
+  programRequirements,
   skillTreeNodes,
   subjects,
 } from "./seed-data";
 import type {
   Career,
   CareerCategory,
-  CareerRequirement,
   EducationProgram,
   Institution,
+  ProgramRequirement,
   SkillTreeNode,
   Subject,
 } from "./types";
@@ -86,6 +86,12 @@ export async function getSubjects(): Promise<Subject[]> {
   return subjects;
 }
 
-export async function getCareerRequirements(): Promise<CareerRequirement[]> {
-  return careerRequirements;
+export async function getProgramRequirements(): Promise<ProgramRequirement[]> {
+  return programRequirements;
+}
+
+export async function getCareerEducationLinks(): Promise<
+  { careerSlug: string; programSlug: string }[]
+> {
+  return careerEducationLinks;
 }

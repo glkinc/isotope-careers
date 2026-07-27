@@ -1,12 +1,27 @@
 import Link from "next/link";
-import { getCareerCategories, getCareers } from "@/data/queries";
+import { getCareerCategories } from "@/data/queries";
 import Button from "@/components/Button";
 
+const steps = [
+  {
+    title: "Tell us where you're at",
+    description:
+      "A high school student, or already in (or done with) post-secondary — either way, we start from what you've actually got.",
+  },
+  {
+    title: "We match you to what's real",
+    description:
+      "High school courses point you to programs; a program or credential points you to careers you can walk into.",
+  },
+  {
+    title: "See exactly what's missing",
+    description:
+      "Close but not quite there? We'll tell you precisely what to add to qualify.",
+  },
+];
+
 export default async function HomePage() {
-  const [categories, careers] = await Promise.all([
-    getCareerCategories(),
-    getCareers(),
-  ]);
+  const categories = await getCareerCategories();
 
   return (
     <div>
@@ -21,7 +36,7 @@ export default async function HomePage() {
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Button href="/path-finder" variant="solid">
-            Find my path
+            Find a career
           </Button>
           <Button href="/careers" variant="outline">
             Explore all careers
@@ -31,42 +46,50 @@ export default async function HomePage() {
 
       <section className="border-t border-brand/10 bg-[#f1f1f1]">
         <div className="mx-auto max-w-5xl px-6 py-16">
-          <h2 className="text-xl font-semibold text-brand">
-            Career areas
-          </h2>
+          <h2 className="text-xl font-semibold text-brand">Career areas</h2>
           <div className="mt-6 grid gap-6 sm:grid-cols-3">
             {categories.map((category) => (
-              <div
+              <Link
                 key={category.id}
-                className="rounded-lg border border-brand/10 bg-white p-6"
+                href={`/careers?category=${category.slug}`}
+                className="group rounded-lg border border-brand/10 bg-white p-6 transition-colors duration-200 hover:border-primary"
               >
-                <h3 className="font-semibold text-brand">
-                  {category.name}
-                </h3>
+                <h3 className="font-semibold text-brand">{category.name}</h3>
                 <p className="mt-2 text-sm text-brand/80">
                   {category.description}
                 </p>
-              </div>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-primary-text">
+                  See careers
+                  <span
+                    aria-hidden
+                    className="transition-transform duration-200 group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-16">
-        <h2 className="text-xl font-semibold text-brand">
-          Featured careers
-        </h2>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          {careers.slice(0, 4).map((career) => (
-            <Link
-              key={career.id}
-              href={`/careers/${career.slug}`}
-              className="rounded-lg border border-brand/10 p-6 hover:border-primary"
-            >
-              <h3 className="font-semibold text-brand">{career.title}</h3>
-              <p className="mt-2 text-sm text-brand/80">{career.summary}</p>
-            </Link>
+        <h2 className="text-xl font-semibold text-brand">How it works</h2>
+        <div className="mt-6 grid gap-6 sm:grid-cols-3">
+          {steps.map((step, i) => (
+            <div key={step.title}>
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-text text-sm font-bold text-white">
+                {i + 1}
+              </span>
+              <h3 className="mt-4 font-semibold text-brand">{step.title}</h3>
+              <p className="mt-2 text-sm text-brand/80">{step.description}</p>
+            </div>
           ))}
+        </div>
+        <div className="mt-10">
+          <Button href="/path-finder" variant="solid">
+            Find a career
+          </Button>
         </div>
       </section>
     </div>

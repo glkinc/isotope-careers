@@ -53,3 +53,24 @@ h6 {
     transform: translateY(0);
   }
 }
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  main {
+    max-width: none !important;
+  }
+}

@@ -43,6 +43,9 @@ export type EducationProgram = {
   description: string;
   duration: string | null;
   requirements: string | null;
+  // Direct link to this program's page on the institution's website (falls
+  // back to the institution's homepage if not set).
+  programUrl: string | null;
 };
 
 export type SkillTreeNode = {
@@ -63,7 +66,7 @@ export type Subject = {
   category: SubjectCategory;
 };
 
-export type CareerRequirement = {
-  careerId: number;
+export type ProgramRequirement = {
+  programId: number;
   subjectId: number;
 };

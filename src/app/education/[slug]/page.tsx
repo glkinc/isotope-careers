@@ -6,6 +6,7 @@ import {
   getEducationPrograms,
   getInstitution,
 } from "@/data/queries";
+import PageActions from "@/components/PageActions";
 
 const levelLabels: Record<string, string> = {
   high_school: "High School",
@@ -44,14 +45,21 @@ export default async function EducationDetailPage({
     getCareersForProgram(program.slug),
   ]);
 
+  const schoolLink = program.programUrl ?? institution?.website ?? null;
+
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
-      <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">
-        {levelLabels[program.level] ?? program.level}
-      </span>
-      <h1 className="mt-2 text-3xl font-semibold text-brand">
-        {program.name}
-      </h1>
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">
+            {levelLabels[program.level] ?? program.level}
+          </span>
+          <h1 className="mt-2 text-3xl font-semibold text-brand">
+            {program.name}
+          </h1>
+        </div>
+        <PageActions title={program.name} />
+      </div>
       {institution && (
         <p className="mt-2 text-brand/80">
           {institution.name}
@@ -75,15 +83,28 @@ export default async function EducationDetailPage({
         )}
       </dl>
 
-      {institution?.website && (
-        <a
-          href={institution.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 inline-block text-sm font-medium text-primary-text hover:underline"
-        >
-          Visit {institution.name} →
-        </a>
+      {institution && (
+        <section className="mt-10">
+          <h2 className="text-lg font-semibold text-brand">School</h2>
+          <div className="mt-3 rounded-lg border border-brand/10 p-4">
+            <p className="font-semibold text-brand">{institution.name}</p>
+            {institution.city && (
+              <p className="mt-1 text-sm text-brand/80">
+                {institution.city}, {institution.province}
+              </p>
+            )}
+            {schoolLink && (
+              <a
+                href={schoolLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-block text-sm font-bold text-primary-text hover:underline"
+              >
+                View this program at {institution.name} →
+              </a>
+            )}
+          </div>
+        </section>
       )}
 
       {relatedCareers.length > 0 && (

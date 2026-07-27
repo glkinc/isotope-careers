@@ -1,30 +1,32 @@
-import type { Career, CareerRequirement, Subject } from "@/data/types";
+import type { Subject } from "@/data/types";
 
-export type CareerMatch = {
-  career: Career;
+export type SubjectMatch<T> = {
+  item: T;
   requiredSubjects: Subject[];
   matchedSubjects: Subject[];
   missingSubjects: Subject[];
   status: "match" | "close";
 };
 
-// Compares a user's completed subjects against each career's requirements.
-// Careers with zero overlap are dropped entirely - the goal is to surface
-// careers the user is either qualified for or one step away from.
-export function matchCareers(
+type Requirement = { subjectId: number };
+
+// Compares a user's completed subjects against each item's (career or
+// program) requirements. Items with zero overlap are dropped entirely - the
+// goal is to surface options the user is either qualified for or one step
+// away from.
+export function matchBySubjects<T extends { id: number }>(
   selectedSubjectIds: number[],
-  careers: Career[],
-  requirements: CareerRequirement[],
+  items: T[],
+  requirementsByItemId: (item: T) => Requirement[],
   subjects: Subject[],
-): CareerMatch[] {
+): SubjectMatch<T>[] {
   const subjectById = new Map(subjects.map((s) => [s.id, s]));
   const selected = new Set(selectedSubjectIds);
 
-  const results: CareerMatch[] = [];
+  const results: SubjectMatch<T>[] = [];
 
-  for (const career of careers) {
-    const requiredSubjects = requirements
-      .filter((r) => r.careerId === career.id)
+  for (const item of items) {
+    const requiredSubjects = requirementsByItemId(item)
       .map((r) => subjectById.get(r.subjectId))
       .filter((s): s is Subject => Boolean(s));
 
@@ -36,7 +38,7 @@ export function matchCareers(
     if (matchedSubjects.length === 0) continue;
 
     results.push({
-      career,
+      item,
       requiredSubjects,
       matchedSubjects,
       missingSubjects,
