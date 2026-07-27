@@ -108,7 +108,7 @@ export default function PathFinderTool({
                   className="flex w-full items-center justify-between px-4 py-2 text-left text-brand hover:bg-primary/10"
                 >
                   <span>{s.name}</span>
-                  <span className="text-xs uppercase text-brand/50">
+                  <span className="text-xs uppercase text-brand/80">
                     {s.category}
                   </span>
                 </button>
@@ -123,14 +123,14 @@ export default function PathFinderTool({
           {selectedSubjects.map((s) => (
             <span
               key={s.id}
-              className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-sm font-bold text-primary"
+              className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-sm font-bold text-primary-text"
             >
               {s.name}
               <button
                 type="button"
                 onClick={() => removeSubject(s.id)}
                 aria-label={`Remove ${s.name}`}
-                className="text-primary/70 hover:text-accent"
+                className="text-primary-text/70 hover:text-accent-text"
               >
                 &times;
               </button>
@@ -141,17 +141,17 @@ export default function PathFinderTool({
 
       <div className="mt-12">
         {selectedSubjects.length === 0 && (
-          <p className="text-brand/70">
+          <p className="text-brand/80">
             Add a few subjects above to see which isotope careers fit — and
             which ones are within reach.
           </p>
         )}
 
         {selectedSubjects.length > 0 && matches.length === 0 && (
-          <p className="text-brand/70">
+          <p className="text-brand/80">
             No careers overlap with what you&apos;ve entered yet. Try adding
             another subject, or{" "}
-            <Link href="/careers" className="text-primary hover:text-accent">
+            <Link href="/careers" className="text-primary-text hover:text-accent-text">
               browse all careers
             </Link>
             .
@@ -170,14 +170,14 @@ export default function PathFinderTool({
                   href={`/careers/${m.career.slug}`}
                   className="rounded-lg border border-brand/10 p-6 hover:border-primary"
                 >
-                  <p className="mb-2 text-xs font-bold uppercase tracking-wide text-primary">
+                  <p className="mb-2 text-xs font-bold uppercase tracking-wide text-primary-text">
                     {categoryById.get(m.career.categoryId)?.name}
                   </p>
                   <h3 className="font-bold text-brand">{m.career.title}</h3>
-                  <p className="mt-2 text-sm text-brand/70">
+                  <p className="mt-2 text-sm text-brand/80">
                     {m.career.summary}
                   </p>
-                  <p className="mt-3 text-sm font-bold text-accent">
+                  <p className="mt-3 text-sm font-bold text-accent-text">
                     ✓ You have everything this career typically needs
                   </p>
                 </Link>
@@ -198,16 +198,16 @@ export default function PathFinderTool({
                   href={`/careers/${m.career.slug}`}
                   className="rounded-lg border border-brand/10 p-6 hover:border-primary"
                 >
-                  <p className="mb-2 text-xs font-bold uppercase tracking-wide text-primary">
+                  <p className="mb-2 text-xs font-bold uppercase tracking-wide text-primary-text">
                     {categoryById.get(m.career.categoryId)?.name}
                   </p>
                   <h3 className="font-bold text-brand">{m.career.title}</h3>
-                  <p className="mt-2 text-sm text-brand/70">
+                  <p className="mt-2 text-sm text-brand/80">
                     {m.career.summary}
                   </p>
                   <p className="mt-3 text-sm text-brand">
                     You&apos;re close! Just add{" "}
-                    <span className="font-bold text-primary">
+                    <span className="font-bold text-primary-text">
                       {m.missingSubjects.map((s) => s.name).join(", ")}
                     </span>{" "}
                     to qualify.

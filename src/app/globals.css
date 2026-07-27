@@ -10,15 +10,20 @@
   --color-foreground: var(--foreground);
   --color-brand: #45434c;
   --color-primary: #8570f2;
+  /* Accessible text/icon variants: the base primary/accent fail WCAG AA
+     contrast as text or fine detail on white (3.75:1 / 1.46:1), so any
+     text, link, or small-icon usage should reach for these instead. */
+  --color-primary-text: #5b45c7;
   --color-accent: #08f48e;
-  --font-sans: var(--font-open-sans);
+  --color-accent-text: #0a7a4c;
+  --font-sans: var(--font-cabin);
   --font-heading: var(--font-cabin);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-open-sans), sans-serif;
+  font-family: var(--font-cabin), sans-serif;
   font-size: 18px;
   line-height: 28px;
 }
@@ -30,10 +35,21 @@ h4,
 h5,
 h6 {
   font-family: var(--font-cabin), sans-serif;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 ::selection {
   background: #8570f2;
   color: #ffffff;
+}
+
+@keyframes menu-link-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

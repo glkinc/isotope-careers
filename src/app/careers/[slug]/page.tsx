@@ -7,6 +7,7 @@ import {
   getProgramsForCareer,
   getSkillTreeForCareer,
 } from "@/data/queries";
+import Button from "@/components/Button";
 
 export async function generateStaticParams() {
   const careers = await getCareers();
@@ -41,17 +42,17 @@ export default async function CareerDetailPage({
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
       {category && (
-        <span className="text-xs font-semibold uppercase tracking-wide text-primary">
+        <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">
           {category.name}
         </span>
       )}
       <h1 className="mt-2 text-3xl font-semibold text-brand">
         {career.title}
       </h1>
-      <p className="mt-4 text-lg text-brand/70">{career.description}</p>
+      <p className="mt-4 text-lg text-brand/80">{career.description}</p>
 
       {career.salaryMin && career.salaryMax && (
-        <p className="mt-4 text-sm text-brand/60">
+        <p className="mt-4 text-sm text-brand/80">
           Estimated salary range: ${career.salaryMin.toLocaleString()} – $
           {career.salaryMax.toLocaleString()} / year
         </p>
@@ -62,7 +63,7 @@ export default async function CareerDetailPage({
           <h2 className="text-lg font-semibold text-brand">
             Responsibilities
           </h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-brand/70">
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-brand/80">
             {career.responsibilities.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -75,7 +76,7 @@ export default async function CareerDetailPage({
           <h2 className="text-lg font-semibold text-brand">
             Day to day
           </h2>
-          <p className="mt-3 text-brand/70">{career.dayToDay}</p>
+          <p className="mt-3 text-brand/80">{career.dayToDay}</p>
         </section>
       )}
 
@@ -89,7 +90,7 @@ export default async function CareerDetailPage({
               <Link
                 key={program.id}
                 href={`/education/${program.slug}`}
-                className="rounded-md border border-brand/10 px-4 py-2 text-sm text-brand/80 hover:border-primary hover:text-accent"
+                className="rounded-md border border-brand/10 px-4 py-2 text-sm text-brand/80 hover:border-primary hover:text-accent-text"
               >
                 {program.name}
               </Link>
@@ -100,12 +101,7 @@ export default async function CareerDetailPage({
 
       {skillTree.length > 0 && (
         <section className="mt-10">
-          <Link
-            href={`/skill-tree/${career.slug}`}
-            className="inline-block rounded-md bg-primary px-5 py-3 text-sm font-semibold text-white hover:bg-accent"
-          >
-            View skill tree →
-          </Link>
+          <Button href={`/skill-tree/${career.slug}`}>View skill tree</Button>
         </section>
       )}
     </div>

@@ -38,26 +38,26 @@ export default async function SkillTreePage({
     <div className="mx-auto max-w-3xl px-6 py-16">
       <Link
         href={`/careers/${career.slug}`}
-        className="text-sm font-medium text-primary hover:underline"
+        className="text-sm font-medium text-primary-text hover:underline"
       >
         ← Back to {career.title}
       </Link>
       <h1 className="mt-4 text-3xl font-semibold text-brand">
         Skill tree: {career.title}
       </h1>
-      <p className="mt-3 text-brand/70">
+      <p className="mt-3 text-brand/80">
         A step-by-step path from foundational education to this role.
       </p>
 
       {tiers.length === 0 ? (
-        <p className="mt-10 text-brand/60">
+        <p className="mt-10 text-brand/80">
           A skill tree for this career hasn&apos;t been added yet.
         </p>
       ) : (
         <ol className="mt-10 space-y-6">
           {tiers.map(([tier, tierNodes]) => (
             <li key={tier} className="relative pl-8">
-              <span className="absolute left-0 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-semibold text-white">
+              <span className="absolute left-0 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary-text text-xs font-semibold text-white">
                 {tier}
               </span>
               {tier < tiers.length && (
@@ -76,7 +76,7 @@ export default async function SkillTreePage({
                       {node.title}
                     </h2>
                     {node.description && (
-                      <p className="mt-1 text-sm text-brand/70">
+                      <p className="mt-1 text-sm text-brand/80">
                         {node.description}
                       </p>
                     )}
