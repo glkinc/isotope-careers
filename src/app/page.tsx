@@ -62,30 +62,30 @@ export default async function HomePage() {
 
         <div
           aria-hidden
-          className="pointer-events-none absolute top-6 right-12 hidden flex-col items-end gap-2 opacity-90 lg:flex"
+          className="pointer-events-none absolute top-6 right-12 hidden flex-col items-end opacity-90 lg:flex"
         >
           <Image
             src="/chevrons.svg"
             alt=""
-            width={28}
-            height={41}
+            width={56}
+            height={82}
             className="animate-chevron-in"
             style={{ animationDelay: "150ms" }}
           />
           <Image
             src="/chevrons.svg"
             alt=""
-            width={28}
-            height={41}
-            className="animate-chevron-in"
+            width={56}
+            height={82}
+            className="animate-chevron-in -mt-10"
             style={{ animationDelay: "300ms" }}
           />
           <Image
             src="/chevrons.svg"
             alt=""
-            width={28}
-            height={41}
-            className="animate-chevron-in"
+            width={56}
+            height={82}
+            className="animate-chevron-in -mt-10"
             style={{ animationDelay: "450ms" }}
           />
         </div>
