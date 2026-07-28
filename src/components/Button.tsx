@@ -16,13 +16,11 @@ const variants = {
   solid: {
     button:
       "bg-primary-text text-white shadow-[0_2px_10px_rgba(0,0,0,0.18)] hover:bg-primary-text hover:shadow-[0_6px_16px_rgba(0,0,0,0.24)]",
-    divider: "bg-white/25",
     chevron: "",
   },
   outline: {
     button:
       "border border-brand/15 bg-transparent text-brand shadow-none hover:border-transparent hover:bg-white hover:shadow-[0_6px_16px_rgba(0,0,0,0.16)]",
-    divider: "bg-brand/15",
     chevron: "group-hover:translate-x-1",
   },
 };
@@ -44,7 +42,6 @@ export default function Button({
       {...props}
     >
       <span>{children}</span>
-      <span aria-hidden className={`h-5 w-px shrink-0 ${styles.divider}`} />
       <ChevronRight
         aria-hidden
         className={`h-4 w-4 shrink-0 transition-transform duration-300 ease-out ${styles.chevron}`}
