@@ -25,13 +25,7 @@ export default async function EducationPage() {
   );
 
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="text-3xl font-semibold text-brand">Education</h1>
-      <p className="mt-3 max-w-2xl text-brand/80">
-        Programs that prepare you for careers in isotope production and use,
-        from technical diplomas to graduate specializations.
-      </p>
-
+    <div className="mx-auto max-w-5xl px-6 py-10 sm:py-16">
       <ProgramsBrowser
         programs={programs}
         institutionsById={institutionsById}

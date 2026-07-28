@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CalendarClock, ClipboardList, DollarSign, GraduationCap } from "lucide-react";
 import {
   getCareerBySlug,
   getCareerCategory,
@@ -41,8 +42,8 @@ export default async function CareerDetailPage({
   ]);
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16">
-      <div className="flex items-start justify-between gap-4">
+    <div className="mx-auto max-w-3xl px-6 py-10 sm:py-16">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           {category && (
             <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">
@@ -58,15 +59,17 @@ export default async function CareerDetailPage({
       <p className="mt-4 text-lg text-brand/80">{career.description}</p>
 
       {career.salaryMin && career.salaryMax && (
-        <p className="mt-4 text-sm text-brand/80">
+        <div className="mt-4 flex items-center gap-2 rounded-lg bg-[#f6f6f7] p-4 text-sm text-brand/80">
+          <DollarSign aria-hidden className="h-4 w-4 shrink-0 text-primary-text" />
           Estimated salary range: ${career.salaryMin.toLocaleString()} – $
           {career.salaryMax.toLocaleString()} / year
-        </p>
+        </div>
       )}
 
       {career.responsibilities.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-lg font-semibold text-brand">
+          <h2 className="flex items-center gap-2 text-lg font-semibold text-brand">
+            <ClipboardList aria-hidden className="h-5 w-5 text-primary-text" />
             Responsibilities
           </h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-brand/80">
@@ -79,7 +82,8 @@ export default async function CareerDetailPage({
 
       {career.dayToDay && (
         <section className="mt-10">
-          <h2 className="text-lg font-semibold text-brand">
+          <h2 className="flex items-center gap-2 text-lg font-semibold text-brand">
+            <CalendarClock aria-hidden className="h-5 w-5 text-primary-text" />
             Day to day
           </h2>
           <p className="mt-3 text-brand/80">{career.dayToDay}</p>
@@ -88,7 +92,8 @@ export default async function CareerDetailPage({
 
       {programs.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-lg font-semibold text-brand">
+          <h2 className="flex items-center gap-2 text-lg font-semibold text-brand">
+            <GraduationCap aria-hidden className="h-5 w-5 text-primary-text" />
             Education paths
           </h2>
           <div className="mt-3 flex flex-wrap gap-3">
@@ -96,7 +101,7 @@ export default async function CareerDetailPage({
               <Link
                 key={program.id}
                 href={`/education/${program.slug}`}
-                className="rounded-md border border-brand/10 px-4 py-2 text-sm text-brand/80 hover:border-primary hover:text-accent-text"
+                className="rounded-md border border-brand/10 bg-white px-4 py-2 text-sm text-brand/80 transition-colors duration-200 hover:border-primary-text hover:bg-primary-text hover:text-white"
               >
                 {program.name}
               </Link>
@@ -107,7 +112,12 @@ export default async function CareerDetailPage({
 
       {skillTree.length > 0 && (
         <section className="mt-10">
-          <Button href={`/skill-tree/${career.slug}`}>View skill tree</Button>
+          <Button
+            href={`/skill-tree/${career.slug}`}
+            className="w-full justify-between sm:w-auto sm:justify-start"
+          >
+            View skill tree
+          </Button>
         </section>
       )}
     </div>

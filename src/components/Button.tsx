@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 import type { ComponentPropsWithoutRef } from "react";
 
 type ButtonProps = {
@@ -9,7 +10,7 @@ type ButtonProps = {
 } & Omit<ComponentPropsWithoutRef<typeof Link>, "href" | "children">;
 
 const base =
-  "group inline-flex items-center gap-4 rounded-xl px-6 py-3.5 font-bold transition-all duration-300 ease-out hover:-translate-y-0.5";
+  "group inline-flex items-center gap-3 sm:gap-4 rounded-xl px-4 py-3 sm:px-6 sm:py-3.5 text-sm sm:text-base font-bold transition-all duration-300 ease-out hover:-translate-y-0.5";
 
 const variants = {
   solid: {
@@ -43,21 +44,11 @@ export default function Button({
       {...props}
     >
       <span>{children}</span>
-      <span aria-hidden className={`h-5 w-px ${styles.divider}`} />
-      <svg
+      <span aria-hidden className={`h-5 w-px shrink-0 ${styles.divider}`} />
+      <ChevronRight
         aria-hidden
-        viewBox="0 0 12 20"
-        className={`h-4 w-2.5 shrink-0 transition-transform duration-300 ease-out ${styles.chevron}`}
-      >
-        <path
-          d="M1.5 1.5L9.5 10L1.5 18.5"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+        className={`h-4 w-4 shrink-0 transition-transform duration-300 ease-out ${styles.chevron}`}
+      />
     </Link>
   );
 }

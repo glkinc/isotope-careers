@@ -35,7 +35,7 @@ export default async function SkillTreePage({
   const tiers = groupByTier(nodes);
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16">
+    <div className="mx-auto max-w-3xl px-6 py-10 sm:py-16">
       <Link
         href={`/careers/${career.slug}`}
         className="text-sm font-medium text-primary-text hover:underline"

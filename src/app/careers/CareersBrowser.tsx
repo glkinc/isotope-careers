@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { Search } from "lucide-react";
 import type { Career, CareerCategory } from "@/data/types";
 
 type Props = {
@@ -25,35 +26,52 @@ export default function CareersBrowser({
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return careers.filter((career) => {
-      const category = categoryById.get(career.categoryId);
-      const matchesCategory =
-        categorySlug === "all" || category?.slug === categorySlug;
-      const matchesQuery =
-        !q ||
-        career.title.toLowerCase().includes(q) ||
-        career.summary.toLowerCase().includes(q);
-      return matchesCategory && matchesQuery;
-    });
+    return careers
+      .filter((career) => {
+        const category = categoryById.get(career.categoryId);
+        const matchesCategory =
+          categorySlug === "all" || category?.slug === categorySlug;
+        const matchesQuery =
+          !q ||
+          career.title.toLowerCase().includes(q) ||
+          career.summary.toLowerCase().includes(q);
+        return matchesCategory && matchesQuery;
+      })
+      .sort((a, b) => a.title.localeCompare(b.title));
   }, [careers, categoryById, categorySlug, query]);
 
   return (
     <div>
-      <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search careers..."
-          aria-label="Search careers"
-          className="w-full max-w-sm rounded-md border border-brand/20 px-4 py-2.5 text-brand outline-none focus:border-primary sm:w-auto"
-        />
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <h1 className="text-3xl font-semibold text-brand">Careers</h1>
+          <p className="mt-3 max-w-2xl text-brand/80">
+            Careers in isotope production and use, across reactor operations,
+            radiopharmaceutical sciences, and regulatory & safety.
+          </p>
+        </div>
+        <div className="relative w-full sm:w-64 sm:shrink-0">
+          <Search
+            aria-hidden
+            className="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-brand/50"
+          />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search careers..."
+            aria-label="Search careers"
+            className="w-full rounded-md border border-brand/20 py-2.5 pl-9 pr-4 text-brand outline-none focus:border-primary"
+          />
+        </div>
+      </div>
 
-        <div className="flex flex-wrap gap-2">
+      <div className="relative mt-6">
+        <div className="scrollbar-none flex gap-2 overflow-x-auto pr-8 pb-1">
           <button
             type="button"
             onClick={() => setCategorySlug("all")}
-            className={`cursor-pointer rounded-full px-4 py-1.5 text-sm font-bold transition-colors duration-200 ${
+            className={`shrink-0 cursor-pointer rounded-full px-4 py-1.5 text-sm font-bold whitespace-nowrap transition-colors duration-200 ${
               categorySlug === "all"
                 ? "bg-primary-text text-white"
                 : "bg-brand/5 text-brand hover:bg-primary/10"
@@ -66,7 +84,7 @@ export default function CareersBrowser({
               key={category.id}
               type="button"
               onClick={() => setCategorySlug(category.slug)}
-              className={`cursor-pointer rounded-full px-4 py-1.5 text-sm font-bold transition-colors duration-200 ${
+              className={`shrink-0 cursor-pointer rounded-full px-4 py-1.5 text-sm font-bold whitespace-nowrap transition-colors duration-200 ${
                 categorySlug === category.slug
                   ? "bg-primary-text text-white"
                   : "bg-brand/5 text-brand hover:bg-primary/10"
@@ -76,6 +94,10 @@ export default function CareersBrowser({
             </button>
           ))}
         </div>
+        <div
+          aria-hidden
+          className="pointer-events-none absolute top-0 right-0 h-full w-10 bg-gradient-to-l from-white to-transparent"
+        />
       </div>
 
       {filtered.length === 0 ? (
@@ -90,7 +112,7 @@ export default function CareersBrowser({
               <Link
                 key={career.id}
                 href={`/careers/${career.slug}`}
-                className="rounded-lg border border-brand/10 p-6 hover:border-primary"
+                className="rounded-lg border border-brand/10 p-6 hover:border-primary hover:shadow-[inset_0_0_0_1px_#8570f2]"
               >
                 {category && (
                   <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">

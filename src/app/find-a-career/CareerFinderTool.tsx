@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { ArrowLeft, Building2, GraduationCap, X } from "lucide-react";
 import type {
   Career,
   CareerCategory,
@@ -76,9 +77,10 @@ function BackButton({ onBack }: { onBack: () => void }) {
     <button
       type="button"
       onClick={onBack}
-      className="mb-8 cursor-pointer text-sm font-bold text-primary-text hover:underline"
+      className="mb-8 flex cursor-pointer items-center gap-2 text-base font-bold text-primary-text hover:underline"
     >
-      ← Start over
+      <ArrowLeft aria-hidden className="h-5 w-5" />
+      Start over
     </button>
   );
 }
@@ -89,9 +91,12 @@ function StartStep({ onChoose }: { onChoose: (step: Step) => void }) {
       <button
         type="button"
         onClick={() => onChoose("high-school")}
-        className="cursor-pointer rounded-lg border border-brand/10 p-8 text-left transition-colors duration-200 hover:border-primary"
+        className="cursor-pointer rounded-lg border border-brand/10 p-8 text-left transition-colors duration-200 hover:border-primary hover:shadow-[inset_0_0_0_1px_#8570f2]"
       >
-        <h2 className="text-xl font-bold text-brand">
+        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-text/10 text-primary-text">
+          <GraduationCap aria-hidden className="h-6 w-6" />
+        </span>
+        <h2 className="mt-4 text-xl font-bold text-brand">
           I&apos;m a high school student
         </h2>
         <p className="mt-2 text-brand/80">
@@ -102,9 +107,12 @@ function StartStep({ onChoose }: { onChoose: (step: Step) => void }) {
       <button
         type="button"
         onClick={() => onChoose("post-secondary")}
-        className="cursor-pointer rounded-lg border border-brand/10 p-8 text-left transition-colors duration-200 hover:border-primary"
+        className="cursor-pointer rounded-lg border border-brand/10 p-8 text-left transition-colors duration-200 hover:border-primary hover:shadow-[inset_0_0_0_1px_#8570f2]"
       >
-        <h2 className="text-xl font-bold text-brand">
+        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-text/10 text-primary-text">
+          <Building2 aria-hidden className="h-6 w-6" />
+        </span>
+        <h2 className="mt-4 text-xl font-bold text-brand">
           I&apos;m in, or have completed, post-secondary
         </h2>
         <p className="mt-2 text-brand/80">
@@ -198,7 +206,7 @@ function HighSchoolStep({
     return (
       <Link
         href={`/education/${program.slug}`}
-        className="rounded-lg border border-brand/10 p-6 hover:border-primary"
+        className="rounded-lg border border-brand/10 p-6 hover:border-primary hover:shadow-[inset_0_0_0_1px_#8570f2]"
       >
         <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">
           {levelLabels[program.level] ?? program.level}
@@ -208,7 +216,7 @@ function HighSchoolStep({
           <p className="mt-1 text-sm text-brand/80">{institution.name}</p>
         )}
         {status === "match" ? (
-          <p className="mt-3 text-sm font-bold text-accent-text">
+          <p className="mt-3 text-sm font-bold text-primary-text">
             ✓ You have everything this program typically needs
           </p>
         ) : (
@@ -297,9 +305,9 @@ function HighSchoolStep({
                 type="button"
                 onClick={() => removeSubject(s.id)}
                 aria-label={`Remove ${s.name}`}
-                className="cursor-pointer text-primary-text/70 hover:text-accent-text"
+                className="cursor-pointer text-primary-text/70 hover:text-red-600"
               >
-                &times;
+                <X aria-hidden className="h-4 w-4" />
               </button>
             </span>
           ))}
@@ -320,7 +328,7 @@ function HighSchoolStep({
             another subject, or{" "}
             <Link
               href="/education"
-              className="text-primary-text hover:text-accent-text"
+              className="text-primary-text hover:underline"
             >
               browse all programs
             </Link>
@@ -510,9 +518,9 @@ function PostSecondaryStep({
                 type="button"
                 onClick={() => removeProgram(p.id)}
                 aria-label={`Remove ${p.name}`}
-                className="cursor-pointer text-primary-text/70 hover:text-accent-text"
+                className="cursor-pointer text-primary-text/70 hover:text-red-600"
               >
-                &times;
+                <X aria-hidden className="h-4 w-4" />
               </button>
             </span>
           ))}
@@ -532,7 +540,7 @@ function PostSecondaryStep({
             We don&apos;t have a career mapped to that credential yet. Try{" "}
             <Link
               href="/careers"
-              className="text-primary-text hover:text-accent-text"
+              className="text-primary-text hover:underline"
             >
               browsing all careers
             </Link>{" "}
@@ -550,7 +558,7 @@ function PostSecondaryStep({
                 <Link
                   key={career.id}
                   href={`/careers/${career.slug}`}
-                  className="rounded-lg border border-brand/10 p-6 hover:border-primary"
+                  className="rounded-lg border border-brand/10 p-6 hover:border-primary hover:shadow-[inset_0_0_0_1px_#8570f2]"
                 >
                   <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">
                     {categoryById.get(career.categoryId)?.name}

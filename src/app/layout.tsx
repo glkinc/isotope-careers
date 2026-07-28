@@ -43,7 +43,7 @@ export const viewport: Viewport = {
 };
 
 const navLinks = [
-  { href: "/path-finder", label: "Find a Career" },
+  { href: "/find-a-career", label: "Find a Career" },
   { href: "/careers", label: "All Careers" },
   { href: "/education", label: "Browse Programs" },
   { href: "/about", label: "About" },

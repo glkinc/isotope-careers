@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Briefcase, Building2, Clock, ExternalLink, ListChecks } from "lucide-react";
 import {
   getCareersForProgram,
   getEducationProgramBySlug,
@@ -48,8 +49,8 @@ export default async function EducationDetailPage({
   const schoolLink = program.programUrl ?? institution?.website ?? null;
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16">
-      <div className="flex items-start justify-between gap-4">
+    <div className="mx-auto max-w-3xl px-6 py-10 sm:py-16">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">
             {levelLabels[program.level] ?? program.level}
@@ -68,25 +69,36 @@ export default async function EducationDetailPage({
       )}
       <p className="mt-4 text-lg text-brand/80">{program.description}</p>
 
-      <dl className="mt-8 grid grid-cols-2 gap-4 text-sm">
+      <dl className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {program.duration && (
-          <div>
-            <dt className="font-semibold text-brand">Duration</dt>
-            <dd className="mt-1 text-brand/80">{program.duration}</dd>
+          <div className="rounded-lg bg-[#f6f6f7] p-4">
+            <dt className="flex items-center gap-2 text-sm font-semibold text-brand">
+              <Clock aria-hidden className="h-4 w-4 text-primary-text" />
+              Duration
+            </dt>
+            <dd className="mt-1 text-sm text-brand/80">{program.duration}</dd>
           </div>
         )}
         {program.requirements && (
-          <div>
-            <dt className="font-semibold text-brand">Requirements</dt>
-            <dd className="mt-1 text-brand/80">{program.requirements}</dd>
+          <div className="rounded-lg bg-[#f6f6f7] p-4">
+            <dt className="flex items-center gap-2 text-sm font-semibold text-brand">
+              <ListChecks aria-hidden className="h-4 w-4 text-primary-text" />
+              Requirements
+            </dt>
+            <dd className="mt-1 text-sm text-brand/80">
+              {program.requirements}
+            </dd>
           </div>
         )}
       </dl>
 
       {institution && (
         <section className="mt-10">
-          <h2 className="text-lg font-semibold text-brand">School</h2>
-          <div className="mt-3 rounded-lg border border-brand/10 p-4">
+          <h2 className="flex items-center gap-2 text-lg font-semibold text-brand">
+            <Building2 aria-hidden className="h-5 w-5 text-primary-text" />
+            School
+          </h2>
+          <div className="mt-3 rounded-lg bg-[#f6f6f7] p-4">
             <p className="font-semibold text-brand">{institution.name}</p>
             {institution.city && (
               <p className="mt-1 text-sm text-brand/80">
@@ -98,9 +110,10 @@ export default async function EducationDetailPage({
                 href={schoolLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-block text-sm font-bold text-primary-text hover:underline"
+                className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-primary-text hover:underline"
               >
-                View this program at {institution.name} →
+                View this program at {institution.name}
+                <ExternalLink aria-hidden className="h-3.5 w-3.5" />
               </a>
             )}
           </div>
@@ -109,7 +122,8 @@ export default async function EducationDetailPage({
 
       {relatedCareers.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-lg font-semibold text-brand">
+          <h2 className="flex items-center gap-2 text-lg font-semibold text-brand">
+            <Briefcase aria-hidden className="h-5 w-5 text-primary-text" />
             Careers this leads to
           </h2>
           <div className="mt-3 flex flex-wrap gap-3">
@@ -117,7 +131,7 @@ export default async function EducationDetailPage({
               <Link
                 key={career.id}
                 href={`/careers/${career.slug}`}
-                className="rounded-md border border-brand/10 px-4 py-2 text-sm text-brand/80 hover:border-primary hover:text-accent-text"
+                className="rounded-md border border-brand/10 bg-white px-4 py-2 text-sm text-brand/80 transition-colors duration-200 hover:border-primary-text hover:bg-primary-text hover:text-white"
               >
                 {career.title}
               </Link>

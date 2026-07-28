@@ -17,13 +17,7 @@ export default async function CareersPage({
   ]);
 
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="text-3xl font-semibold text-brand">Careers</h1>
-      <p className="mt-3 max-w-2xl text-brand/80">
-        Careers in isotope production and use, across reactor operations,
-        radiopharmaceutical sciences, and regulatory & safety.
-      </p>
-
+    <div className="mx-auto max-w-5xl px-6 py-10 sm:py-16">
       <CareersBrowser
         careers={careers}
         categories={categories}
