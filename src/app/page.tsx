@@ -41,18 +41,18 @@ export default async function HomePage() {
               Canada&apos;s medical and industrial isotope industry — from
               reactor operations to radiopharmaceutical chemistry.
             </p>
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <Button
                 href="/find-a-career"
                 variant="solid"
-                className="w-full min-w-0 justify-between sm:w-auto sm:justify-start"
+                className="w-full justify-between sm:w-auto sm:justify-start"
               >
                 Find a career
               </Button>
               <Button
                 href="/careers"
                 variant="outline"
-                className="w-full min-w-0 justify-between sm:w-auto sm:justify-start"
+                className="w-full justify-between sm:w-auto sm:justify-start"
               >
                 Explore all careers
               </Button>
