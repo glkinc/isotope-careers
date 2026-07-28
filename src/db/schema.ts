@@ -45,6 +45,7 @@ export const careers = pgTable("careers", {
   responsibilities: text("responsibilities").array(),
   dayToDay: text("day_to_day"),
   sources: text("sources").array(),
+  topEmployers: text("top_employers").array(),
 });
 
 export const institutions = pgTable("institutions", {
@@ -54,6 +55,7 @@ export const institutions = pgTable("institutions", {
   province: text("province"),
   description: text("description"),
   website: text("website"),
+  logoUrl: text("logo_url"),
 });
 
 export const educationPrograms = pgTable("education_programs", {

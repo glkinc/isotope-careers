@@ -31,6 +31,7 @@ type Dataset = {
     responsibilities: string[];
     dayToDay: string;
     sources: string[];
+    topEmployers: string[];
   }[];
   institutions: {
     id: number;
@@ -39,6 +40,7 @@ type Dataset = {
     province: string;
     description: string;
     website: string;
+    logoUrl: string;
   }[];
   educationPrograms: {
     id: number;

@@ -44,6 +44,13 @@
         "https://www.jobbank.gc.ca/wagereport/occupation/26861",
         "https://www.jobbank.gc.ca/marketreport/requirements/26811/ON",
         "https://www.jobbank.gc.ca/marketreport/outlook-occupation/26811/ON"
+      ],
+      "topEmployers": [
+        "Ontario Power Generation (OPG)",
+        "Bruce Power",
+        "Cameco Corporation",
+        "Canadian Nuclear Laboratories (CNL)",
+        "NB Power (Point Lepreau)"
       ]
     },
     {
@@ -69,6 +76,13 @@
         "https://www.jobbank.gc.ca/wagereport/occupation/2495",
         "https://www.jobbank.gc.ca/marketreport/outlook-occupation/2495/ON",
         "https://www.services.labour.gov.on.ca/labourmarket-ui/jobProfile?nocCode=21100"
+      ],
+      "topEmployers": [
+        "Canadian Nuclear Safety Commission (CNSC)",
+        "Ontario Power Generation (OPG)",
+        "Bruce Power",
+        "Canadian Nuclear Laboratories (CNL)",
+        "Hospital radiation oncology departments"
       ]
     },
     {
@@ -94,6 +108,13 @@
         "https://www23.statcan.gc.ca/imdb/p3VD.pl?Function=getVD&TVD=1322554&CVD=1322870&CPV=21101&CST=01052021&CLV=5&MLV=5",
         "https://www.jobbank.gc.ca/marketreport/wages-occupation/20049/ON",
         "https://durhamcollege.ca/programs/chemical-engineering-technology"
+      ],
+      "topEmployers": [
+        "Canadian Nuclear Laboratories (CNL)",
+        "BWXT Medical",
+        "TRIUMF",
+        "McMaster Nuclear Reactor",
+        "Isologic Innovative Radiopharmaceuticals"
       ]
     },
     {
@@ -119,6 +140,13 @@
         "https://noc.esdc.gc.ca/Structure/NOCProfile?GocTemplateCulture=en-CA&code=32121&version=2021.0",
         "https://www.jobbank.gc.ca/marketreport/wages-occupation/18254/ON",
         "https://www.services.labour.gov.on.ca/labourmarket-ui/jobProfile?nocCode=32121"
+      ],
+      "topEmployers": [
+        "Hospital diagnostic imaging departments (UHN, Sunnybrook, LHSC)",
+        "Vancouver Coastal Health",
+        "Alberta Health Services",
+        "Nova Scotia Health Authority",
+        "BWXT Medical"
       ]
     },
     {
@@ -144,6 +172,13 @@
         "https://www23.statcan.gc.ca/imdb/p3VD.pl?Function=getVD&TVD=1322554&CVD=1322870&CPV=22230&CST=01052021&CLV=5&MLV=5",
         "https://www.jobbank.gc.ca/marketreport/wages-occupation/3554/ON",
         "https://durhamcollege.ca/programs/mechanical-engineering-technician-non-destructive-evaluation-compressed-fast-track"
+      ],
+      "topEmployers": [
+        "Bruce Power",
+        "Ontario Power Generation (OPG)",
+        "Aecon",
+        "Acuren",
+        "Intech International"
       ]
     },
     {
@@ -169,6 +204,13 @@
         "https://www.jobbank.gc.ca/marketreport/occupation/2758/ON",
         "https://www.jobbank.gc.ca/marketreport/wages-occupation/2757/ON",
         "https://www.services.labour.gov.on.ca/labourmarket-ui/jobProfile?nocCode=21301"
+      ],
+      "topEmployers": [
+        "Ontario Power Generation (OPG)",
+        "Bruce Power",
+        "AtkinsRéalis / Candu Energy",
+        "Canadian Nuclear Laboratories (CNL)",
+        "Canadian Nuclear Safety Commission (CNSC)"
       ]
     },
     {
@@ -193,6 +235,13 @@
       "sources": [
         "https://noc.esdc.gc.ca/Structure/NOCProfile?GocTemplateCulture=en-CA&code=31120&version=2021.0",
         "https://www.jobbank.gc.ca/marketreport/wages-occupation/18196/ON"
+      ],
+      "topEmployers": [
+        "BWXT Medical",
+        "Isologic Innovative Radiopharmaceuticals",
+        "Hospital nuclear pharmacy departments (UHN, Sunnybrook)",
+        "Curium Pharma",
+        "Lantheus Medical Imaging"
       ]
     }
   ],
@@ -203,7 +252,8 @@
       "city": "Oshawa",
       "province": "ON",
       "description": "Public university offering Canada's only accredited undergraduate Nuclear Engineering program, an undergraduate Health Physics and Radiation Science program, and graduate nuclear engineering degrees.",
-      "website": "https://ontariotechu.ca"
+      "website": "https://ontariotechu.ca",
+      "logoUrl": "https://logo.clearbit.com/ontariotechu.ca"
     },
     {
       "id": 2,
@@ -211,7 +261,8 @@
       "city": "Hamilton",
       "province": "ON",
       "description": "Research university with a Department of Physics & Astronomy offering an Honours Physics program with a Medical and Biological Physics option, and home to the McMaster Nuclear Reactor.",
-      "website": "https://mcmaster.ca"
+      "website": "https://mcmaster.ca",
+      "logoUrl": "https://logo.clearbit.com/mcmaster.ca"
     },
     {
       "id": 3,
@@ -219,7 +270,8 @@
       "city": "Oshawa",
       "province": "ON",
       "description": "Public college offering applied-science and engineering-technology diplomas, including chemical engineering technology (with nuclear-physics content) and a non-destructive evaluation program, situated near Ontario's nuclear generating stations.",
-      "website": "https://durhamcollege.ca"
+      "website": "https://durhamcollege.ca",
+      "logoUrl": "https://logo.clearbit.com/durhamcollege.ca"
     },
     {
       "id": 4,
@@ -227,7 +279,8 @@
       "city": "Toronto",
       "province": "ON",
       "description": "Applied health-sciences college that delivers clinical medical-radiation-sciences education jointly with the University of Toronto, including the Nuclear Medicine and Molecular Imaging Technology program.",
-      "website": "https://michener.ca"
+      "website": "https://michener.ca",
+      "logoUrl": "https://logo.clearbit.com/michener.ca"
     },
     {
       "id": 5,
@@ -235,7 +288,8 @@
       "city": "Toronto",
       "province": "ON",
       "description": "Research university whose Faculty of Applied Science and Engineering offers Engineering Science, an extremely competitive program with majors including Engineering Physics that feeds into nuclear engineering and health-physics careers.",
-      "website": "https://utoronto.ca"
+      "website": "https://utoronto.ca",
+      "logoUrl": "https://logo.clearbit.com/utoronto.ca"
     },
     {
       "id": 6,
@@ -243,7 +297,8 @@
       "city": "Toronto",
       "province": "ON",
       "description": "Public university whose Faculty of Science offers one of only five undergraduate Medical Physics programs in Canada, plus a CAMPEP-accredited graduate Medical Physics program.",
-      "website": "https://torontomu.ca"
+      "website": "https://torontomu.ca",
+      "logoUrl": "https://logo.clearbit.com/torontomu.ca"
     },
     {
       "id": 7,
@@ -251,7 +306,8 @@
       "city": "Waterloo",
       "province": "ON",
       "description": "Research university whose School of Pharmacy runs Canada's only co-op Doctor of Pharmacy (PharmD) program, with a direct-from-high-school Conditional Admission to Pharmacy (CAP) pathway via its Honours Science program.",
-      "website": "https://uwaterloo.ca"
+      "website": "https://uwaterloo.ca",
+      "logoUrl": "https://logo.clearbit.com/uwaterloo.ca"
     }
   ],
   "educationPrograms": [
@@ -387,79 +443,326 @@
     }
   ],
   "subjects": [
-    { "id": 1, "slug": "eng4u", "name": "English", "code": "ENG4U", "category": "language" },
-    { "id": 2, "slug": "mhf4u", "name": "Advanced Functions", "code": "MHF4U", "category": "math" },
-    { "id": 3, "slug": "mcv4u", "name": "Calculus and Vectors", "code": "MCV4U", "category": "math" },
-    { "id": 4, "slug": "sch4u", "name": "Chemistry", "code": "SCH4U", "category": "science" },
-    { "id": 5, "slug": "sph4u", "name": "Physics", "code": "SPH4U", "category": "science" },
-    { "id": 6, "slug": "sbi4u", "name": "Biology", "code": "SBI4U", "category": "science" },
-    { "id": 7, "slug": "mdm4u", "name": "Mathematics of Data Management", "code": "MDM4U", "category": "math" },
-    { "id": 8, "slug": "ses4u", "name": "Earth and Space Science", "code": "SES4U", "category": "science" }
+    {
+      "id": 1,
+      "slug": "eng4u",
+      "name": "English",
+      "code": "ENG4U",
+      "category": "language"
+    },
+    {
+      "id": 2,
+      "slug": "mhf4u",
+      "name": "Advanced Functions",
+      "code": "MHF4U",
+      "category": "math"
+    },
+    {
+      "id": 3,
+      "slug": "mcv4u",
+      "name": "Calculus and Vectors",
+      "code": "MCV4U",
+      "category": "math"
+    },
+    {
+      "id": 4,
+      "slug": "sch4u",
+      "name": "Chemistry",
+      "code": "SCH4U",
+      "category": "science"
+    },
+    {
+      "id": 5,
+      "slug": "sph4u",
+      "name": "Physics",
+      "code": "SPH4U",
+      "category": "science"
+    },
+    {
+      "id": 6,
+      "slug": "sbi4u",
+      "name": "Biology",
+      "code": "SBI4U",
+      "category": "science"
+    },
+    {
+      "id": 7,
+      "slug": "mdm4u",
+      "name": "Mathematics of Data Management",
+      "code": "MDM4U",
+      "category": "math"
+    },
+    {
+      "id": 8,
+      "slug": "ses4u",
+      "name": "Earth and Space Science",
+      "code": "SES4U",
+      "category": "science"
+    }
   ],
   "programRequirements": [
-    { "programId": 1, "subjectId": 1, "minGrade": 60 },
-    { "programId": 1, "subjectId": 2, "minGrade": 60 },
-    { "programId": 1, "subjectId": 3, "minGrade": 60 },
-    { "programId": 1, "subjectId": 4, "minGrade": 60 },
-    { "programId": 1, "subjectId": 5, "minGrade": 60 },
-
-    { "programId": 2, "subjectId": 1, "minGrade": null },
-    { "programId": 2, "subjectId": 2, "minGrade": null },
-    { "programId": 2, "subjectId": 3, "minGrade": null },
-    { "programId": 2, "subjectId": 4, "minGrade": null },
-    { "programId": 2, "subjectId": 5, "minGrade": null },
-
-    { "programId": 3, "subjectId": 1, "minGrade": null },
-    { "programId": 3, "subjectId": 4, "minGrade": null },
-    { "programId": 3, "subjectId": 5, "minGrade": null },
-
-    { "programId": 5, "subjectId": 4, "minGrade": null },
-    { "programId": 5, "subjectId": 5, "minGrade": null },
-    { "programId": 5, "subjectId": 6, "minGrade": null },
-    { "programId": 5, "subjectId": 2, "minGrade": null },
-
-    { "programId": 6, "subjectId": 1, "minGrade": null },
-    { "programId": 6, "subjectId": 2, "minGrade": null },
-    { "programId": 6, "subjectId": 3, "minGrade": null },
-    { "programId": 6, "subjectId": 4, "minGrade": null },
-    { "programId": 6, "subjectId": 5, "minGrade": null },
-
-    { "programId": 7, "subjectId": 1, "minGrade": 65 },
-    { "programId": 7, "subjectId": 2, "minGrade": 65 },
-    { "programId": 7, "subjectId": 5, "minGrade": 65 },
-    { "programId": 7, "subjectId": 4, "minGrade": 65 },
-    { "programId": 7, "subjectId": 6, "minGrade": 65 },
-
-    { "programId": 8, "subjectId": 1, "minGrade": 70 },
-    { "programId": 8, "subjectId": 2, "minGrade": 70 },
-    { "programId": 8, "subjectId": 3, "minGrade": 70 },
-    { "programId": 8, "subjectId": 6, "minGrade": null },
-    { "programId": 8, "subjectId": 4, "minGrade": null },
-    { "programId": 8, "subjectId": 8, "minGrade": null },
-    { "programId": 8, "subjectId": 7, "minGrade": null },
-    { "programId": 8, "subjectId": 5, "minGrade": null },
-
-    { "programId": 9, "subjectId": 1, "minGrade": null },
-    { "programId": 9, "subjectId": 2, "minGrade": null },
-    { "programId": 9, "subjectId": 6, "minGrade": null },
-    { "programId": 9, "subjectId": 3, "minGrade": null },
-    { "programId": 9, "subjectId": 4, "minGrade": null },
-    { "programId": 9, "subjectId": 5, "minGrade": null }
+    {
+      "programId": 1,
+      "subjectId": 1,
+      "minGrade": 60
+    },
+    {
+      "programId": 1,
+      "subjectId": 2,
+      "minGrade": 60
+    },
+    {
+      "programId": 1,
+      "subjectId": 3,
+      "minGrade": 60
+    },
+    {
+      "programId": 1,
+      "subjectId": 4,
+      "minGrade": 60
+    },
+    {
+      "programId": 1,
+      "subjectId": 5,
+      "minGrade": 60
+    },
+    {
+      "programId": 2,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 2,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 2,
+      "subjectId": 3,
+      "minGrade": null
+    },
+    {
+      "programId": 2,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 2,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 3,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 3,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 3,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 5,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 5,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 5,
+      "subjectId": 6,
+      "minGrade": null
+    },
+    {
+      "programId": 5,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 6,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 6,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 6,
+      "subjectId": 3,
+      "minGrade": null
+    },
+    {
+      "programId": 6,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 6,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 7,
+      "subjectId": 1,
+      "minGrade": 65
+    },
+    {
+      "programId": 7,
+      "subjectId": 2,
+      "minGrade": 65
+    },
+    {
+      "programId": 7,
+      "subjectId": 5,
+      "minGrade": 65
+    },
+    {
+      "programId": 7,
+      "subjectId": 4,
+      "minGrade": 65
+    },
+    {
+      "programId": 7,
+      "subjectId": 6,
+      "minGrade": 65
+    },
+    {
+      "programId": 8,
+      "subjectId": 1,
+      "minGrade": 70
+    },
+    {
+      "programId": 8,
+      "subjectId": 2,
+      "minGrade": 70
+    },
+    {
+      "programId": 8,
+      "subjectId": 3,
+      "minGrade": 70
+    },
+    {
+      "programId": 8,
+      "subjectId": 6,
+      "minGrade": null
+    },
+    {
+      "programId": 8,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 8,
+      "subjectId": 8,
+      "minGrade": null
+    },
+    {
+      "programId": 8,
+      "subjectId": 7,
+      "minGrade": null
+    },
+    {
+      "programId": 8,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 9,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 9,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 9,
+      "subjectId": 6,
+      "minGrade": null
+    },
+    {
+      "programId": 9,
+      "subjectId": 3,
+      "minGrade": null
+    },
+    {
+      "programId": 9,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 9,
+      "subjectId": 5,
+      "minGrade": null
+    }
   ],
   "careerEducationLinks": [
-    { "careerSlug": "nuclear-reactor-operator", "programSlug": "nuclear-engineering-ontariotech" },
-    { "careerSlug": "nuclear-reactor-operator", "programSlug": "chemical-engineering-technology-durham" },
-    { "careerSlug": "health-physicist", "programSlug": "honours-physics-mcmaster" },
-    { "careerSlug": "health-physicist", "programSlug": "nuclear-engineering-ontariotech" },
-    { "careerSlug": "health-physicist", "programSlug": "engsci-uoft" },
-    { "careerSlug": "health-physicist", "programSlug": "medical-physics-tmu" },
-    { "careerSlug": "health-physicist", "programSlug": "health-physics-radiation-science-ontariotech" },
-    { "careerSlug": "radiochemist", "programSlug": "chemical-engineering-technology-durham" },
-    { "careerSlug": "nuclear-medicine-technologist", "programSlug": "nuclear-medicine-molecular-imaging-michener-uoft" },
-    { "careerSlug": "ndt-technician", "programSlug": "ndt-fast-track-durham" },
-    { "careerSlug": "ndt-technician", "programSlug": "health-physics-radiation-science-ontariotech" },
-    { "careerSlug": "nuclear-engineer", "programSlug": "nuclear-engineering-ontariotech" },
-    { "careerSlug": "nuclear-engineer", "programSlug": "engsci-uoft" },
-    { "careerSlug": "radiopharmacist", "programSlug": "honours-science-cap-waterloo" }
+    {
+      "careerSlug": "nuclear-reactor-operator",
+      "programSlug": "nuclear-engineering-ontariotech"
+    },
+    {
+      "careerSlug": "nuclear-reactor-operator",
+      "programSlug": "chemical-engineering-technology-durham"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "honours-physics-mcmaster"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "nuclear-engineering-ontariotech"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "engsci-uoft"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "medical-physics-tmu"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "health-physics-radiation-science-ontariotech"
+    },
+    {
+      "careerSlug": "radiochemist",
+      "programSlug": "chemical-engineering-technology-durham"
+    },
+    {
+      "careerSlug": "nuclear-medicine-technologist",
+      "programSlug": "nuclear-medicine-molecular-imaging-michener-uoft"
+    },
+    {
+      "careerSlug": "ndt-technician",
+      "programSlug": "ndt-fast-track-durham"
+    },
+    {
+      "careerSlug": "ndt-technician",
+      "programSlug": "health-physics-radiation-science-ontariotech"
+    },
+    {
+      "careerSlug": "nuclear-engineer",
+      "programSlug": "nuclear-engineering-ontariotech"
+    },
+    {
+      "careerSlug": "nuclear-engineer",
+      "programSlug": "engsci-uoft"
+    },
+    {
+      "careerSlug": "radiopharmacist",
+      "programSlug": "honours-science-cap-waterloo"
+    }
   ]
 }

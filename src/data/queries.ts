@@ -28,6 +28,7 @@ function toCareer(row: typeof careersTable.$inferSelect): Career {
     ...row,
     responsibilities: row.responsibilities ?? [],
     sources: row.sources ?? [],
+    topEmployers: row.topEmployers ?? [],
   };
 }
 
@@ -92,6 +93,20 @@ export async function getInstitution(
     .from(institutionsTable)
     .where(eq(institutionsTable.id, institutionId));
   return rows[0];
+}
+
+export async function getInstitutions(): Promise<Institution[]> {
+  return db.select().from(institutionsTable);
+}
+
+export async function getProgramsForInstitution(
+  institutionId: number,
+): Promise<EducationProgram[]> {
+  const rows = await db
+    .select()
+    .from(educationProgramsTable)
+    .where(eq(educationProgramsTable.institutionId, institutionId));
+  return rows.map(toEducationProgram);
 }
 
 export async function getProgramsForCareer(

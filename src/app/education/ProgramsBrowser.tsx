@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Search } from "lucide-react";
 import type { Career, EducationProgram, Institution } from "@/data/types";
+import InstitutionLogo from "@/components/InstitutionLogo";
 
 type Props = {
   programs: EducationProgram[];
@@ -54,6 +55,17 @@ export default function ProgramsBrowser({
       a.name.localeCompare(b.name),
     );
   }, [programs, institutionsById]);
+
+  const programCountByInstitutionId = useMemo(() => {
+    const counts = new Map<number, number>();
+    for (const program of programs) {
+      counts.set(
+        program.institutionId,
+        (counts.get(program.institutionId) ?? 0) + 1,
+      );
+    }
+    return counts;
+  }, [programs]);
 
   const maxSalaryByProgramSlug = useMemo(() => {
     const map = new Map<string, number>();
@@ -129,6 +141,47 @@ export default function ProgramsBrowser({
         </div>
       </div>
 
+      <div className="mt-10">
+        <h2 className="text-lg font-semibold text-brand">Browse by school</h2>
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          {institutionOptions.map((institution) => {
+            const isSelected = institutionId === String(institution.id);
+            return (
+              <button
+                key={institution.id}
+                type="button"
+                onClick={() =>
+                  setInstitutionId(isSelected ? "all" : String(institution.id))
+                }
+                className={`flex items-center gap-3 rounded-lg border p-3 text-left transition-colors duration-200 ${
+                  isSelected
+                    ? "border-primary bg-primary-text/5 shadow-[inset_0_0_0_1px_#8570f2]"
+                    : "border-brand/10 hover:border-primary-text"
+                }`}
+              >
+                <InstitutionLogo
+                  name={institution.name}
+                  logoUrl={institution.logoUrl}
+                  className="h-9 w-9 shrink-0 rounded-md"
+                />
+                <div className="min-w-0">
+                  <p className="truncate text-sm font-semibold text-brand">
+                    {institution.name}
+                  </p>
+                  <p className="text-xs text-brand/60">
+                    {programCountByInstitutionId.get(institution.id) ?? 0}{" "}
+                    program
+                    {programCountByInstitutionId.get(institution.id) === 1
+                      ? ""
+                      : "s"}
+                  </p>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       <div className="mt-6 grid grid-cols-1 gap-3 sm:flex sm:flex-wrap sm:gap-4">
         <select
           value={level}
@@ -184,25 +237,34 @@ export default function ProgramsBrowser({
               <Link
                 key={program.id}
                 href={`/education/${program.slug}`}
-                className="rounded-lg border border-brand/10 p-6 hover:border-primary hover:shadow-[inset_0_0_0_1px_#8570f2]"
+                className="flex gap-4 rounded-lg border border-brand/10 p-6 hover:border-primary hover:shadow-[inset_0_0_0_1px_#8570f2]"
               >
-                <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">
-                  {levelLabels[program.level] ?? program.level}
-                </span>
-                <h2 className="mt-2 font-semibold text-brand">
-                  {program.name}
-                </h2>
                 {institution && (
-                  <p className="mt-1 text-sm text-brand/80">
-                    {institution.name}
-                    {institution.city
-                      ? ` — ${institution.city}, ${institution.province}`
-                      : ""}
-                  </p>
+                  <InstitutionLogo
+                    name={institution.name}
+                    logoUrl={institution.logoUrl}
+                    className="h-10 w-10 shrink-0 rounded-md"
+                  />
                 )}
-                <p className="mt-2 text-sm text-brand/80">
-                  {program.description}
-                </p>
+                <div className="min-w-0">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-primary-text">
+                    {levelLabels[program.level] ?? program.level}
+                  </span>
+                  <h2 className="mt-2 font-semibold text-brand">
+                    {program.name}
+                  </h2>
+                  {institution && (
+                    <p className="mt-1 text-sm text-brand/80">
+                      {institution.name}
+                      {institution.city
+                        ? ` — ${institution.city}, ${institution.province}`
+                        : ""}
+                    </p>
+                  )}
+                  <p className="mt-2 text-sm text-brand/80">
+                    {program.description}
+                  </p>
+                </div>
               </Link>
             );
           })}

@@ -67,26 +67,18 @@ export default async function HomePage() {
           <Image
             src="/chevrons.svg"
             alt=""
-            width={56}
-            height={82}
+            width={209}
+            height={305}
             className="animate-chevron-in"
             style={{ animationDelay: "150ms" }}
           />
           <Image
             src="/chevrons.svg"
             alt=""
-            width={56}
-            height={82}
+            width={209}
+            height={305}
             className="animate-chevron-in -mt-10"
             style={{ animationDelay: "300ms" }}
-          />
-          <Image
-            src="/chevrons.svg"
-            alt=""
-            width={56}
-            height={82}
-            className="animate-chevron-in -mt-10"
-            style={{ animationDelay: "450ms" }}
           />
         </div>
       </section>

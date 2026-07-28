@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CalendarClock, ClipboardList, DollarSign, GraduationCap } from "lucide-react";
+import {
+  Briefcase,
+  CalendarClock,
+  ClipboardList,
+  DollarSign,
+  GraduationCap,
+} from "lucide-react";
 import {
   getCareerBySlug,
   getCareerCategory,
@@ -87,6 +93,25 @@ export default async function CareerDetailPage({
             Day to day
           </h2>
           <p className="mt-3 text-brand/80">{career.dayToDay}</p>
+        </section>
+      )}
+
+      {career.topEmployers.length > 0 && (
+        <section className="mt-10">
+          <h2 className="flex items-center gap-2 text-lg font-semibold text-brand">
+            <Briefcase aria-hidden className="h-5 w-5 text-primary-text" />
+            Top employers
+          </h2>
+          <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
+            {career.topEmployers.map((employer) => (
+              <li
+                key={employer}
+                className="rounded-md bg-[#f6f6f7] px-4 py-2.5 text-sm text-brand/80"
+              >
+                {employer}
+              </li>
+            ))}
+          </ul>
         </section>
       )}
 

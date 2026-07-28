@@ -6,8 +6,10 @@ import {
   getEducationProgramBySlug,
   getEducationPrograms,
   getInstitution,
+  getProgramsForInstitution,
 } from "@/data/queries";
 import PageActions from "@/components/PageActions";
+import InstitutionLogo from "@/components/InstitutionLogo";
 
 const levelLabels: Record<string, string> = {
   high_school: "High School",
@@ -41,12 +43,17 @@ export default async function EducationDetailPage({
   const program = await getEducationProgramBySlug(slug);
   if (!program) notFound();
 
-  const [institution, relatedCareers] = await Promise.all([
-    getInstitution(program.institutionId),
-    getCareersForProgram(program.slug),
-  ]);
+  const [institution, relatedCareers, institutionPrograms] =
+    await Promise.all([
+      getInstitution(program.institutionId),
+      getCareersForProgram(program.slug),
+      getProgramsForInstitution(program.institutionId),
+    ]);
 
   const schoolLink = program.programUrl ?? institution?.website ?? null;
+  const otherPrograms = institutionPrograms.filter(
+    (p) => p.slug !== program.slug,
+  );
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-10 sm:py-16">
@@ -98,25 +105,51 @@ export default async function EducationDetailPage({
             <Building2 aria-hidden className="h-5 w-5 text-primary-text" />
             School
           </h2>
-          <div className="mt-3 rounded-lg bg-[#f6f6f7] p-4">
-            <p className="font-semibold text-brand">{institution.name}</p>
-            {institution.city && (
-              <p className="mt-1 text-sm text-brand/80">
-                {institution.city}, {institution.province}
-              </p>
-            )}
-            {schoolLink && (
-              <a
-                href={schoolLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-primary-text hover:underline"
-              >
-                View this program at {institution.name}
-                <ExternalLink aria-hidden className="h-3.5 w-3.5" />
-              </a>
-            )}
+          <div className="mt-3 flex items-start gap-4 rounded-lg bg-[#f6f6f7] p-4">
+            <InstitutionLogo
+              name={institution.name}
+              logoUrl={institution.logoUrl}
+              className="h-12 w-12 shrink-0 rounded-md"
+            />
+            <div>
+              <p className="font-semibold text-brand">{institution.name}</p>
+              {institution.city && (
+                <p className="mt-1 text-sm text-brand/80">
+                  {institution.city}, {institution.province}
+                </p>
+              )}
+              {schoolLink && (
+                <a
+                  href={schoolLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-primary-text hover:underline"
+                >
+                  View this program at {institution.name}
+                  <ExternalLink aria-hidden className="h-3.5 w-3.5" />
+                </a>
+              )}
+            </div>
           </div>
+
+          {otherPrograms.length > 0 && (
+            <div className="mt-4">
+              <h3 className="text-sm font-semibold text-brand">
+                Other programs at {institution.name}
+              </h3>
+              <div className="mt-3 flex flex-wrap gap-3">
+                {otherPrograms.map((p) => (
+                  <Link
+                    key={p.id}
+                    href={`/education/${p.slug}`}
+                    className="rounded-md border border-brand/10 bg-white px-4 py-2 text-sm text-brand/80 transition-colors duration-200 hover:border-primary-text hover:bg-primary-text hover:text-white"
+                  >
+                    {p.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </section>
       )}
 

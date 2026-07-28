@@ -25,6 +25,7 @@ export type Career = {
   responsibilities: string[];
   dayToDay: string | null;
   sources: string[];
+  topEmployers: string[];
 };
 
 export type Institution = {
@@ -34,6 +35,7 @@ export type Institution = {
   province: string | null;
   description: string | null;
   website: string | null;
+  logoUrl: string | null;
 };
 
 export type EducationProgram = {

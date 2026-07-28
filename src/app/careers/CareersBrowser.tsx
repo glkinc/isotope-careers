@@ -46,8 +46,7 @@ export default function CareersBrowser({
         <div>
           <h1 className="text-3xl font-semibold text-brand">Careers</h1>
           <p className="mt-3 max-w-2xl text-brand/80">
-            Careers in isotope production and use, across reactor operations,
-            radiopharmaceutical sciences, and regulatory & safety.
+            Whether you're a student, recent graduate, or changing careers, we'll help you discover pathways into Canada's growing nuclear workforce.
           </p>
         </div>
         <div className="relative w-full sm:w-64 sm:shrink-0">

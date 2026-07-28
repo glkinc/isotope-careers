@@ -59,15 +59,15 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-white text-brand font-sans">
         <Header navLinks={navLinks} />
         <main className="flex-1">{children}</main>
-        <footer className="border-t border-brand/10 bg-white py-12 print:hidden">
+        <footer className="border-t border-brand/10 bg-brand py-12 print:hidden">
           <div className="mx-auto flex max-w-5xl flex-col items-start gap-4 px-6 text-left">
             <Image
-              src="/logo-full.svg"
+              src="/logo-full-white.svg"
               alt="Sabertree"
               width={180}
               height={30}
             />
-            <p className="text-sm text-brand/80">
+            <p className="text-sm text-white">
               © {new Date().getFullYear()} Sabertree. All rights reserved.
             </p>
           </div>
