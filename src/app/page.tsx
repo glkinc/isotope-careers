@@ -41,9 +41,9 @@ export default async function HomePage() {
         />
         <div className="relative mx-auto max-w-5xl px-6 py-12 sm:py-30">
           <div className="max-w-2xl text-center mx-auto">
-            <Pill icon={BriefcaseBusiness}>Over 20 career opportunities</Pill>
+            <Pill icon={BriefcaseBusiness}>Over 20+ career opportunities</Pill>
             
-            <h1 className="text-4xl font-semibold tracking-tight text-brand sm:text-5xl">
+            <h1 className="text-4xl sm:text-5xl font-semibold text-brand">
               Build a career in isotope production and use.
             </h1>
             <p className="mt-6 max-w-xl mx-auto text-lg text-brand/80">
@@ -116,7 +116,7 @@ export default async function HomePage() {
           <div className=" text-center mx-auto">
             <Pill icon={Info}>How it works</Pill>
             
-            <h2 className="text-6xl font-semibold max-w-xl mx-auto tracking-tight text-brand sm:text-5xl">
+            <h2 className="text-4xl md:text-5xl font-semibold max-w-xl mx-auto text-brand sm:text-5xl">
               Three Simple Steps To Get Started 
             </h2>
             
