@@ -31,8 +31,8 @@ export default function Header({ navLinks }: { navLinks: NavLink[] }) {
   }, []);
 
   return (
-    <header className="relative z-50 m-4 rounded-full bg-brand print:hidden">
-      <div className="flex items-center justify-between px-10 py-4">
+    <header className="relative z-50 mx-4 mt-4 rounded-full bg-brand print:hidden">
+      <div className="flex items-center justify-between px-6 py-4 md:px-8 lg:px-10">
         <Link href="/" className="block" onClick={() => setOpen(false)}>
           <Image
             src="/logo-full-white.svg"

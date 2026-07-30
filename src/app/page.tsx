@@ -71,7 +71,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="border border-brand/10 bg-primary/8 mx-auto max-w-6xl rounded-xl">
+      <section className="border border-brand/10 bg-primary/8 mx-auto max-w-6xl md:mx-5 lg:mx-auto md:rounded-xl">
         <div className="px-6 py-10 sm:py-16 lg:px-20">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div>

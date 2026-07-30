@@ -60,6 +60,38 @@ h6 {
   display: none;
 }
 
+/* Hidden on touch/mobile, a visible thin scrollbar once there's room for a
+   mouse/trackpad to use it. */
+.scrollbar-desktop {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-desktop::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .scrollbar-desktop {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(69, 67, 76, 0.3) transparent;
+  }
+
+  .scrollbar-desktop::-webkit-scrollbar {
+    display: block;
+    height: 6px;
+  }
+
+  .scrollbar-desktop::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-desktop::-webkit-scrollbar-thumb {
+    background-color: rgba(69, 67, 76, 0.3);
+    border-radius: 9999px;
+  }
+}
+
 @media print {
   .no-print {
     display: none !important;

@@ -1,8 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { Search } from "lucide-react";
+import { ChevronDown, Search } from "lucide-react";
 import type { Career, EducationProgram, Institution } from "@/data/types";
 import InstitutionLogo from "@/components/InstitutionLogo";
 
@@ -39,6 +39,14 @@ export default function ProgramsBrowser({
   const [level, setLevel] = useState("all");
   const [institutionId, setInstitutionId] = useState("all");
   const [minSalary, setMinSalary] = useState("all");
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+  const schoolScrollRef = useRef<HTMLDivElement>(null);
+
+  function updateSchoolScrollFade(el: HTMLDivElement) {
+    setCanScrollLeft(el.scrollLeft > 0);
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
+  }
 
   const levels = useMemo(
     () => Array.from(new Set(programs.map((p) => p.level))),
@@ -55,6 +63,10 @@ export default function ProgramsBrowser({
       a.name.localeCompare(b.name),
     );
   }, [programs, institutionsById]);
+
+  useEffect(() => {
+    if (schoolScrollRef.current) updateSchoolScrollFade(schoolScrollRef.current);
+  }, [institutionOptions]);
 
   const programCountByInstitutionId = useMemo(() => {
     const counts = new Map<number, number>();
@@ -144,7 +156,11 @@ export default function ProgramsBrowser({
       <div className="mt-10">
         <h2 className="text-lg font-semibold text-brand">Browse by school</h2>
         <div className="relative mt-4">
-          <div className="scrollbar-none flex gap-3 overflow-x-auto px-1 py-1">
+          <div
+            ref={schoolScrollRef}
+            onScroll={(e) => updateSchoolScrollFade(e.currentTarget)}
+            className="scrollbar-desktop flex gap-3 overflow-x-auto px-1 py-1 pb-3"
+          >
             {institutionOptions.map((institution) => {
               const isSelected = institutionId === String(institution.id);
               return (
@@ -185,68 +201,72 @@ export default function ProgramsBrowser({
           </div>
           <div
             aria-hidden
-            className="pointer-events-none absolute top-0 left-0 h-full w-10 bg-gradient-to-r from-white to-transparent"
+            className={`pointer-events-none absolute top-0 left-0 h-full w-10 bg-gradient-to-r from-white to-transparent transition-opacity duration-200 ${
+              canScrollLeft ? "opacity-100" : "opacity-0"
+            }`}
           />
           <div
             aria-hidden
-            className="pointer-events-none absolute top-0 right-0 h-full w-10 bg-gradient-to-l from-white to-transparent"
+            className={`pointer-events-none absolute top-0 right-0 h-full w-10 bg-gradient-to-l from-white to-transparent transition-opacity duration-200 ${
+              canScrollRight ? "opacity-100" : "opacity-0"
+            }`}
           />
         </div>
       </div>
 
-      <div className="mt-8 flex flex-col gap-4">
-        <div>
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand/50">
-            Credential
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <button
-              type="button"
-              onClick={() => setLevel("all")}
-              className={`cursor-pointer rounded-full px-4 py-1.5 text-sm font-bold transition-colors duration-200 ${
-                level === "all"
-                  ? "bg-primary-text text-white"
-                  : "bg-brand/5 text-brand hover:bg-primary/10"
-              }`}
+      <div className="mt-6 flex flex-wrap gap-4">
+        <div className="w-full sm:w-56">
+          <label
+            htmlFor="credential-filter"
+            className="mb-2 block text-xs font-semibold uppercase tracking-wide text-brand"
+          >
+            Filter by credential
+          </label>
+          <div className="relative">
+            <select
+              id="credential-filter"
+              value={level}
+              onChange={(e) => setLevel(e.target.value)}
+              className="w-full cursor-pointer appearance-none rounded-md border border-brand/20 py-2.5 pl-3 pr-9 text-sm text-brand outline-none focus:border-primary"
             >
-              All credentials
-            </button>
-            {levels.map((l) => (
-              <button
-                key={l}
-                type="button"
-                onClick={() => setLevel(l)}
-                className={`cursor-pointer rounded-full px-4 py-1.5 text-sm font-bold transition-colors duration-200 ${
-                  level === l
-                    ? "bg-primary-text text-white"
-                    : "bg-brand/5 text-brand hover:bg-primary/10"
-                }`}
-              >
-                {levelLabels[l] ?? l}
-              </button>
-            ))}
+              <option value="all">All credentials</option>
+              {levels.map((l) => (
+                <option key={l} value={l}>
+                  {levelLabels[l] ?? l}
+                </option>
+              ))}
+            </select>
+            <ChevronDown
+              aria-hidden
+              className="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-brand/50"
+            />
           </div>
         </div>
 
-        <div>
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand/50">
-            Career salary potential
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {salaryBuckets.map((bucket) => (
-              <button
-                key={bucket.value}
-                type="button"
-                onClick={() => setMinSalary(bucket.value)}
-                className={`cursor-pointer rounded-full px-4 py-1.5 text-sm font-bold transition-colors duration-200 ${
-                  minSalary === bucket.value
-                    ? "bg-primary-text text-white"
-                    : "bg-brand/5 text-brand hover:bg-primary/10"
-                }`}
-              >
-                {bucket.label}
-              </button>
-            ))}
+        <div className="w-full sm:w-56">
+          <label
+            htmlFor="salary-filter"
+            className="mb-2 block text-xs font-semibold uppercase tracking-wide text-brand"
+          >
+            Filter by salary potential
+          </label>
+          <div className="relative">
+            <select
+              id="salary-filter"
+              value={minSalary}
+              onChange={(e) => setMinSalary(e.target.value)}
+              className="w-full cursor-pointer appearance-none rounded-md border border-brand/20 py-2.5 pl-3 pr-9 text-sm text-brand outline-none focus:border-primary"
+            >
+              {salaryBuckets.map((bucket) => (
+                <option key={bucket.value} value={bucket.value}>
+                  {bucket.label}
+                </option>
+              ))}
+            </select>
+            <ChevronDown
+              aria-hidden
+              className="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-brand/50"
+            />
           </div>
         </div>
       </div>
