@@ -143,86 +143,112 @@ export default function ProgramsBrowser({
 
       <div className="mt-10">
         <h2 className="text-lg font-semibold text-brand">Browse by school</h2>
-        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-          {institutionOptions.map((institution) => {
-            const isSelected = institutionId === String(institution.id);
-            return (
-              <button
-                key={institution.id}
-                type="button"
-                onClick={() =>
-                  setInstitutionId(isSelected ? "all" : String(institution.id))
-                }
-                className={`flex items-center gap-3 rounded-lg border p-3 text-left transition-colors duration-200 ${
-                  isSelected
-                    ? "border-primary bg-primary-text/5 shadow-[inset_0_0_0_1px_#8570f2]"
-                    : "border-brand/10 hover:border-primary-text"
-                }`}
-              >
-                <InstitutionLogo
-                  name={institution.name}
-                  logoUrl={institution.logoUrl}
-                  className="h-9 w-9 shrink-0 rounded-md"
-                />
-                <div className="min-w-0">
-                  <p className="truncate text-sm font-semibold text-brand">
-                    {institution.name}
-                  </p>
-                  <p className="text-xs text-brand/60">
-                    {programCountByInstitutionId.get(institution.id) ?? 0}{" "}
-                    program
-                    {programCountByInstitutionId.get(institution.id) === 1
-                      ? ""
-                      : "s"}
-                  </p>
-                </div>
-              </button>
-            );
-          })}
+        <div className="relative mt-4">
+          <div className="scrollbar-none flex gap-3 overflow-x-auto px-1 py-1">
+            {institutionOptions.map((institution) => {
+              const isSelected = institutionId === String(institution.id);
+              return (
+                <button
+                  key={institution.id}
+                  type="button"
+                  onClick={() =>
+                    setInstitutionId(
+                      isSelected ? "all" : String(institution.id),
+                    )
+                  }
+                  className={`flex w-56 shrink-0 items-center gap-3 rounded-lg border p-3 text-left transition-colors duration-200 ${
+                    isSelected
+                      ? "border-primary bg-primary-text/5 shadow-[inset_0_0_0_1px_#8570f2]"
+                      : "border-brand/10 hover:border-primary-text"
+                  }`}
+                >
+                  <InstitutionLogo
+                    name={institution.name}
+                    website={institution.website}
+                    className="h-9 w-9 shrink-0 rounded-md"
+                  />
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-semibold text-brand">
+                      {institution.name}
+                    </p>
+                    <p className="text-xs text-brand/60">
+                      {programCountByInstitutionId.get(institution.id) ?? 0}{" "}
+                      program
+                      {programCountByInstitutionId.get(institution.id) === 1
+                        ? ""
+                        : "s"}
+                    </p>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+          <div
+            aria-hidden
+            className="pointer-events-none absolute top-0 left-0 h-full w-10 bg-gradient-to-r from-white to-transparent"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute top-0 right-0 h-full w-10 bg-gradient-to-l from-white to-transparent"
+          />
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-3 sm:flex sm:flex-wrap sm:gap-4">
-        <select
-          value={level}
-          onChange={(e) => setLevel(e.target.value)}
-          aria-label="Filter by credential"
-          className="w-full cursor-pointer rounded-md border border-brand/20 px-3 py-2 text-sm text-brand outline-none focus:border-primary sm:w-auto"
-        >
-          <option value="all">All credentials</option>
-          {levels.map((l) => (
-            <option key={l} value={l}>
-              {levelLabels[l] ?? l}
-            </option>
-          ))}
-        </select>
+      <div className="mt-8 flex flex-col gap-4">
+        <div>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand/50">
+            Credential
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={() => setLevel("all")}
+              className={`cursor-pointer rounded-full px-4 py-1.5 text-sm font-bold transition-colors duration-200 ${
+                level === "all"
+                  ? "bg-primary-text text-white"
+                  : "bg-brand/5 text-brand hover:bg-primary/10"
+              }`}
+            >
+              All credentials
+            </button>
+            {levels.map((l) => (
+              <button
+                key={l}
+                type="button"
+                onClick={() => setLevel(l)}
+                className={`cursor-pointer rounded-full px-4 py-1.5 text-sm font-bold transition-colors duration-200 ${
+                  level === l
+                    ? "bg-primary-text text-white"
+                    : "bg-brand/5 text-brand hover:bg-primary/10"
+                }`}
+              >
+                {levelLabels[l] ?? l}
+              </button>
+            ))}
+          </div>
+        </div>
 
-        <select
-          value={institutionId}
-          onChange={(e) => setInstitutionId(e.target.value)}
-          aria-label="Filter by school"
-          className="w-full cursor-pointer rounded-md border border-brand/20 px-3 py-2 text-sm text-brand outline-none focus:border-primary sm:w-auto"
-        >
-          <option value="all">All schools</option>
-          {institutionOptions.map((institution) => (
-            <option key={institution.id} value={String(institution.id)}>
-              {institution.name}
-            </option>
-          ))}
-        </select>
-
-        <select
-          value={minSalary}
-          onChange={(e) => setMinSalary(e.target.value)}
-          aria-label="Filter by salary"
-          className="w-full cursor-pointer rounded-md border border-brand/20 px-3 py-2 text-sm text-brand outline-none focus:border-primary sm:w-auto"
-        >
-          {salaryBuckets.map((bucket) => (
-            <option key={bucket.value} value={bucket.value}>
-              {bucket.label}
-            </option>
-          ))}
-        </select>
+        <div>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand/50">
+            Career salary potential
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {salaryBuckets.map((bucket) => (
+              <button
+                key={bucket.value}
+                type="button"
+                onClick={() => setMinSalary(bucket.value)}
+                className={`cursor-pointer rounded-full px-4 py-1.5 text-sm font-bold transition-colors duration-200 ${
+                  minSalary === bucket.value
+                    ? "bg-primary-text text-white"
+                    : "bg-brand/5 text-brand hover:bg-primary/10"
+                }`}
+              >
+                {bucket.label}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       {filtered.length === 0 ? (
@@ -242,7 +268,7 @@ export default function ProgramsBrowser({
                 {institution && (
                   <InstitutionLogo
                     name={institution.name}
-                    logoUrl={institution.logoUrl}
+                    website={institution.website}
                     className="h-10 w-10 shrink-0 rounded-md"
                   />
                 )}

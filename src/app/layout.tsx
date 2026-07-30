@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cabin } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import "./globals.css";
 import Header from "@/components/Header";
 
@@ -46,7 +47,12 @@ const navLinks = [
   { href: "/find-a-career", label: "Find a Career" },
   { href: "/careers", label: "All Careers" },
   { href: "/education", label: "Browse Programs" },
+];
+
+const footerLinks = [
   { href: "/about", label: "About" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Service" },
 ];
 
 export default function RootLayout({
@@ -60,16 +66,29 @@ export default function RootLayout({
         <Header navLinks={navLinks} />
         <main className="flex-1">{children}</main>
         <footer className="border-t border-brand/10 bg-brand py-12 print:hidden">
-          <div className="mx-auto flex max-w-5xl flex-col items-start gap-4 px-6 text-left">
-            <Image
-              src="/logo-full-white.svg"
-              alt="Sabertree"
-              width={180}
-              height={30}
-            />
-            <p className="text-sm text-white">
-              © {new Date().getFullYear()} Sabertree. All rights reserved.
-            </p>
+          <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+            <div className="flex flex-col items-center gap-4 sm:items-start">
+              <Image
+                src="/logo-full-white.svg"
+                alt="Sabertree"
+                width={180}
+                height={30}
+              />
+              <p className="text-sm text-white">
+                © {new Date().getFullYear()} Sabertree. All rights reserved.
+              </p>
+            </div>
+            <nav className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-6">
+              {footerLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-white transition-colors duration-200 hover:text-accent"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
           </div>
         </footer>
       </body>

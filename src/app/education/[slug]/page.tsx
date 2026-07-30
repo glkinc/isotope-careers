@@ -108,7 +108,7 @@ export default async function EducationDetailPage({
           <div className="mt-3 flex items-start gap-4 rounded-lg bg-[#f6f6f7] p-4">
             <InstitutionLogo
               name={institution.name}
-              logoUrl={institution.logoUrl}
+              website={institution.website}
               className="h-12 w-12 shrink-0 rounded-md"
             />
             <div>

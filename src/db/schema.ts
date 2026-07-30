@@ -45,8 +45,27 @@ export const careers = pgTable("careers", {
   responsibilities: text("responsibilities").array(),
   dayToDay: text("day_to_day"),
   sources: text("sources").array(),
-  topEmployers: text("top_employers").array(),
 });
+
+export const companies = pgTable("companies", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull().unique(),
+  website: text("website"),
+});
+
+export const careerTopEmployers = pgTable(
+  "career_top_employers",
+  {
+    careerId: integer("career_id")
+      .notNull()
+      .references(() => careers.id),
+    companyId: integer("company_id")
+      .notNull()
+      .references(() => companies.id),
+    sortOrder: integer("sort_order").notNull().default(0),
+  },
+  (table) => [primaryKey({ columns: [table.careerId, table.companyId] })],
+);
 
 export const institutions = pgTable("institutions", {
   id: serial("id").primaryKey(),
@@ -55,7 +74,6 @@ export const institutions = pgTable("institutions", {
   province: text("province"),
   description: text("description"),
   website: text("website"),
-  logoUrl: text("logo_url"),
 });
 
 export const educationPrograms = pgTable("education_programs", {
@@ -133,11 +151,30 @@ export const careersRelations = relations(careers, ({ one, many }) => ({
   }),
   educationLinks: many(careerEducationPrograms),
   skillTreeNodes: many(skillTreeNodes),
+  topEmployers: many(careerTopEmployers),
 }));
 
 export const institutionsRelations = relations(institutions, ({ many }) => ({
   programs: many(educationPrograms),
 }));
+
+export const companiesRelations = relations(companies, ({ many }) => ({
+  careerLinks: many(careerTopEmployers),
+}));
+
+export const careerTopEmployersRelations = relations(
+  careerTopEmployers,
+  ({ one }) => ({
+    career: one(careers, {
+      fields: [careerTopEmployers.careerId],
+      references: [careers.id],
+    }),
+    company: one(companies, {
+      fields: [careerTopEmployers.companyId],
+      references: [companies.id],
+    }),
+  }),
+);
 
 export const educationProgramsRelations = relations(
   educationPrograms,

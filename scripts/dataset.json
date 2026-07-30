@@ -252,8 +252,7 @@
       "city": "Oshawa",
       "province": "ON",
       "description": "Public university offering Canada's only accredited undergraduate Nuclear Engineering program, an undergraduate Health Physics and Radiation Science program, and graduate nuclear engineering degrees.",
-      "website": "https://ontariotechu.ca",
-      "logoUrl": "https://logo.clearbit.com/ontariotechu.ca"
+      "website": "https://ontariotechu.ca"
     },
     {
       "id": 2,
@@ -261,8 +260,7 @@
       "city": "Hamilton",
       "province": "ON",
       "description": "Research university with a Department of Physics & Astronomy offering an Honours Physics program with a Medical and Biological Physics option, and home to the McMaster Nuclear Reactor.",
-      "website": "https://mcmaster.ca",
-      "logoUrl": "https://logo.clearbit.com/mcmaster.ca"
+      "website": "https://mcmaster.ca"
     },
     {
       "id": 3,
@@ -270,8 +268,7 @@
       "city": "Oshawa",
       "province": "ON",
       "description": "Public college offering applied-science and engineering-technology diplomas, including chemical engineering technology (with nuclear-physics content) and a non-destructive evaluation program, situated near Ontario's nuclear generating stations.",
-      "website": "https://durhamcollege.ca",
-      "logoUrl": "https://logo.clearbit.com/durhamcollege.ca"
+      "website": "https://durhamcollege.ca"
     },
     {
       "id": 4,
@@ -279,8 +276,7 @@
       "city": "Toronto",
       "province": "ON",
       "description": "Applied health-sciences college that delivers clinical medical-radiation-sciences education jointly with the University of Toronto, including the Nuclear Medicine and Molecular Imaging Technology program.",
-      "website": "https://michener.ca",
-      "logoUrl": "https://logo.clearbit.com/michener.ca"
+      "website": "https://michener.ca"
     },
     {
       "id": 5,
@@ -288,8 +284,7 @@
       "city": "Toronto",
       "province": "ON",
       "description": "Research university whose Faculty of Applied Science and Engineering offers Engineering Science, an extremely competitive program with majors including Engineering Physics that feeds into nuclear engineering and health-physics careers.",
-      "website": "https://utoronto.ca",
-      "logoUrl": "https://logo.clearbit.com/utoronto.ca"
+      "website": "https://utoronto.ca"
     },
     {
       "id": 6,
@@ -297,8 +292,7 @@
       "city": "Toronto",
       "province": "ON",
       "description": "Public university whose Faculty of Science offers one of only five undergraduate Medical Physics programs in Canada, plus a CAMPEP-accredited graduate Medical Physics program.",
-      "website": "https://torontomu.ca",
-      "logoUrl": "https://logo.clearbit.com/torontomu.ca"
+      "website": "https://torontomu.ca"
     },
     {
       "id": 7,
@@ -306,8 +300,7 @@
       "city": "Waterloo",
       "province": "ON",
       "description": "Research university whose School of Pharmacy runs Canada's only co-op Doctor of Pharmacy (PharmD) program, with a direct-from-high-school Conditional Admission to Pharmacy (CAP) pathway via its Honours Science program.",
-      "website": "https://uwaterloo.ca",
-      "logoUrl": "https://logo.clearbit.com/uwaterloo.ca"
+      "website": "https://uwaterloo.ca"
     }
   ],
   "educationPrograms": [
@@ -763,6 +756,118 @@
     {
       "careerSlug": "radiopharmacist",
       "programSlug": "honours-science-cap-waterloo"
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "name": "Acuren",
+      "website": "https://www.acuren.com"
+    },
+    {
+      "id": 2,
+      "name": "Aecon",
+      "website": "https://www.aecon.com"
+    },
+    {
+      "id": 3,
+      "name": "Alberta Health Services",
+      "website": "https://www.albertahealthservices.ca"
+    },
+    {
+      "id": 4,
+      "name": "AtkinsRéalis / Candu Energy",
+      "website": "https://www.candu.com"
+    },
+    {
+      "id": 5,
+      "name": "BWXT Medical",
+      "website": "https://www.bwxtmedical.com"
+    },
+    {
+      "id": 6,
+      "name": "Bruce Power",
+      "website": "https://www.brucepower.com"
+    },
+    {
+      "id": 7,
+      "name": "Cameco Corporation",
+      "website": "https://www.cameco.com"
+    },
+    {
+      "id": 8,
+      "name": "Canadian Nuclear Laboratories (CNL)",
+      "website": "https://www.cnl.ca"
+    },
+    {
+      "id": 9,
+      "name": "Canadian Nuclear Safety Commission (CNSC)",
+      "website": "https://www.cnsc-ccsn.gc.ca"
+    },
+    {
+      "id": 10,
+      "name": "Curium Pharma",
+      "website": "https://www.curiumpharma.com"
+    },
+    {
+      "id": 11,
+      "name": "Hospital diagnostic imaging departments (UHN, Sunnybrook, LHSC)",
+      "website": null
+    },
+    {
+      "id": 12,
+      "name": "Hospital nuclear pharmacy departments (UHN, Sunnybrook)",
+      "website": null
+    },
+    {
+      "id": 13,
+      "name": "Hospital radiation oncology departments",
+      "website": null
+    },
+    {
+      "id": 14,
+      "name": "Intech International",
+      "website": "https://www.intechinternational.com"
+    },
+    {
+      "id": 15,
+      "name": "Isologic Innovative Radiopharmaceuticals",
+      "website": "https://isologicradiopharm.ca"
+    },
+    {
+      "id": 16,
+      "name": "Lantheus Medical Imaging",
+      "website": "https://www.lantheus.com"
+    },
+    {
+      "id": 17,
+      "name": "McMaster Nuclear Reactor",
+      "website": "https://nuclear.mcmaster.ca"
+    },
+    {
+      "id": 18,
+      "name": "NB Power (Point Lepreau)",
+      "website": "https://www.nbpower.com"
+    },
+    {
+      "id": 19,
+      "name": "Nova Scotia Health Authority",
+      "website": "https://www.nshealth.ca"
+    },
+    {
+      "id": 20,
+      "name": "Ontario Power Generation (OPG)",
+      "website": "https://www.opg.com"
+    },
+    {
+      "id": 21,
+      "name": "TRIUMF",
+      "website": "https://www.triumf.ca"
+    },
+    {
+      "id": 22,
+      "name": "Vancouver Coastal Health",
+      "website": "https://www.vch.ca"
     }
   ]
 }

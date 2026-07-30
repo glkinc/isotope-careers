@@ -1,12 +1,14 @@
 // Data-access layer, backed by Postgres (Neon) via Drizzle. Callers (pages)
 // depend only on the types in ./types, not on the shape of the db schema.
 
-import { eq } from "drizzle-orm";
+import { asc, eq } from "drizzle-orm";
 import { db } from "@/db";
 import {
   careerCategories as careerCategoriesTable,
   careerEducationPrograms,
+  careerTopEmployers as careerTopEmployersTable,
   careers as careersTable,
+  companies as companiesTable,
   educationPrograms as educationProgramsTable,
   institutions as institutionsTable,
   programRequirements as programRequirementsTable,
@@ -16,6 +18,7 @@ import {
 import type {
   Career,
   CareerCategory,
+  Company,
   EducationProgram,
   Institution,
   ProgramRequirement,
@@ -28,7 +31,6 @@ function toCareer(row: typeof careersTable.$inferSelect): Career {
     ...row,
     responsibilities: row.responsibilities ?? [],
     sources: row.sources ?? [],
-    topEmployers: row.topEmployers ?? [],
   };
 }
 
@@ -158,6 +160,21 @@ export async function getSubjects(): Promise<Subject[]> {
 
 export async function getProgramRequirements(): Promise<ProgramRequirement[]> {
   return db.select().from(programRequirementsTable);
+}
+
+export async function getTopEmployersForCareer(
+  careerId: number,
+): Promise<Company[]> {
+  const rows = await db
+    .select({ company: companiesTable })
+    .from(careerTopEmployersTable)
+    .innerJoin(
+      companiesTable,
+      eq(careerTopEmployersTable.companyId, companiesTable.id),
+    )
+    .where(eq(careerTopEmployersTable.careerId, careerId))
+    .orderBy(asc(careerTopEmployersTable.sortOrder));
+  return rows.map((r) => r.company);
 }
 
 export async function getCareerEducationLinks(): Promise<

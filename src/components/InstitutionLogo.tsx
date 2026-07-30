@@ -5,14 +5,26 @@ import { Building2 } from "lucide-react";
 
 type Props = {
   name: string;
-  logoUrl: string | null;
+  website: string | null;
   className?: string;
 };
 
-export default function InstitutionLogo({ name, logoUrl, className }: Props) {
-  const [failed, setFailed] = useState(false);
+// Institutions don't have a hosted logo asset, so we derive one from their
+// domain via a favicon service rather than storing brittle logo URLs.
+function faviconUrlFor(website: string): string | null {
+  try {
+    const { hostname } = new URL(website);
+    return `https://icons.duckduckgo.com/ip3/${hostname}.ico`;
+  } catch {
+    return null;
+  }
+}
 
-  if (!logoUrl || failed) {
+export default function InstitutionLogo({ name, website, className }: Props) {
+  const [failed, setFailed] = useState(false);
+  const src = website ? faviconUrlFor(website) : null;
+
+  if (!src || failed) {
     return (
       <div
         className={`flex items-center justify-center bg-[#f6f6f7] ${className ?? ""}`}
@@ -25,7 +37,7 @@ export default function InstitutionLogo({ name, logoUrl, className }: Props) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={logoUrl}
+      src={src}
       alt={`${name} logo`}
       onError={() => setFailed(true)}
       className={`object-contain ${className ?? ""}`}

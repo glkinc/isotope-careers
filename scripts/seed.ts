@@ -4,6 +4,8 @@ import { db } from "../src/db";
 import {
   careerCategories,
   careers,
+  careerTopEmployers,
+  companies,
   institutions,
   educationPrograms,
   careerEducationPrograms,
@@ -33,6 +35,7 @@ type Dataset = {
     sources: string[];
     topEmployers: string[];
   }[];
+  companies: { id: number; name: string; website: string | null }[];
   institutions: {
     id: number;
     name: string;
@@ -40,7 +43,6 @@ type Dataset = {
     province: string;
     description: string;
     website: string;
-    logoUrl: string;
   }[];
   educationPrograms: {
     id: number;
@@ -74,6 +76,8 @@ async function main() {
   const data: Dataset = JSON.parse(raw);
 
   console.log("Clearing existing rows...");
+  await db.delete(careerTopEmployers);
+  await db.delete(companies);
   await db.delete(careerEducationPrograms);
   await db.delete(programRequirements);
   await db.delete(subjects);
@@ -86,7 +90,14 @@ async function main() {
   await db.insert(careerCategories).values(data.careerCategories);
 
   console.log("Inserting careers...");
-  await db.insert(careers).values(data.careers);
+  await db.insert(careers).values(
+    data.careers.map(({ topEmployers, ...career }) => career),
+  );
+
+  console.log("Inserting companies...");
+  await db.insert(companies).values(
+    data.companies.map((c) => ({ id: c.id, name: c.name, website: c.website })),
+  );
 
   console.log("Inserting institutions...");
   await db.insert(institutions).values(data.institutions);
@@ -110,6 +121,17 @@ async function main() {
     programId: programIdBySlug.get(link.programSlug)!,
   }));
   await db.insert(careerEducationPrograms).values(links);
+
+  console.log("Inserting career/top-employer links...");
+  const companyIdByName = new Map(data.companies.map((c) => [c.name, c.id]));
+  const employerLinks = data.careers.flatMap((career) =>
+    (career.topEmployers ?? []).map((name, i) => ({
+      careerId: career.id,
+      companyId: companyIdByName.get(name)!,
+      sortOrder: i,
+    })),
+  );
+  await db.insert(careerTopEmployers).values(employerLinks);
 
   console.log("Done.");
 }

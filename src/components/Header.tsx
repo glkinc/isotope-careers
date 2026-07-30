@@ -3,11 +3,17 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type NavLink = { href: string; label: string };
 
 export default function Header({ navLinks }: { navLinks: NavLink[] }) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  function isActive(href: string) {
+    return href === "/" ? pathname === "/" : pathname.startsWith(href);
+  }
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -25,8 +31,8 @@ export default function Header({ navLinks }: { navLinks: NavLink[] }) {
   }, []);
 
   return (
-    <header className="relative z-50 bg-brand print:hidden">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
+    <header className="relative z-50 m-4 rounded-full bg-brand print:hidden">
+      <div className="flex items-center justify-between px-10 py-4">
         <Link href="/" className="block" onClick={() => setOpen(false)}>
           <Image
             src="/logo-full-white.svg"
@@ -37,12 +43,14 @@ export default function Header({ navLinks }: { navLinks: NavLink[] }) {
           />
         </Link>
 
-        <nav className="hidden gap-8 text-sm font-bold text-white md:flex">
+        <nav className="hidden gap-8 text-md text-white md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors duration-200 hover:text-accent"
+              className={`transition-colors duration-200 hover:text-accent ${
+                isActive(link.href) ? "text-accent" : ""
+              }`}
             >
               {link.label}
             </Link>
@@ -92,9 +100,9 @@ export default function Header({ navLinks }: { navLinks: NavLink[] }) {
             style={{
               transitionDelay: open ? `${i * 60 + 100}ms` : "0ms",
             }}
-            className={`font-heading text-3xl font-bold text-white transition-all duration-300 ease-out hover:text-accent ${
-              open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
-            }`}
+            className={`font-heading text-3xl font-bold transition-all duration-300 ease-out hover:text-accent ${
+              isActive(link.href) ? "text-accent" : "text-white"
+            } ${open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}
           >
             {link.label}
           </Link>

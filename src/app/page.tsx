@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Compass, ListChecks, MapPinned, Sparkles } from "lucide-react";
+import { Info, Sprout, ListChecks, MapPinned, Sparkles, BriefcaseBusiness } from "lucide-react";
 import { getCareerCategories } from "@/data/queries";
 import Button from "@/components/Button";
+import Pill from "@/components/Pill";
 
 const steps = [
   {
@@ -31,17 +31,27 @@ export default async function HomePage() {
   return (
     <div>
       <section className="relative overflow-hidden">
-        <div className="mx-auto max-w-5xl px-6 py-12 sm:py-20">
-          <div className="max-w-2xl lg:pr-24">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute bottom-0 left-1/2 h-[36rem] w-[64rem] -translate-x-1/2 translate-y-1/2 rounded-full"
+          style={{
+            background:
+              "radial-gradient(closest-side, rgba(181,166,247,0.60), rgba(181,166,247,0) 70%)",
+          }}
+        />
+        <div className="relative mx-auto max-w-5xl px-6 py-12 sm:py-30">
+          <div className="max-w-2xl text-center mx-auto">
+            <Pill icon={BriefcaseBusiness}>Over 20 career opportunities</Pill>
+            
             <h1 className="text-4xl font-semibold tracking-tight text-brand sm:text-5xl">
               Build a career in isotope production and use.
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-brand/80">
+            <p className="mt-6 max-w-xl mx-auto text-lg text-brand/80">
               A guide to the careers, education paths, and skills behind
-              Canada&apos;s medical and industrial isotope industry — from
+              Canada&apos;s medical and industrial isotope industry, from
               reactor operations to radiopharmaceutical chemistry.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+            <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <Button
                 href="/find-a-career"
                 variant="solid"
@@ -59,91 +69,83 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
+      </section>
 
+      <section className="border border-brand/10 bg-primary/8 mx-auto max-w-6xl rounded-xl">
+        <div className="px-6 py-10 sm:py-16 lg:px-20">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <Pill icon={Sprout}>Opportunites Await</Pill>
+              <h2 className="text-3xl font-semibold text-brand sm:text-5xl">Why work with isotope production?</h2>
+              <p className="mt-6 max-w-xl text-lg text-brand/80">
+                Canada has spent 70+ years building a global reputation in isotope production — and it&apos;s entering a new growth phase. With a national Radioisotope Strategy now underway, the sector is expanding across reactors, accelerators, and production facilities nationwide, creating demand for technologists, engineers, physicists, and skilled trades. Now is the time to build a career at the center of one of Canada&apos;s fastest-growing industries.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 text-center">
+              <div className="rounded-2xl border border-primary/15 flex-col content-center bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                <p className="text-3xl font-bold text-primary-text">8,500+</p>
+                <p className="mt-2 text-sm text-gray-500">jobs in Canada&apos;s medical isotope sector</p>
+              </div>
+              <div className="rounded-2xl border border-primary/15 flex-col content-center bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                <p className="text-3xl font-bold text-primary-text">70+ years</p>
+                <p className="mt-2 text-sm text-gray-500">as a global isotope leader</p>
+              </div>
+              <div className="rounded-2xl border border-primary/15 flex-col content-center bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                <p className="text-3xl font-bold text-primary-text">$770B CAD</p>
+                <p className="mt-2 text-sm text-gray-500">in GDP supported by isotope-reliant industries</p>
+              </div>
+              <div className="rounded-2xl border border-primary/15 flex-col content-center bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                <p className="text-3xl font-bold text-primary-text">10%</p>
+                <p className="mt-2 text-sm text-gray-500">targeted growth in global market share</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute top-6 right-12 hidden flex-col items-end opacity-90 lg:flex"
-        >
-          <Image
-            src="/chevrons.svg"
-            alt=""
-            width={209}
-            height={305}
-            className="animate-chevron-in"
-            style={{ animationDelay: "150ms" }}
-          />
-          <Image
-            src="/chevrons.svg"
-            alt=""
-            width={209}
-            height={305}
-            className="animate-chevron-in -mt-10"
-            style={{ animationDelay: "300ms" }}
-          />
-        </div>
-      </section>
-
-      <section className="border-t border-brand/10 bg-[#f1f1f1]">
-        <div className="mx-auto max-w-5xl px-6 py-10 sm:py-16">
-          <div className="flex items-center gap-2">
-            <Compass aria-hidden className="h-6 w-6 text-primary-text" />
-            <h2 className="text-xl font-semibold text-brand">Career areas</h2>
-          </div>
-          <div className="mt-6 grid gap-6 sm:grid-cols-3">
-            {categories.map((category) => (
-              <Link
-                key={category.id}
-                href={`/careers?category=${category.slug}`}
-                className="group rounded-lg border border-brand/10 bg-white p-6 transition-colors duration-200 hover:border-primary hover:shadow-[inset_0_0_0_1px_#8570f2]"
-              >
-                <h3 className="font-semibold text-brand">{category.name}</h3>
-                <p className="mt-2 text-sm text-brand/80">
-                  {category.description}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-primary-text">
-                  See careers
-                  <span
-                    aria-hidden
-                    className="transition-transform duration-200 group-hover:translate-x-1"
-                  >
-                    →
+          className="pointer-events-none absolute bottom-0 left-1/2 h-[36rem] w-[64rem] -translate-x-1/2 translate-y-1/2 rounded-full"
+          style={{
+            background:
+              "radial-gradient(closest-side, rgba(181,166,247,0.60), rgba(181,166,247,0) 70%)",
+          }}
+        />
+        <div className="relative mx-auto px-6 py-12 sm:py-30">
+          <div className=" text-center mx-auto">
+            <Pill icon={Info}>How it works</Pill>
+            
+            <h2 className="text-6xl font-semibold max-w-xl mx-auto tracking-tight text-brand sm:text-5xl">
+              Three Simple Steps To Get Started 
+            </h2>
+            
+            <div className="mt-6 grid gap-6 max-w-6xl mx-auto text-left sm:grid-cols-3">
+              {steps.map((step, i) => (
+                <div
+                  key={step.title}
+                  className="relative flex gap-4 rounded-lg border border-brand/10 bg-primary/8 p-6"
+                >
+                  <span className="shrink-0 text-6xl font-bold text-primary-text">
+                    {i + 1}
                   </span>
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-5xl px-6 py-10 sm:py-16">
-        <h2 className="text-xl font-semibold text-brand">How it works</h2>
-        <div className="mt-6 grid gap-6 sm:grid-cols-3">
-          {steps.map((step, i) => (
-            <div
-              key={step.title}
-              className="relative rounded-lg border border-brand/10 bg-[#f6f6f7] p-6"
-            >
-              <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-text text-white">
-                  <step.icon aria-hidden className="h-5 w-5" />
-                </span>
-                <span className="text-sm font-bold text-primary-text">
-                  Step {i + 1}
-                </span>
-              </div>
-              <h3 className="mt-4 font-semibold text-brand">{step.title}</h3>
-              <p className="mt-2 text-sm text-brand/80">{step.description}</p>
+                  <div>
+                    <h3 className="font-semibold text-brand">{step.title}</h3>
+                    <p className="mt-1 text-sm text-brand/80">{step.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="mt-10">
-          <Button
-            href="/find-a-career"
-            variant="solid"
-            className="w-full justify-between sm:w-auto sm:justify-start"
-          >
-            Find a career
-          </Button>
+            <div className="mt-10">
+              <Button
+                href="/find-a-career"
+                variant="solid"
+                className="w-full justify-between sm:w-auto sm:justify-start"
+              >
+                Find a career
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
