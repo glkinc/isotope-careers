@@ -17,6 +17,7 @@ import {
 } from "@/data/queries";
 import Button from "@/components/Button";
 import PageActions from "@/components/PageActions";
+import OrgLogo from "@/components/OrgLogo";
 
 export async function generateStaticParams() {
   const careers = await getCareers();
@@ -112,21 +113,37 @@ export default async function CareerDetailPage({
                     href={employer.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block rounded-md bg-[#f6f6f7] px-4 py-2.5 text-sm text-brand/80 transition-colors duration-200 hover:bg-primary/10 hover:text-primary-text"
+                    className="flex items-center gap-2.5 rounded-md bg-[#f6f6f7] px-4 py-2.5 text-sm text-brand/80 transition-colors duration-200 hover:bg-primary/10 hover:text-primary-text"
                   >
+                    <OrgLogo
+                      name={employer.name}
+                      website={employer.website}
+                      className="h-6 w-6 shrink-0 rounded"
+                    />
                     {employer.name}
                   </a>
                 </li>
               ) : (
                 <li
                   key={employer.id}
-                  className="rounded-md bg-[#f6f6f7] px-4 py-2.5 text-sm text-brand/80"
+                  className="flex items-center gap-2.5 rounded-md bg-[#f6f6f7] px-4 py-2.5 text-sm text-brand/80"
                 >
+                  <OrgLogo
+                    name={employer.name}
+                    website={employer.website}
+                    className="h-6 w-6 shrink-0 rounded"
+                  />
                   {employer.name}
                 </li>
               ),
             )}
           </ul>
+          <Link
+            href="/employers"
+            className="mt-3 inline-block text-sm font-bold text-primary-text hover:underline"
+          >
+            See all employers in the field
+          </Link>
         </section>
       )}
 

@@ -9,8 +9,9 @@ type Props = {
   className?: string;
 };
 
-// Institutions don't have a hosted logo asset, so we derive one from their
-// domain via a favicon service rather than storing brittle logo URLs.
+// Institutions and companies don't have a hosted logo asset, so we derive
+// one from their domain via a favicon service rather than storing brittle
+// logo URLs.
 function faviconUrlFor(website: string): string | null {
   try {
     const { hostname } = new URL(website);
@@ -20,7 +21,7 @@ function faviconUrlFor(website: string): string | null {
   }
 }
 
-export default function InstitutionLogo({ name, website, className }: Props) {
+export default function OrgLogo({ name, website, className }: Props) {
   const [failed, setFailed] = useState(false);
   const src = website ? faviconUrlFor(website) : null;
 

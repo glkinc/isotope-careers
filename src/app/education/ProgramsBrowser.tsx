@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { ChevronDown, Search } from "lucide-react";
 import type { Career, EducationProgram, Institution } from "@/data/types";
-import InstitutionLogo from "@/components/InstitutionLogo";
+import OrgLogo from "@/components/OrgLogo";
 
 type Props = {
   programs: EducationProgram[];
@@ -178,7 +178,7 @@ export default function ProgramsBrowser({
                       : "border-brand/10 hover:border-primary-text"
                   }`}
                 >
-                  <InstitutionLogo
+                  <OrgLogo
                     name={institution.name}
                     website={institution.website}
                     className="h-9 w-9 shrink-0 rounded-md"
@@ -286,7 +286,7 @@ export default function ProgramsBrowser({
                 className="flex gap-4 rounded-lg border border-brand/10 p-6 hover:border-primary hover:shadow-[inset_0_0_0_1px_#8570f2]"
               >
                 {institution && (
-                  <InstitutionLogo
+                  <OrgLogo
                     name={institution.name}
                     website={institution.website}
                     className="h-10 w-10 shrink-0 rounded-md"

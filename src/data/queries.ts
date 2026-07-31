@@ -177,6 +177,25 @@ export async function getTopEmployersForCareer(
   return rows.map((r) => r.company);
 }
 
+export async function getCompanies(): Promise<Company[]> {
+  const rows = await db.select().from(companiesTable);
+  return rows.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+export async function getCareersForCompany(
+  companyId: number,
+): Promise<Career[]> {
+  const rows = await db
+    .select({ career: careersTable })
+    .from(careerTopEmployersTable)
+    .innerJoin(
+      careersTable,
+      eq(careerTopEmployersTable.careerId, careersTable.id),
+    )
+    .where(eq(careerTopEmployersTable.companyId, companyId));
+  return rows.map((r) => toCareer(r.career));
+}
+
 export async function getCareerEducationLinks(): Promise<
   { careerSlug: string; programSlug: string }[]
 > {

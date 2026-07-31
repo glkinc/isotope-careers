@@ -47,6 +47,7 @@ const navLinks = [
   { href: "/find-a-career", label: "Find a Career" },
   { href: "/careers", label: "All Careers" },
   { href: "/education", label: "Browse Programs" },
+  { href: "/employers", label: "Employers" },
 ];
 
 const footerLinks = [

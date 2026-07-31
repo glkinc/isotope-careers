@@ -9,7 +9,7 @@ import {
   getProgramsForInstitution,
 } from "@/data/queries";
 import PageActions from "@/components/PageActions";
-import InstitutionLogo from "@/components/InstitutionLogo";
+import OrgLogo from "@/components/OrgLogo";
 
 const levelLabels: Record<string, string> = {
   high_school: "High School",
@@ -106,7 +106,7 @@ export default async function EducationDetailPage({
             School
           </h2>
           <div className="mt-3 flex items-start gap-4 rounded-lg bg-[#f6f6f7] p-4">
-            <InstitutionLogo
+            <OrgLogo
               name={institution.name}
               website={institution.website}
               className="h-12 w-12 shrink-0 rounded-md"
