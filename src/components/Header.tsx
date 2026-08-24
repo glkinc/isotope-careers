@@ -36,7 +36,7 @@ export default function Header({ navLinks }: { navLinks: NavLink[] }) {
         <Link href="/" className="block" onClick={() => setOpen(false)}>
           <Image
             src="/logo-full-white.svg"
-            alt="Sabertree"
+            alt="Isotope Careers"
             width={160}
             height={26}
             priority

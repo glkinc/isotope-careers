@@ -11,7 +11,7 @@ export default function PrivacyPage() {
       <p className="mt-4 text-sm text-brand/60">Last updated: July 29, 2026</p>
 
       <p className="mt-6 text-brand/80">
-        Sabertree is an independent, public-facing resource about careers,
+        Isotope Careers is an independent, public-facing resource about careers,
         education, and skill paths in Canada&apos;s isotope production and use
         sector. This policy explains what information we collect when you use
         this site and how it&apos;s handled.
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
           Information we collect
         </h2>
         <p className="mt-3 text-brand/80">
-          Sabertree does not require an account, and we do not ask you to
+          Isotope Careers does not require an account, and we do not ask you to
           submit personal information to browse careers, education programs,
           or the skill tree tool. The site does not run a quiz, survey, or
           onboarding flow that collects personal details.

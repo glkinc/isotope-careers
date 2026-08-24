@@ -4,7 +4,7 @@
       "id": 1,
       "slug": "reactor-operations",
       "name": "Reactor Operations & Power Engineering",
-      "description": "Careers that keep nuclear power stations and research reactors running safely — operating controls, maintaining equipment, and designing plant systems."
+      "description": "Careers that keep nuclear power stations and research reactors running safely \u2014 operating controls, maintaining equipment, and designing plant systems."
     },
     {
       "id": 2,
@@ -17,6 +17,24 @@
       "slug": "regulatory-radiation-safety",
       "name": "Regulatory & Radiation Safety",
       "description": "Careers focused on protecting people and the environment from radiation risk, from hospital and plant health-physics roles to industrial inspection."
+    },
+    {
+      "id": 4,
+      "slug": "quality-regulatory",
+      "name": "Quality & Regulatory Affairs",
+      "description": "Careers that keep isotope and radiopharmaceutical production compliant and safe to release, from lab-based quality control to licensing and GMP quality systems."
+    },
+    {
+      "id": 5,
+      "slug": "research-clinical",
+      "name": "Research & Clinical Support",
+      "description": "Careers that develop new radiopharmaceuticals and support their use in patient care, from preclinical research through clinical trials, dosimetry, and medical affairs."
+    },
+    {
+      "id": 6,
+      "slug": "commercial-operations",
+      "name": "Commercial, Logistics & Program Operations",
+      "description": "Careers that get isotope products, projects, and partnerships across the finish line, from time-critical radioactive-material logistics to sales and program management."
     }
   ],
   "careers": [
@@ -81,8 +99,7 @@
         "Canadian Nuclear Safety Commission (CNSC)",
         "Ontario Power Generation (OPG)",
         "Bruce Power",
-        "Canadian Nuclear Laboratories (CNL)",
-        "Hospital radiation oncology departments"
+        "Canadian Nuclear Laboratories (CNL)"
       ]
     },
     {
@@ -91,7 +108,7 @@
       "slug": "radiochemist",
       "title": "Radiochemist / Nuclear Chemistry Technologist",
       "summary": "Analyzes and handles radioactive materials and compounds, supporting everything from radiopharmaceutical production to nuclear plant water chemistry.",
-      "description": "Chemists in the isotope industry — sometimes called radiochemists or nuclear lab technologists depending on the employer — conduct research and quality-control analysis involving radioactive and non-radioactive compounds. They work in university and government research labs, radiopharmaceutical manufacturers, and nuclear generating stations, where they monitor coolant and fuel chemistry and support radioactive-materials handling. A bachelor's degree is the typical entry point, with a master's or doctorate usually required for research-chemist roles; licensing is voluntary in Ontario.",
+      "description": "Chemists in the isotope industry \u2014 sometimes called radiochemists or nuclear lab technologists depending on the employer \u2014 conduct research and quality-control analysis involving radioactive and non-radioactive compounds. They work in university and government research labs, radiopharmaceutical manufacturers, and nuclear generating stations, where they monitor coolant and fuel chemistry and support radioactive-materials handling. A bachelor's degree is the typical entry point, with a master's or doctorate usually required for research-chemist roles; licensing is voluntary in Ontario.",
       "nocCode": "21101",
       "salaryMin": 56300,
       "salaryMax": 138700,
@@ -142,7 +159,6 @@
         "https://www.services.labour.gov.on.ca/labourmarket-ui/jobProfile?nocCode=32121"
       ],
       "topEmployers": [
-        "Hospital diagnostic imaging departments (UHN, Sunnybrook, LHSC)",
         "Vancouver Coastal Health",
         "Alberta Health Services",
         "Nova Scotia Health Authority",
@@ -155,7 +171,7 @@
       "slug": "ndt-technician",
       "title": "Non-Destructive Testing (NDT) Technician",
       "summary": "Uses X-ray, ultrasonic, and other techniques to check welds, pipes, and structures for hidden flaws without damaging them.",
-      "description": "Non-destructive testers and inspectors examine manufactured parts and structures — from pipelines to aircraft to nuclear plant components — for cracks or defects using radiographic, ultrasonic, magnetic-particle, liquid-penetrant, and eddy-current methods. Industrial radiographers who use a radioactive isotope source must pass a CNSC exam to become a certified exposure-device operator. Certification through Natural Resources Canada is available in three levels and is usually required by employers, and welding-inspector certification through the Canadian Welding Bureau is common as well.",
+      "description": "Non-destructive testers and inspectors examine manufactured parts and structures \u2014 from pipelines to aircraft to nuclear plant components \u2014 for cracks or defects using radiographic, ultrasonic, magnetic-particle, liquid-penetrant, and eddy-current methods. Industrial radiographers who use a radioactive isotope source must pass a CNSC exam to become a certified exposure-device operator. Certification through Natural Resources Canada is available in three levels and is usually required by employers, and welding-inspector certification through the Canadian Welding Bureau is common as well.",
       "nocCode": "22230",
       "salaryMin": 42300,
       "salaryMax": 99500,
@@ -208,7 +224,7 @@
       "topEmployers": [
         "Ontario Power Generation (OPG)",
         "Bruce Power",
-        "AtkinsRéalis / Candu Energy",
+        "AtkinsR\u00e9alis / Candu Energy",
         "Canadian Nuclear Laboratories (CNL)",
         "Canadian Nuclear Safety Commission (CNSC)"
       ]
@@ -239,9 +255,492 @@
       "topEmployers": [
         "BWXT Medical",
         "Isologic Innovative Radiopharmaceuticals",
-        "Hospital nuclear pharmacy departments (UHN, Sunnybrook)",
         "Curium Pharma",
         "Lantheus Medical Imaging"
+      ]
+    },
+    {
+      "id": 8,
+      "categoryId": 1,
+      "slug": "nuclear-reactor-analyst",
+      "title": "Nuclear Reactor Analyst / Reactor Physicist",
+      "summary": "Uses physics and computer modelling to calculate how neutrons and radiation behave inside a reactor so isotopes and power are produced safely and efficiently.",
+      "description": "Nuclear reactor analysts and reactor physicists model neutron flux, radiation transport, and reactor core behaviour to support isotope irradiation planning, reactor licensing, and safety cases. They work closely with reactor operators and engineers at research and power reactors to plan irradiation experiments, verify shielding, and interpret detector data. The role blends advanced physics with hands-on collaboration in a licensed nuclear facility.",
+      "nocCode": "21100",
+      "salaryMin": 69100,
+      "salaryMax": 134300,
+      "responsibilities": [
+        "Model neutron and radiation transport using simulation software to predict reactor and irradiation behaviour",
+        "Plan and evaluate target placement and irradiation schedules for isotope production runs",
+        "Analyze reactor physics data and detector readings to verify safety margins",
+        "Support licensing submissions and safety analysis reports for regulators",
+        "Collaborate with reactor operators, engineers, and radiochemists on experiment design",
+        "Document methods and findings for internal review and regulatory audits"
+      ],
+      "dayToDay": "A typical day involves running or reviewing reactor physics simulations, meeting with operations staff to plan an upcoming irradiation cycle, and analyzing data from a previous run to confirm isotope yields matched predictions.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/2495/ca",
+        "https://www.jobbank.gc.ca/marketreport/summary-occupation/2495/ca",
+        "https://noc.esdc.gc.ca/Structure/NOCProfile?GocTemplateCulture=en-CA&code=21100&version=2021.0"
+      ],
+      "topEmployers": [
+        "Canadian Nuclear Laboratories (CNL)",
+        "McMaster Nuclear Reactor",
+        "TRIUMF",
+        "Bruce Power",
+        "Ontario Power Generation (OPG)"
+      ]
+    },
+    {
+      "id": 9,
+      "categoryId": 2,
+      "slug": "isotope-production-technician",
+      "title": "Isotope Production Technician / Nuclear Technologist",
+      "summary": "Prepares irradiation targets and processes them afterward to recover, package, and ship medical isotopes safely.",
+      "description": "Isotope production technicians and nuclear technologists handle the hands-on work of turning an irradiated target into a usable isotope product. They prepare and load targets, operate hot cells and processing equipment to chemically recover isotopes, run quality checks, and package material for shipment to radiopharmacies and hospitals under strict radiation-safety procedures. The work requires precision, comfort working with radioactive material, and close attention to regulatory documentation.",
+      "nocCode": "22100",
+      "salaryMin": 34200,
+      "salaryMax": 83200,
+      "responsibilities": [
+        "Prepare and load irradiation targets according to production schedules",
+        "Operate hot cells, shielded processing equipment, and remote handling tools to recover isotopes",
+        "Perform in-process quality checks on isotope purity and activity levels",
+        "Package and label radioactive material for shipment following transport regulations",
+        "Maintain radiation dose logs and equipment maintenance records",
+        "Follow radiation protection and contamination control procedures at all times"
+      ],
+      "dayToDay": "A shift typically includes loading or unloading targets from a hot cell, running chemical separation steps to recover the isotope, and completing documentation and dose logs before releasing product for shipment.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/2934/ca",
+        "https://www.jobbank.gc.ca/marketreport/summary-occupation/2934/ca",
+        "https://noc.esdc.gc.ca/Structure/NOCProfile?GocTemplateCulture=en-CA&code=22100&version=2021.0"
+      ],
+      "topEmployers": [
+        "BWXT Medical",
+        "Canadian Nuclear Laboratories (CNL)",
+        "ARTMS Products",
+        "McMaster Nuclear Reactor",
+        "TRIUMF"
+      ]
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "slug": "cyclotron-operator",
+      "title": "Cyclotron Operator / Accelerator Technologist",
+      "summary": "Runs and maintains the particle accelerator that bombards targets with protons to make PET and other medical isotopes.",
+      "description": "Cyclotron operators and accelerator technologists start up, monitor, and shut down cyclotrons used to produce medical isotopes such as those used in PET imaging. They troubleshoot beam and vacuum systems, perform preventive maintenance on high-voltage and mechanical components, and work with radiochemistry teams to coordinate irradiation runs. The job combines electromechanical trade skills with radiation-safety discipline in a highly regulated production environment.",
+      "nocCode": "22301",
+      "salaryMin": 42600,
+      "salaryMax": 95300,
+      "responsibilities": [
+        "Start up, tune, and monitor cyclotron beam parameters during production runs",
+        "Perform preventive and corrective maintenance on accelerator, vacuum, and cooling systems",
+        "Coordinate target irradiation schedules with production and chemistry teams",
+        "Troubleshoot mechanical, electrical, and radio-frequency system faults",
+        "Maintain radiation safety interlocks and complete equipment logbooks",
+        "Support installation and commissioning of new accelerator components"
+      ],
+      "dayToDay": "A typical day includes pre-run system checks, operating the cyclotron console during target bombardment, and performing scheduled maintenance or troubleshooting between production runs.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/3236/ca",
+        "https://alis.alberta.ca/occinfo/wages-and-salaries-in-alberta/mechanical-engineering-technologists-and-technicians/22301/",
+        "https://fiveyearplan.triumf.ca/teams-tools/bwxt-cyclotrons/index.html"
+      ],
+      "topEmployers": [
+        "TRIUMF",
+        "BWXT Medical",
+        "Centre for Probe Development and Commercialization (CPDC)",
+        "Lawson Health Research Institute"
+      ]
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "slug": "radiopharmaceutical-production-technologist",
+      "title": "Radiopharmaceutical / Production Technologist",
+      "summary": "Compounds, tests, and packages radioactive drugs in a manufacturing or hospital lab so they are safe and ready to ship.",
+      "description": "Radiopharmaceutical production technologists prepare, compound, and package radioactive drug products in licensed manufacturing or hospital radiopharmacy settings, working under pharmacists and production supervisors. They follow strict aseptic and Good Manufacturing Practice procedures, perform in-process checks, and manage inventory and documentation for products with short shelf lives. Because radiopharmaceuticals decay quickly, timing, accuracy, and radiation safety are central to the job.",
+      "nocCode": "32124",
+      "salaryMin": 28600,
+      "salaryMax": 57200,
+      "responsibilities": [
+        "Compound and prepare radiopharmaceutical doses following validated production procedures",
+        "Perform aseptic technique and in-process quality checks during manufacturing",
+        "Package, label, and stage products for time-sensitive shipment",
+        "Maintain batch records, inventory, and controlled-substance documentation",
+        "Support cleaning, calibration, and maintenance of production equipment",
+        "Follow radiation protection procedures and monitor personal dose"
+      ],
+      "dayToDay": "A typical day is built around production schedules tied to isotope decay, with technologists compounding batches, running quality checks, and packaging doses in time for same-day courier pickup.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/25660/ca",
+        "https://www.jobbank.gc.ca/marketreport/summary-occupation/25660/ca",
+        "https://noc.esdc.gc.ca/Structure/NOCProfile?GocTemplateCulture=en-CA&code=32124&version=2021.0"
+      ],
+      "topEmployers": [
+        "AtomVie Global Radiopharma",
+        "Isologic Innovative Radiopharmaceuticals",
+        "ITM Isotope Technologies Canada",
+        "BWXT Medical"
+      ]
+    },
+    {
+      "id": 12,
+      "categoryId": 4,
+      "slug": "quality-control-analyst",
+      "title": "Quality Control Analyst / QC Chemist",
+      "summary": "Tests radiopharmaceutical products in the lab to confirm they are pure, correctly identified, and safe to release.",
+      "description": "Quality control analysts and QC chemists run laboratory tests, such as chromatography, radiochemical purity testing, and sterility checks, to confirm that isotopes and radiopharmaceuticals meet release specifications before they leave the facility. They document results against Good Manufacturing Practice standards, investigate out-of-specification results, and support product release decisions. The role requires strong analytical chemistry skills and comfort working with radioactive samples.",
+      "nocCode": "21101",
+      "salaryMin": 40100,
+      "salaryMax": 123200,
+      "responsibilities": [
+        "Perform analytical tests such as chromatography, radiochemical purity, and endotoxin testing",
+        "Compare test results against product release specifications",
+        "Document and investigate out-of-specification or atypical results",
+        "Calibrate and maintain laboratory instruments",
+        "Prepare certificates of analysis and QC records for batch release",
+        "Support audits and regulatory inspections with accurate testing records"
+      ],
+      "dayToDay": "A typical day involves running scheduled assays on production samples, reviewing chromatography or counting data against specifications, and documenting results in time to support same-day product release.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/20049/ca",
+        "https://www.jobbank.gc.ca/marketreport/summary-occupation/20049/ca"
+      ],
+      "topEmployers": [
+        "BWXT Medical",
+        "AtomVie Global Radiopharma",
+        "Isologic Innovative Radiopharmaceuticals",
+        "ITM Isotope Technologies Canada"
+      ]
+    },
+    {
+      "id": 13,
+      "categoryId": 4,
+      "slug": "quality-assurance-specialist",
+      "title": "Quality Assurance Specialist",
+      "summary": "Keeps the quality system running so a facility making radioactive products consistently meets regulatory and safety standards.",
+      "description": "Quality assurance specialists build and maintain the quality management systems that let isotope and radiopharmaceutical manufacturers meet Good Manufacturing Practice and regulatory requirements. They manage deviations, corrective and preventive actions (CAPA), change control, and internal audits, and act as a key contact during regulatory inspections. The role sits at the intersection of science, documentation, and process improvement.",
+      "nocCode": "22302",
+      "salaryMin": 36600,
+      "salaryMax": 86600,
+      "responsibilities": [
+        "Maintain and improve quality management system documentation and procedures",
+        "Investigate deviations and manage corrective and preventive action (CAPA) plans",
+        "Review batch records and manage change control processes",
+        "Plan and conduct internal audits and support external regulatory inspections",
+        "Coordinate training on quality procedures across production teams",
+        "Track quality metrics and report trends to management"
+      ],
+      "dayToDay": "A typical day includes reviewing batch documentation for completeness, following up on open deviations or CAPAs, and meeting with production and QC teams to resolve quality issues before the next release.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/22583/ca",
+        "https://www.jobbank.gc.ca/marketreport/summary-occupation/22583/ca",
+        "https://alis.alberta.ca/occinfo/wages-and-salaries-in-alberta/industrial-engineering-and-manufacturing-technologists-and-technicians/22302/"
+      ],
+      "topEmployers": [
+        "BWXT Medical",
+        "AtomVie Global Radiopharma",
+        "Isologic Innovative Radiopharmaceuticals",
+        "ITM Isotope Technologies Canada"
+      ]
+    },
+    {
+      "id": 14,
+      "categoryId": 3,
+      "slug": "radiation-safety-officer",
+      "title": "Radiation Safety Officer / Radiation Safety Specialist",
+      "summary": "Protects workers, the public, and the environment by monitoring radiation levels and enforcing safety rules at a nuclear or radiopharma facility.",
+      "description": "Radiation safety officers run the day-to-day radiation protection program at licensed nuclear and radiopharmaceutical facilities, applying the ALARA (as low as reasonably achievable) principle to keep doses down. They monitor radiation levels, manage personal dosimetry programs, investigate incidents, and act as the facility's main point of contact with the Canadian Nuclear Safety Commission (CNSC) for licensing and compliance matters. Certification by the CNSC is typically required to hold this role.",
+      "nocCode": "22232",
+      "salaryMin": 42900,
+      "salaryMax": 109700,
+      "responsibilities": [
+        "Monitor radiation levels and contamination using survey instruments",
+        "Manage personal dosimetry programs and review worker dose records",
+        "Investigate radiation safety incidents and implement corrective actions",
+        "Maintain the facility's Radiation Protection Program and related procedures",
+        "Act as primary contact with the CNSC for licensing and compliance",
+        "Deliver radiation safety training to staff"
+      ],
+      "dayToDay": "A typical day includes conducting radiation surveys around production and storage areas, reviewing dosimetry reports, and following up on any readings or procedural questions raised by staff.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/22668/ca",
+        "https://www.jobbank.gc.ca/marketreport/summary-occupation/22668/ca",
+        "https://www.cnsc-ccsn.gc.ca/eng/acts-and-regulations/regulatory-documents/published/html/regdoc2-2-3/"
+      ],
+      "topEmployers": [
+        "Canadian Nuclear Laboratories (CNL)",
+        "Bruce Power",
+        "Ontario Power Generation (OPG)",
+        "McMaster Nuclear Reactor"
+      ]
+    },
+    {
+      "id": 15,
+      "categoryId": 4,
+      "slug": "regulatory-affairs-specialist",
+      "title": "Regulatory Affairs Specialist",
+      "summary": "Prepares the applications and paperwork that keep isotope and radiopharmaceutical facilities licensed and compliant with Health Canada and the CNSC.",
+      "description": "Regulatory affairs specialists prepare and manage submissions to Health Canada and the Canadian Nuclear Safety Commission (CNSC) needed to license, manufacture, and distribute isotopes and radiopharmaceuticals. They track changing regulations, coordinate cross-functional input for licence renewals and drug submissions, and help ensure ongoing compliance with regulatory commitments. Strong writing skills and a solid grasp of science and regulation are essential.",
+      "nocCode": "11201",
+      "salaryMin": 56000,
+      "salaryMax": 145000,
+      "responsibilities": [
+        "Prepare and submit licensing and compliance documents to the CNSC and Health Canada",
+        "Track regulatory changes affecting isotope and radiopharmaceutical operations",
+        "Coordinate input from quality, production, and safety teams for submissions",
+        "Maintain records supporting licence renewals and inspections",
+        "Respond to regulator information requests and deficiency letters",
+        "Advise internal teams on regulatory requirements for new products or processes"
+      ],
+      "dayToDay": "A typical day involves drafting or reviewing sections of a regulatory submission, coordinating with technical teams to gather supporting data, and tracking deadlines for licence renewals or regulator responses.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/227321/ca",
+        "https://www.jobbank.gc.ca/marketreport/summary-occupation/227321/ca",
+        "https://www.cnsc-ccsn.gc.ca/eng/nuclear-substances/licensing-nuclear-substances-and-radiation-devices/"
+      ],
+      "topEmployers": [
+        "BWXT Medical",
+        "ITM Isotope Technologies Canada",
+        "Isologic Innovative Radiopharmaceuticals",
+        "AtomVie Global Radiopharma"
+      ]
+    },
+    {
+      "id": 16,
+      "categoryId": 5,
+      "slug": "medical-physicist-dosimetry",
+      "title": "Medical Physicist / Internal Dosimetry Specialist",
+      "summary": "Calculates and models how much radiation dose a patient's organs and tumours actually receive from diagnostic and therapeutic radiopharmaceuticals, to keep treatments safe and effective.",
+      "description": "Medical physicists and internal dosimetry specialists apply physics to quantify and optimize radiation dose in nuclear medicine and radiopharmaceutical therapy, a field increasingly important as new theranostic drugs (paired diagnostic/therapeutic isotopes) reach patients. They build patient-specific dose models from imaging data, validate treatment protocols, and work alongside radiopharmacists, oncologists, and nuclear medicine physicians in hospitals, cancer centres, and research institutions.",
+      "nocCode": "21100",
+      "salaryMin": 72700,
+      "salaryMax": 200000,
+      "responsibilities": [
+        "Calculate patient-specific internal radiation doses from diagnostic and therapeutic radiopharmaceuticals",
+        "Develop and validate quantitative imaging and dosimetry protocols for theranostic procedures",
+        "Ensure radiation safety and regulatory compliance for nuclear medicine and radiotherapy programs",
+        "Collaborate with nuclear medicine physicians, radiopharmacists, and oncologists on treatment planning",
+        "Support clinical trials evaluating new radiopharmaceutical therapies",
+        "Maintain and calibrate imaging and dose-measurement equipment"
+      ],
+      "dayToDay": "A typical day involves reviewing patient imaging scans to calculate organ and tumour dose, consulting with the clinical team on treatment plans, and validating equipment or software used for quantitative imaging.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/2495/ca",
+        "https://services.labour.gov.on.ca/labourmarket-ui/jobProfile?nocCode=21100"
+      ],
+      "topEmployers": [
+        "Ontario Health / Cancer Care Ontario",
+        "BC Cancer",
+        "University Health Network",
+        "TRIUMF"
+      ]
+    },
+    {
+      "id": 17,
+      "categoryId": 5,
+      "slug": "research-scientist-preclinical",
+      "title": "Research Scientist / Preclinical Scientist",
+      "summary": "Designs and tests new isotopes, targeting molecules, and imaging or therapy agents in the lab before they are studied in people.",
+      "description": "Preclinical research scientists develop and evaluate novel radioisotopes, targeting ligands, and radiopharmaceutical formulations, working from early discovery chemistry through in vitro and in vivo evaluation. They typically hold graduate training in chemistry, radiochemistry, or a related life science and work in university, government, or industry labs alongside radiochemists and clinical teams to help move new imaging and therapeutic agents toward human trials.",
+      "nocCode": "21101",
+      "salaryMin": 49900,
+      "salaryMax": 137100,
+      "responsibilities": [
+        "Design and synthesize new radiolabeled compounds and targeting molecules",
+        "Run preclinical evaluation studies of imaging and therapeutic radiopharmaceutical candidates",
+        "Analyze experimental data and prepare results for publication or regulatory submission",
+        "Collaborate with radiochemists, physicists, and clinical partners on translational research",
+        "Maintain laboratory safety and quality standards for work with radioactive materials",
+        "Contribute to grant applications and research funding proposals"
+      ],
+      "dayToDay": "A typical day includes running experiments or radiosyntheses in the lab, analyzing data from prior studies, and meeting with collaborators to plan the next phase of a research project.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/20049/ca",
+        "https://www.jobbank.gc.ca/marketreport/summary-occupation/20049/ca"
+      ],
+      "topEmployers": [
+        "Canadian Nuclear Laboratories (CNL)",
+        "TRIUMF",
+        "Centre for Probe Development and Commercialization (CPDC)",
+        "BWXT Medical"
+      ]
+    },
+    {
+      "id": 18,
+      "categoryId": 5,
+      "slug": "clinical-research-coordinator",
+      "title": "Clinical Research Coordinator / Clinical Trial Specialist",
+      "summary": "Keeps radiopharmaceutical clinical trials running smoothly by coordinating patient visits, paperwork, and the safe handling of investigational doses.",
+      "description": "Clinical research coordinators manage the day-to-day operations of clinical trials involving new diagnostic or therapeutic radiopharmaceuticals, including patient scheduling, informed consent, data collection, and coordination of investigational product logistics with pharmacy and imaging teams. They work in hospitals, cancer centres, and contract research organizations, ensuring studies follow Health Canada and Good Clinical Practice requirements.",
+      "nocCode": "21110",
+      "salaryMin": 53500,
+      "salaryMax": 138700,
+      "responsibilities": [
+        "Coordinate patient recruitment, scheduling, and informed consent for clinical trials",
+        "Track and document investigational radiopharmaceutical product receipt, storage, and administration",
+        "Maintain accurate trial records and ensure compliance with Health Canada and GCP requirements",
+        "Liaise between investigators, sponsors, pharmacy, and imaging or treatment teams",
+        "Support data collection, adverse event reporting, and study audits",
+        "Coordinate logistics for time-sensitive investigational dose delivery"
+      ],
+      "dayToDay": "A typical day includes checking in with trial participants, coordinating dose delivery and administration timing with pharmacy staff, and updating study records and regulatory documentation.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/23071/ca",
+        "https://www.jobbank.gc.ca/marketreport/summary-occupation/23071/ca"
+      ],
+      "topEmployers": [
+        "University Health Network",
+        "BC Cancer",
+        "Ottawa Hospital Research Institute"
+      ]
+    },
+    {
+      "id": 19,
+      "categoryId": 5,
+      "slug": "medical-science-liaison",
+      "title": "Medical Science Liaison / Medical Affairs Specialist",
+      "summary": "Acts as the scientific bridge between a radiopharmaceutical company and the doctors and hospitals who use its products, sharing evidence and answering clinical questions.",
+      "description": "Medical science liaisons and medical affairs specialists communicate clinical and scientific evidence about diagnostic and therapeutic radiopharmaceuticals to physicians, treatment centres, and internal teams. They support product launches, respond to unsolicited medical inquiries, gather field insights on clinical practice, and help design or support investigator-initiated studies. The role typically requires an advanced science or health degree and strong communication skills.",
+      "nocCode": "41404",
+      "salaryMin": 41700,
+      "salaryMax": 107800,
+      "responsibilities": [
+        "Communicate clinical and scientific data on radiopharmaceutical products to healthcare providers",
+        "Respond to unsolicited medical and scientific inquiries from clinicians",
+        "Gather field insights on clinical practice and emerging treatment needs",
+        "Support investigator-initiated studies and continuing medical education",
+        "Collaborate with internal medical affairs, marketing, and regulatory teams",
+        "Represent the company at medical conferences and treatment centres"
+      ],
+      "dayToDay": "A typical day involves meeting with nuclear medicine physicians or oncologists to discuss clinical data, preparing scientific materials, and coordinating with internal medical affairs colleagues on emerging questions from the field.",
+      "sources": [
+        "https://www.jobbank.gc.ca/wagereport/occupation/23043",
+        "https://www.workbc.ca/career-profiles/health-policy-researchers-consultants-and-program-officers"
+      ],
+      "topEmployers": [
+        "Curium Pharma",
+        "Lantheus Medical Imaging",
+        "ITM Isotope Technologies Canada"
+      ]
+    },
+    {
+      "id": 20,
+      "categoryId": 5,
+      "slug": "clinical-applications-specialist",
+      "title": "Clinical Applications Specialist",
+      "summary": "Trains hospital staff and troubleshoots equipment and software so nuclear medicine and radiopharmaceutical technologies get used correctly and safely.",
+      "description": "Clinical applications specialists support the rollout and correct clinical use of nuclear medicine imaging equipment, dosimetry software, and radiopharmaceutical products in hospitals and clinics. They train technologists and physicians on new systems, troubleshoot technical issues, and act as a link between equipment manufacturers and clinical end users. Many come from a technologist, biomedical engineering technology, or applied science background.",
+      "nocCode": "22310",
+      "salaryMin": 50000,
+      "salaryMax": 115100,
+      "responsibilities": [
+        "Train clinical staff on new nuclear medicine equipment, software, or radiopharmaceutical products",
+        "Provide on-site and remote technical troubleshooting support",
+        "Support installation, calibration, and validation of imaging and dosimetry systems",
+        "Act as liaison between manufacturers, sales teams, and clinical end users",
+        "Document workflows and best practices for clinical adoption",
+        "Gather user feedback to inform product improvements"
+      ],
+      "dayToDay": "A typical day includes visiting or remotely supporting a clinical site to train staff on equipment or software, resolving a technical issue, and coordinating with the vendor's product and sales teams.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/18000/ca",
+        "https://www.jobbank.gc.ca/marketreport/occupation/18000/ca"
+      ],
+      "topEmployers": [
+        "BWXT Medical",
+        "Lantheus Medical Imaging"
+      ]
+    },
+    {
+      "id": 21,
+      "categoryId": 6,
+      "slug": "sales-account-manager",
+      "title": "Sales / Account Manager / Business Development",
+      "summary": "Builds relationships with hospitals and clinics to help them adopt and purchase diagnostic and therapeutic radiopharmaceutical products.",
+      "description": "Sales and account managers in the radiopharmaceutical and medical isotope industry manage customer relationships with hospitals, imaging clinics, and healthcare systems, guiding the adoption of diagnostic and therapeutic products and negotiating supply agreements. They combine technical product knowledge with business development skills, often traveling within a territory to support customers and identify new partnership opportunities.",
+      "nocCode": "62100",
+      "salaryMin": 41600,
+      "salaryMax": 137500,
+      "responsibilities": [
+        "Manage relationships with hospital, clinic, and health authority customers",
+        "Promote and explain the clinical and technical benefits of radiopharmaceutical products",
+        "Negotiate supply agreements and pricing with healthcare purchasers",
+        "Identify and develop new business and partnership opportunities",
+        "Coordinate with clinical applications and logistics teams to support customer onboarding",
+        "Track sales targets and territory performance"
+      ],
+      "dayToDay": "A typical day includes meeting with hospital purchasing or clinical staff, following up on orders or contracts, and coordinating with internal teams to resolve customer needs.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/6127/ca",
+        "https://www.services.labour.gov.on.ca/labourmarket-ui/jobProfile?nocCode=62100"
+      ],
+      "topEmployers": [
+        "Curium Pharma",
+        "Lantheus Medical Imaging",
+        "ITM Isotope Technologies Canada",
+        "Isologic Innovative Radiopharmaceuticals"
+      ]
+    },
+    {
+      "id": 22,
+      "categoryId": 6,
+      "slug": "medical-courier-logistics",
+      "title": "Medical Courier / Radiopharmaceutical Logistics & Supply Chain",
+      "summary": "Moves time-sensitive radioactive doses safely and quickly from production sites to hospitals before they decay.",
+      "description": "Medical couriers and radiopharmaceutical logistics specialists manage the tightly time-constrained transport of radioactive isotopes and doses from cyclotrons, reactors, or radiopharmacies to hospitals and clinics. Because many isotopes decay within hours, this work demands precise scheduling, compliance with transport regulations for radioactive materials, and close coordination with production and clinical teams.",
+      "nocCode": "74102",
+      "salaryMin": 36400,
+      "salaryMax": 72800,
+      "responsibilities": [
+        "Transport radioactive doses and isotope products within strict time windows",
+        "Follow federal transport of dangerous goods regulations for radioactive materials",
+        "Coordinate delivery schedules with production sites, pharmacies, and hospitals",
+        "Maintain chain-of-custody documentation and radiation safety records",
+        "Respond to schedule changes caused by isotope decay timing or clinical needs",
+        "Inspect and maintain specialized transport containers and vehicles"
+      ],
+      "dayToDay": "A typical day involves picking up freshly produced isotope doses, planning the fastest safe route to each delivery site, and completing documentation confirming safe, on-time delivery.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/21691/ca",
+        "https://www.jobbank.gc.ca/marketreport/summary-occupation/21691/ca"
+      ],
+      "topEmployers": [
+        "World Courier",
+        "Marken",
+        "Isologic Innovative Radiopharmaceuticals"
+      ]
+    },
+    {
+      "id": 23,
+      "categoryId": 6,
+      "slug": "project-program-manager",
+      "title": "Project / Program Manager",
+      "summary": "Plans and coordinates complex projects, such as new facility construction or product launches, across reactor, cyclotron, radiopharmacy, and healthcare teams.",
+      "description": "Project and program managers in the isotope and radiopharmaceutical sector coordinate cross-functional initiatives such as facility construction, equipment installation, new product implementation, and regulatory readiness projects. They manage timelines, budgets, and stakeholders across engineering, clinical, regulatory, and operations teams, often at reactor operators, cyclotron facilities, or radiopharmaceutical manufacturers.",
+      "nocCode": "70010",
+      "salaryMin": 65000,
+      "salaryMax": 174200,
+      "responsibilities": [
+        "Plan, budget, and schedule facility, equipment, or product-implementation projects",
+        "Coordinate cross-functional teams across engineering, clinical, and regulatory groups",
+        "Track project risks, timelines, and deliverables through completion",
+        "Report project status to leadership and external stakeholders",
+        "Manage vendor and contractor relationships for infrastructure projects",
+        "Support regulatory and safety readiness milestones for new facilities or programs"
+      ],
+      "dayToDay": "A typical day includes running status meetings with project teams, updating schedules and budgets, and resolving issues that could delay a facility or product milestone.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/24311/ca",
+        "https://www.services.labour.gov.on.ca/labourmarket-ui/jobProfile?nocCode=70010"
+      ],
+      "topEmployers": [
+        "Bruce Power",
+        "Canadian Nuclear Laboratories (CNL)",
+        "BWXT Medical",
+        "McMaster Nuclear Reactor"
       ]
     }
   ],
@@ -301,6 +800,78 @@
       "province": "ON",
       "description": "Research university whose School of Pharmacy runs Canada's only co-op Doctor of Pharmacy (PharmD) program, with a direct-from-high-school Conditional Admission to Pharmacy (CAP) pathway via its Honours Science program.",
       "website": "https://uwaterloo.ca"
+    },
+    {
+      "id": 8,
+      "name": "University of British Columbia",
+      "city": "Vancouver",
+      "province": "BC",
+      "description": "UBC is a top research university and TRIUMF partner offering an Engineering Physics program with nuclear and particle physics pathways.",
+      "website": "https://www.ubc.ca"
+    },
+    {
+      "id": 9,
+      "name": "British Columbia Institute of Technology",
+      "city": "Burnaby",
+      "province": "BC",
+      "description": "BCIT is BC's leading polytechnic and the only institution in the province offering a Nuclear Medicine Technology diploma.",
+      "website": "https://www.bcit.ca"
+    },
+    {
+      "id": 10,
+      "name": "University of Alberta",
+      "city": "Edmonton",
+      "province": "AB",
+      "description": "The University of Alberta hosts a CAMPEP-accredited Medical Physics graduate program within its Department of Oncology.",
+      "website": "https://www.ualberta.ca"
+    },
+    {
+      "id": 11,
+      "name": "Southern Alberta Institute of Technology",
+      "city": "Calgary",
+      "province": "AB",
+      "description": "SAIT is Alberta's only institution offering an accredited Nuclear Medicine Technology diploma program.",
+      "website": "https://www.sait.ca"
+    },
+    {
+      "id": 12,
+      "name": "University of Saskatchewan",
+      "city": "Saskatoon",
+      "province": "SK",
+      "description": "A major research university whose College of Engineering and Department of Physics and Engineering Physics work alongside the Sylvia Fedoruk Canadian Centre for Nuclear Innovation and the province's cyclotron.",
+      "website": "https://engineering.usask.ca"
+    },
+    {
+      "id": 13,
+      "name": "University of Manitoba",
+      "city": "Winnipeg",
+      "province": "MB",
+      "description": "Manitoba's largest research university, whose Department of Physics and Astronomy offers a CAMPEP-track Medical Physics program delivered with CancerCare Manitoba.",
+      "website": "https://umanitoba.ca"
+    },
+    {
+      "id": 14,
+      "name": "University of New Brunswick",
+      "city": "Fredericton",
+      "province": "NB",
+      "description": "UNB's Faculty of Engineering offers a Nuclear Power specialization within Chemical Engineering, with deep ties to NB Power's Point Lepreau Nuclear Generating Station.",
+      "website": "https://www.unb.ca"
+    },
+    {
+      "id": 15,
+      "name": "Dalhousie University",
+      "city": "Halifax",
+      "province": "NS",
+      "description": "Dalhousie offers a CAMPEP-accredited Medical Physics graduate degree and an entry-to-practice Nuclear Medicine Technology degree through its School of Health Sciences.",
+      "website": "https://www.dal.ca"
+    },
+    {
+      "id": 16,
+      "name": "Memorial University of Newfoundland",
+      "city": "St. John's",
+      "province": "NL",
+      "description": "Memorial's Faculty of Science offers Physics and Chemistry degree programs that provide foundational training relevant to radiation science and radiochemistry careers.",
+      "website": "https://www.mun.ca"
     }
   ],
   "educationPrograms": [
@@ -351,7 +922,7 @@
       "id": 4,
       "institutionId": 3,
       "slug": "ndt-fast-track-durham",
-      "name": "Mechanical Engineering Technician — Non-Destructive Evaluation (fast-track)",
+      "name": "Mechanical Engineering Technician \u2014 Non-Destructive Evaluation (fast-track)",
       "level": "diploma",
       "description": "Ontario College Diploma covering liquid-penetrant, ultrasonic, magnetic-particle, eddy-current, and radiographic (including radiation-safety) testing methods, leading to NDT personnel certification eligibility under CGSB standard 48.9712.",
       "duration": "2 semesters (post-diploma fast-track)",
@@ -432,6 +1003,182 @@
       "sources": [
         "https://engineering.ontariotechu.ca/departments/energy-and-nuclear-engineering/health-physics-and-radiation-science.php",
         "https://ontariotechu.ca/programs/undergraduate/science/physics/index.php"
+      ]
+    },
+    {
+      "id": 10,
+      "institutionId": 8,
+      "slug": "engineering-physics-ubc",
+      "name": "Engineering Physics (BASc)",
+      "level": "undergraduate",
+      "description": "A five-year Bachelor of Applied Science program combining core engineering training with a strong foundation in physics and mathematics. Students select technical electives that allow specialization in areas such as nuclear/particle instrumentation, materials, or electrical systems, with proximity to TRIUMF research opportunities.",
+      "duration": "5 years",
+      "requirements": "Completion of first-year Applied Science (Engineering) at UBC, including BC Grade 12 English, Pre-Calculus 12, Chemistry 12, and Physics 12 (or equivalents), followed by a competitive second-year application including an interview for entry into Engineering Physics.",
+      "programUrl": "https://www.engphys.ubc.ca/prospective-students/admissions/",
+      "sources": [
+        "https://www.engphys.ubc.ca/prospective-students/admissions/",
+        "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/engineering-physics"
+      ]
+    },
+    {
+      "id": 11,
+      "institutionId": 9,
+      "slug": "nuclear-medicine-bcit",
+      "name": "Nuclear Medicine Diploma",
+      "level": "diploma",
+      "description": "A two-year full-time diploma preparing students to become Registered Technologists in Nuclear Medicine (RTNM). The program combines on-campus instruction with in-hospital clinical rotations covering radiopharmaceutical administration, diagnostic imaging, and radiation safety, leading to CAMRT certification eligibility.",
+      "duration": "2 years",
+      "requirements": "Minimum 73% (or equivalent) in English Studies 12, Pre-Calculus 12, Chemistry 12, Physics 11, and a Grade 12-level Anatomy and Physiology/Biology course, plus completion of a medical terminology course, CPR certification, and a criminal record check.",
+      "programUrl": "https://www.bcit.ca/programs/nuclear-medicine-diploma-full-time-6705dipma/",
+      "sources": [
+        "https://www.bcit.ca/programs/nuclear-medicine-diploma-full-time-6705dipma/"
+      ]
+    },
+    {
+      "id": 12,
+      "institutionId": 10,
+      "slug": "medical-physics-msc-ualberta",
+      "name": "Medical Physics (MSc)",
+      "level": "graduate",
+      "description": "A CAMPEP-accredited, research-based Master of Science program in the Department of Oncology focused on the application of ionizing radiation for cancer diagnosis and treatment. Students complete required coursework in radiation physics and dosimetry alongside a thesis in areas such as radiotherapy, PET imaging, or Monte Carlo dose calculations.",
+      "duration": "up to 4 years (typically 2 years coursework plus thesis)",
+      "requirements": "A Bachelor's degree in Physics, Engineering Physics, or a closely related discipline with a minimum GPA of 2.7 (B+ average recommended over the last two years); undergraduate preparation should include Physics, Mathematics, and Chemistry coursework.",
+      "programUrl": "https://mp.med.ualberta.ca/graduate.html",
+      "sources": [
+        "https://mp.med.ualberta.ca/graduate.html",
+        "https://www.ualberta.ca/en/graduate-programs/master-of-science-with-specialization-in-medical-physics-oncology.html"
+      ]
+    },
+    {
+      "id": 13,
+      "institutionId": 11,
+      "slug": "nuclear-medicine-technology-sait",
+      "name": "Nuclear Medicine Technology Diploma",
+      "level": "diploma",
+      "description": "A two-and-a-half-year diploma preparing students for careers as nuclear medicine technologists, covering radiobiology, radiation safety, diagnostic imaging, CT, and patient care through classroom instruction and clinical practicum placements in hospitals and clinics.",
+      "duration": "2.5 years",
+      "requirements": "Combined average of 75% including Math 30-1 (70%) or Math 30-2 (75%), English Language Arts 30-1 (70%), Chemistry 30 (70%), and one of Biology 30, Physics 30, or Math 31 (70%), plus passing the School of Health and Public Safety's entrance testing process.",
+      "programUrl": "https://www.sait.ca/programs-and-courses/diplomas/nuclear-medicine-technology",
+      "sources": [
+        "https://www.sait.ca/programs-and-courses/diplomas/nuclear-medicine-technology"
+      ]
+    },
+    {
+      "id": 14,
+      "institutionId": 12,
+      "slug": "engineering-physics-usask",
+      "name": "Engineering Physics (B.E.)",
+      "level": "undergraduate",
+      "description": "A CEAB-accredited engineering degree bridging fundamental physics and applied engineering, covering topics such as instrumentation, materials, and advanced technology systems. Students complete a common first-year core before entering the upper-year Engineering Physics stream, with opportunities to connect to nuclear-related research through campus facilities like the Fedoruk Centre and the Saskatchewan cyclotron.",
+      "duration": "4 years",
+      "requirements": "Direct entry from high school requiring roughly 70% or better in Grade 12 Physics, Chemistry, Pre-Calculus, and English (Saskatchewan curriculum), or equivalent for out-of-province applicants.",
+      "programUrl": "https://engineering.usask.ca/programs/Academic/Degrees/engineering-physics.php",
+      "sources": [
+        "https://engineering.usask.ca/programs/Academic/Degrees/engineering-physics.php",
+        "https://admissions.usask.ca/engineering-physics.php"
+      ]
+    },
+    {
+      "id": 15,
+      "institutionId": 12,
+      "slug": "physics-engineering-physics-grad-usask",
+      "name": "Physics and Engineering Physics (M.Sc./Ph.D.)",
+      "level": "graduate",
+      "description": "Graduate research program in the Department of Physics and Engineering Physics offering thesis-based study in experimental and theoretical fields, including nuclear, particle, and medical physics research connected to the Sylvia Fedoruk Canadian Centre for Nuclear Innovation and the Saskatchewan Centre for Cyclotron Sciences.",
+      "duration": "2 years (M.Sc.) / 4 years (Ph.D.)",
+      "requirements": "An Honours B.Sc. (or equivalent) in physics, engineering physics, or a related field; admission also requires meeting College of Graduate and Postdoctoral Studies English-proficiency and academic standards.",
+      "programUrl": "https://grad.usask.ca/programs/physics-engineering-physics.php",
+      "sources": [
+        "https://grad.usask.ca/programs/physics-engineering-physics.php",
+        "https://fedorukcentre.ca/who-we-are/who-we-are.php"
+      ]
+    },
+    {
+      "id": 16,
+      "institutionId": 13,
+      "slug": "medical-physics-msc-umanitoba",
+      "name": "Physics and Astronomy, M.Sc. \u2014 Comprehensive Medical Physics",
+      "level": "graduate",
+      "description": "A course-based, CAMPEP-oriented M.Sc. specialization delivered with CancerCare Manitoba, covering radiation protection, medical radiation physics, radiation therapy physics, diagnostic imaging (MRI, ultrasound, X-ray), and nuclear medicine physics. Replaces a thesis with an 18-month coursework sequence plus a 6-month clinical research project and closing oral examination.",
+      "duration": "2 years",
+      "requirements": "An Honours B.Sc. in Physics and Astronomy, Mathematics and Physics, Engineering Physics, or an equivalent degree; applicants without this background may need pre-Master's coursework, and all applicants must meet Faculty of Graduate Studies admission and English-proficiency standards.",
+      "programUrl": "https://catalog.umanitoba.ca/graduate-studies/science/physics-msc/",
+      "sources": [
+        "https://catalog.umanitoba.ca/graduate-studies/science/physics-msc/",
+        "https://www.cancercare.mb.ca/Research/medical-physics/career-in-medical-physics/msc-phd-research-programs"
+      ]
+    },
+    {
+      "id": 17,
+      "institutionId": 14,
+      "slug": "chemical-engineering-nuclear-unb",
+      "name": "Bachelor of Science in Engineering, Chemical Engineering (Nuclear Power Specialization)",
+      "level": "undergraduate",
+      "description": "A Chemical Engineering degree with an optional Nuclear Power specialization, offered once students complete 80 credit hours, covering nuclear engineering fundamentals, nuclear chemical processes, corrosion, nuclear reactor physics, and nuclear safety and reliability. Draws on UNB's long-standing relationship with NB Power and the Point Lepreau Nuclear Generating Station.",
+      "duration": "4 years (5 years with Co-op)",
+      "requirements": "Grade 12 English, Advanced Functions/Trigonometry, Calculus, Chemistry, and Physics, each typically at 70%+, with a competitive overall admission average (around 75%+) required for entry into Engineering.",
+      "programUrl": "https://www.unb.ca/academics/calendar/undergraduate/current/frederictonprograms/bachelorofscienceinengineering/chemicalengineering.html",
+      "sources": [
+        "https://www.unb.ca/academics/calendar/undergraduate/current/frederictonprograms/bachelorofscienceinengineering/chemicalengineering.html",
+        "https://www.unb.ca/admissions/requirements/"
+      ]
+    },
+    {
+      "id": 18,
+      "institutionId": 15,
+      "slug": "medical-physics-msc-dal",
+      "name": "Medical Physics (MSc)",
+      "level": "graduate",
+      "description": "A CAMPEP-accredited, thesis-based master's degree combining coursework and hands-on research in imaging and radiation oncology medical physics, delivered through the Department of Physics and Atmospheric Science in partnership with hospital treatment and imaging facilities. Graduates are eligible to enter residency training programs in medical physics.",
+      "duration": "16 months (2 years typical)",
+      "requirements": "An undergraduate degree in Physics or a closely related field with strong standing, meeting Dalhousie Faculty of Graduate Studies admission requirements plus program-specific prerequisites in physics and mathematics.",
+      "programUrl": "https://www.dal.ca/study/programs/graduate-professional/medical-physics-msc.html",
+      "sources": [
+        "https://www.dal.ca/study/programs/graduate-professional/medical-physics-msc.html",
+        "https://www.dal.ca/study/program-sites/medical-physics.html"
+      ]
+    },
+    {
+      "id": 19,
+      "institutionId": 15,
+      "slug": "nuclear-medicine-technology-bhsc-dal",
+      "name": "Health Sciences (Nuclear Medicine Technology) (BHSc)",
+      "level": "undergraduate",
+      "description": "An entry-to-practice bachelor's degree preparing students to become certified nuclear medicine technologists who administer radiopharmaceuticals for diagnostic and therapeutic imaging. Combines academic coursework with clinical practicums across Atlantic Canada and leads to CAMRT certification eligibility.",
+      "duration": "4 years",
+      "requirements": "Minimum overall average of 75%, with Grade 12 English, Mathematics, Physics, and Chemistry each at 70% or higher, plus one additional academic subject; reserved seats are available for residents of NB, PE, and NL.",
+      "programUrl": "https://www.dal.ca/study/programs/undergraduate/nuclear-medicine-technology-bhsc.html",
+      "sources": [
+        "https://www.dal.ca/study/programs/undergraduate/nuclear-medicine-technology-bhsc.html"
+      ]
+    },
+    {
+      "id": 20,
+      "institutionId": 16,
+      "slug": "physics-bsc-mun",
+      "name": "Bachelor of Science (Physics)",
+      "level": "undergraduate",
+      "description": "A general BSc program covering Newtonian mechanics, electricity and magnetism, thermodynamics, and quantum mechanics, with opportunities for experimental, theoretical, and computational work. Physics cannot be declared as a major until after first-year coursework, following Memorial's direct-entry Faculty of Science admission model.",
+      "duration": "4 years",
+      "requirements": "High school graduation with senior-level Mathematics and laboratory science (Physics and/or Chemistry recommended) among required credits, plus general Memorial University admission standards; declaring Physics as a major requires 30 credit hours including math and physics coursework.",
+      "programUrl": "https://www.mun.ca/physics/undergraduates/",
+      "sources": [
+        "https://www.mun.ca/undergrad/programs/science/physics/",
+        "https://www.mun.ca/physics/undergraduates/"
+      ]
+    },
+    {
+      "id": 21,
+      "institutionId": 16,
+      "slug": "chemistry-bsc-mun",
+      "name": "Chemistry Major (BSc)",
+      "level": "undergraduate",
+      "description": "A Canadian Society for Chemistry-accredited general degree covering general and analytical chemistry, organic chemistry, physical chemistry, and biochemistry, with required supporting coursework in physics and mathematics. Provides a foundation for careers involving chemical analysis, quality control, and radiochemical work.",
+      "duration": "4 years",
+      "requirements": "High school graduation meeting Memorial's general Faculty of Science admission standards, including senior Mathematics and laboratory science; declaring a Chemistry major requires foundational university-level chemistry, physics, and math coursework.",
+      "programUrl": "https://www.mun.ca/chem/undergraduates/chemistry-degree-options/chemistry-major/",
+      "sources": [
+        "https://www.mun.ca/chem/undergraduates/chemistry-degree-options/chemistry-major/"
       ]
     }
   ],
@@ -698,6 +1445,261 @@
       "programId": 9,
       "subjectId": 5,
       "minGrade": null
+    },
+    {
+      "programId": 10,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 10,
+      "subjectId": 3,
+      "minGrade": null
+    },
+    {
+      "programId": 10,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 10,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 10,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 11,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 11,
+      "subjectId": 3,
+      "minGrade": null
+    },
+    {
+      "programId": 11,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 11,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 11,
+      "subjectId": 6,
+      "minGrade": null
+    },
+    {
+      "programId": 12,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 12,
+      "subjectId": 3,
+      "minGrade": null
+    },
+    {
+      "programId": 12,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 12,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 13,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 13,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 13,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 13,
+      "subjectId": 6,
+      "minGrade": null
+    },
+    {
+      "programId": 13,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 14,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 14,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 14,
+      "subjectId": 3,
+      "minGrade": null
+    },
+    {
+      "programId": 14,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 14,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 15,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 15,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 15,
+      "subjectId": 3,
+      "minGrade": null
+    },
+    {
+      "programId": 15,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 15,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 16,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 16,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 16,
+      "subjectId": 3,
+      "minGrade": null
+    },
+    {
+      "programId": 16,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 16,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 17,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 17,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 17,
+      "subjectId": 3,
+      "minGrade": null
+    },
+    {
+      "programId": 17,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 17,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 18,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 18,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 18,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 19,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 19,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 19,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 19,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 20,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 20,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 21,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 21,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 21,
+      "subjectId": 5,
+      "minGrade": null
     }
   ],
   "careerEducationLinks": [
@@ -756,6 +1758,218 @@
     {
       "careerSlug": "radiopharmacist",
       "programSlug": "honours-science-cap-waterloo"
+    },
+    {
+      "careerSlug": "nuclear-engineer",
+      "programSlug": "engineering-physics-ubc"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "engineering-physics-ubc"
+    },
+    {
+      "careerSlug": "nuclear-reactor-analyst",
+      "programSlug": "engineering-physics-ubc"
+    },
+    {
+      "careerSlug": "medical-physicist-dosimetry",
+      "programSlug": "engineering-physics-ubc"
+    },
+    {
+      "careerSlug": "research-scientist-preclinical",
+      "programSlug": "engineering-physics-ubc"
+    },
+    {
+      "careerSlug": "nuclear-medicine-technologist",
+      "programSlug": "nuclear-medicine-bcit"
+    },
+    {
+      "careerSlug": "isotope-production-technician",
+      "programSlug": "nuclear-medicine-bcit"
+    },
+    {
+      "careerSlug": "radiopharmaceutical-production-technologist",
+      "programSlug": "nuclear-medicine-bcit"
+    },
+    {
+      "careerSlug": "clinical-applications-specialist",
+      "programSlug": "nuclear-medicine-bcit"
+    },
+    {
+      "careerSlug": "medical-physicist-dosimetry",
+      "programSlug": "medical-physics-msc-ualberta"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "medical-physics-msc-ualberta"
+    },
+    {
+      "careerSlug": "research-scientist-preclinical",
+      "programSlug": "medical-physics-msc-ualberta"
+    },
+    {
+      "careerSlug": "radiation-safety-officer",
+      "programSlug": "medical-physics-msc-ualberta"
+    },
+    {
+      "careerSlug": "nuclear-medicine-technologist",
+      "programSlug": "nuclear-medicine-technology-sait"
+    },
+    {
+      "careerSlug": "isotope-production-technician",
+      "programSlug": "nuclear-medicine-technology-sait"
+    },
+    {
+      "careerSlug": "radiopharmaceutical-production-technologist",
+      "programSlug": "nuclear-medicine-technology-sait"
+    },
+    {
+      "careerSlug": "clinical-applications-specialist",
+      "programSlug": "nuclear-medicine-technology-sait"
+    },
+    {
+      "careerSlug": "nuclear-engineer",
+      "programSlug": "engineering-physics-usask"
+    },
+    {
+      "careerSlug": "nuclear-reactor-operator",
+      "programSlug": "engineering-physics-usask"
+    },
+    {
+      "careerSlug": "nuclear-reactor-analyst",
+      "programSlug": "engineering-physics-usask"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "engineering-physics-usask"
+    },
+    {
+      "careerSlug": "ndt-technician",
+      "programSlug": "engineering-physics-usask"
+    },
+    {
+      "careerSlug": "cyclotron-operator",
+      "programSlug": "physics-engineering-physics-grad-usask"
+    },
+    {
+      "careerSlug": "isotope-production-technician",
+      "programSlug": "physics-engineering-physics-grad-usask"
+    },
+    {
+      "careerSlug": "radiochemist",
+      "programSlug": "physics-engineering-physics-grad-usask"
+    },
+    {
+      "careerSlug": "research-scientist-preclinical",
+      "programSlug": "physics-engineering-physics-grad-usask"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "physics-engineering-physics-grad-usask"
+    },
+    {
+      "careerSlug": "nuclear-reactor-analyst",
+      "programSlug": "physics-engineering-physics-grad-usask"
+    },
+    {
+      "careerSlug": "medical-physicist-dosimetry",
+      "programSlug": "medical-physics-msc-umanitoba"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "medical-physics-msc-umanitoba"
+    },
+    {
+      "careerSlug": "nuclear-medicine-technologist",
+      "programSlug": "medical-physics-msc-umanitoba"
+    },
+    {
+      "careerSlug": "radiation-safety-officer",
+      "programSlug": "medical-physics-msc-umanitoba"
+    },
+    {
+      "careerSlug": "research-scientist-preclinical",
+      "programSlug": "medical-physics-msc-umanitoba"
+    },
+    {
+      "careerSlug": "nuclear-engineer",
+      "programSlug": "chemical-engineering-nuclear-unb"
+    },
+    {
+      "careerSlug": "nuclear-reactor-operator",
+      "programSlug": "chemical-engineering-nuclear-unb"
+    },
+    {
+      "careerSlug": "nuclear-reactor-analyst",
+      "programSlug": "chemical-engineering-nuclear-unb"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "chemical-engineering-nuclear-unb"
+    },
+    {
+      "careerSlug": "radiation-safety-officer",
+      "programSlug": "chemical-engineering-nuclear-unb"
+    },
+    {
+      "careerSlug": "medical-physicist-dosimetry",
+      "programSlug": "medical-physics-msc-dal"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "medical-physics-msc-dal"
+    },
+    {
+      "careerSlug": "research-scientist-preclinical",
+      "programSlug": "medical-physics-msc-dal"
+    },
+    {
+      "careerSlug": "nuclear-medicine-technologist",
+      "programSlug": "nuclear-medicine-technology-bhsc-dal"
+    },
+    {
+      "careerSlug": "radiopharmaceutical-production-technologist",
+      "programSlug": "nuclear-medicine-technology-bhsc-dal"
+    },
+    {
+      "careerSlug": "isotope-production-technician",
+      "programSlug": "nuclear-medicine-technology-bhsc-dal"
+    },
+    {
+      "careerSlug": "cyclotron-operator",
+      "programSlug": "nuclear-medicine-technology-bhsc-dal"
+    },
+    {
+      "careerSlug": "health-physicist",
+      "programSlug": "physics-bsc-mun"
+    },
+    {
+      "careerSlug": "medical-physicist-dosimetry",
+      "programSlug": "physics-bsc-mun"
+    },
+    {
+      "careerSlug": "nuclear-reactor-analyst",
+      "programSlug": "physics-bsc-mun"
+    },
+    {
+      "careerSlug": "research-scientist-preclinical",
+      "programSlug": "physics-bsc-mun"
+    },
+    {
+      "careerSlug": "radiochemist",
+      "programSlug": "chemistry-bsc-mun"
+    },
+    {
+      "careerSlug": "quality-control-analyst",
+      "programSlug": "chemistry-bsc-mun"
+    },
+    {
+      "careerSlug": "quality-assurance-specialist",
+      "programSlug": "chemistry-bsc-mun"
+    },
+    {
+      "careerSlug": "isotope-production-technician",
+      "programSlug": "chemistry-bsc-mun"
     }
   ],
   "companies": [
@@ -776,7 +1990,7 @@
     },
     {
       "id": 4,
-      "name": "AtkinsRéalis / Candu Energy",
+      "name": "AtkinsR\u00e9alis / Candu Energy",
       "website": "https://www.candu.com"
     },
     {
@@ -808,21 +2022,6 @@
       "id": 10,
       "name": "Curium Pharma",
       "website": "https://www.curiumpharma.com"
-    },
-    {
-      "id": 11,
-      "name": "Hospital diagnostic imaging departments (UHN, Sunnybrook, LHSC)",
-      "website": null
-    },
-    {
-      "id": 12,
-      "name": "Hospital nuclear pharmacy departments (UHN, Sunnybrook)",
-      "website": null
-    },
-    {
-      "id": 13,
-      "name": "Hospital radiation oncology departments",
-      "website": null
     },
     {
       "id": 14,
@@ -868,6 +2067,61 @@
       "id": 22,
       "name": "Vancouver Coastal Health",
       "website": "https://www.vch.ca"
+    },
+    {
+      "id": 23,
+      "name": "ARTMS Products",
+      "website": null
+    },
+    {
+      "id": 24,
+      "name": "Centre for Probe Development and Commercialization (CPDC)",
+      "website": null
+    },
+    {
+      "id": 25,
+      "name": "Lawson Health Research Institute",
+      "website": null
+    },
+    {
+      "id": 26,
+      "name": "AtomVie Global Radiopharma",
+      "website": null
+    },
+    {
+      "id": 27,
+      "name": "ITM Isotope Technologies Canada",
+      "website": null
+    },
+    {
+      "id": 28,
+      "name": "Ontario Health / Cancer Care Ontario",
+      "website": null
+    },
+    {
+      "id": 29,
+      "name": "BC Cancer",
+      "website": null
+    },
+    {
+      "id": 30,
+      "name": "University Health Network",
+      "website": null
+    },
+    {
+      "id": 31,
+      "name": "Ottawa Hospital Research Institute",
+      "website": null
+    },
+    {
+      "id": 32,
+      "name": "World Courier",
+      "website": null
+    },
+    {
+      "id": 33,
+      "name": "Marken",
+      "website": null
     }
   ]
 }

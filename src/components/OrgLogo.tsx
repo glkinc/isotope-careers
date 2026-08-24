@@ -10,22 +10,28 @@ type Props = {
 };
 
 // Institutions and companies don't have a hosted logo asset, so we derive
-// one from their domain via a favicon service rather than storing brittle
-// logo URLs.
-function faviconUrlFor(website: string): string | null {
+// one from their domain rather than storing brittle logo URLs. Clearbit
+// serves an actual high-res logo when it has one; if not (or the request
+// fails) we fall back to Google's favicon service at a large size, which is
+// still much sharper than a plain 16-32px .ico favicon.
+function logoUrlsFor(website: string): string[] | null {
   try {
     const { hostname } = new URL(website);
-    return `https://icons.duckduckgo.com/ip3/${hostname}.ico`;
+    return [
+      `https://logo.clearbit.com/${hostname}?size=256`,
+      `https://www.google.com/s2/favicons?domain=${hostname}&sz=256`,
+    ];
   } catch {
     return null;
   }
 }
 
 export default function OrgLogo({ name, website, className }: Props) {
-  const [failed, setFailed] = useState(false);
-  const src = website ? faviconUrlFor(website) : null;
+  const [attempt, setAttempt] = useState(0);
+  const sources = website ? logoUrlsFor(website) : null;
+  const src = sources?.[attempt];
 
-  if (!src || failed) {
+  if (!src) {
     return (
       <div
         className={`flex items-center justify-center bg-[#f6f6f7] ${className ?? ""}`}
@@ -40,7 +46,7 @@ export default function OrgLogo({ name, website, className }: Props) {
     <img
       src={src}
       alt={`${name} logo`}
-      onError={() => setFailed(true)}
+      onError={() => setAttempt((a) => a + 1)}
       className={`object-contain ${className ?? ""}`}
     />
   );

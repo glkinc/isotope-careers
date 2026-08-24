@@ -150,7 +150,12 @@ function HighSchoolStep({
     const q = query.trim().toLowerCase();
     if (!q) return [];
     return subjects
-      .filter((s) => !selectedSet.has(s.id) && s.name.toLowerCase().includes(q))
+      .filter(
+        (s) =>
+          !selectedSet.has(s.id) &&
+          (s.name.toLowerCase().includes(q) ||
+            s.code?.toLowerCase().includes(q)),
+      )
       .slice(0, 6);
   }, [query, subjects, selectedSet]);
 
@@ -266,7 +271,7 @@ function HighSchoolStep({
               setQuery("");
             }
           }}
-          placeholder="e.g. Math, Chemistry, Physics..."
+          placeholder="e.g. Chemistry, SCH4U, Calculus..."
           className="w-full rounded-md border border-brand/20 px-4 py-3 text-brand outline-none focus:border-primary"
         />
         {suggestions.length > 0 && (
@@ -282,7 +287,14 @@ function HighSchoolStep({
                   onClick={() => addSubject(s.id)}
                   className="flex w-full cursor-pointer items-center justify-between px-4 py-2 text-left text-brand hover:bg-primary/10"
                 >
-                  <span>{s.name}</span>
+                  <span>
+                    {s.name}
+                    {s.code && (
+                      <span className="ml-2 text-xs font-mono text-brand/60">
+                        {s.code}
+                      </span>
+                    )}
+                  </span>
                   <span className="text-xs uppercase text-brand/80">
                     {s.category}
                   </span>

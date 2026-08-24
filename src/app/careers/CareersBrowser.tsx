@@ -66,7 +66,7 @@ export default function CareersBrowser({
       </div>
 
       <div className="relative mt-6">
-        <div className="scrollbar-none flex gap-2 overflow-x-auto pr-8 pb-1">
+        <div className="scrollbar-desktop flex gap-2 overflow-x-auto pr-8 pb-3">
           <button
             type="button"
             onClick={() => setCategorySlug("all")}

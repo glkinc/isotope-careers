@@ -11,7 +11,7 @@ export default function TermsPage() {
       <p className="mt-4 text-sm text-brand/60">Last updated: July 29, 2026</p>
 
       <p className="mt-6 text-brand/80">
-        These terms govern your use of Sabertree, an independent resource
+        These terms govern your use of Isotope Careers, an independent resource
         about careers, education paths, and skills for Canada&apos;s nuclear
         and medical isotope workforce. By using this site, you agree to the
         terms below.
@@ -22,7 +22,7 @@ export default function TermsPage() {
           Independent resource
         </h2>
         <p className="mt-3 text-brand/80">
-          Sabertree is not affiliated with any specific employer, reactor
+          Isotope Careers is not affiliated with any specific employer, reactor
           operator, educational institution, or regulator. References to
           organizations — including employers, schools, and licensing bodies —
           are for informational purposes only and do not imply endorsement or
@@ -84,7 +84,7 @@ export default function TermsPage() {
           Limitation of liability
         </h2>
         <p className="mt-3 text-brand/80">
-          Sabertree is provided &quot;as is,&quot; without warranties of any
+          Isotope Careers is provided &quot;as is,&quot; without warranties of any
           kind. To the fullest extent permitted by law, we are not liable for
           any damages arising from your use of, or reliance on, this site or
           its content.

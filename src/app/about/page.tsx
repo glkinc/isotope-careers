@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-10 sm:py-16">
       <h1 className="text-3xl font-semibold text-brand">
-        About Sabertree
+        About Isotope Careers
       </h1>
 
       <div className="border border-brand/10 bg-primary/8 mx-auto max-w-6xl p-6 mt-8 md:mx-5 lg:mx-auto rounded-xl">

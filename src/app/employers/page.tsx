@@ -24,7 +24,7 @@ export default async function EmployersPage() {
       <p className="mt-3 max-w-2xl text-brand/80">
         A look at organizations across Canada that operate in the isotope
         production and use space — reactor operators, radiopharmaceutical
-        companies, regulators, hospitals, and more. Sabertree isn&apos;t
+        companies, regulators, hospitals, and more. Isotope Careers isn&apos;t
         endorsed by or affiliated with any of them; this is simply here to
         show the breadth of who hires into this field.
       </p>

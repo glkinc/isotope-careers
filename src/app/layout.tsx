@@ -13,30 +13,20 @@ const cabin = Cabin({
 
 export const metadata: Metadata = {
   title: {
-    default: "Sabertree",
-    template: "%s | Sabertree",
+    default: "Isotope Careers",
+    template: "%s | Isotope Careers",
   },
   description:
     "Explore careers, education paths, and skill trees for isotope production and use in Canada.",
   icons: {
     icon: [
-      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
     shortcut: "/favicon/favicon.ico",
     apple: "/favicon/apple-touch-icon.png",
-    other: [
-      {
-        rel: "mask-icon",
-        url: "/favicon/safari-pinned-tab.svg",
-        color: "#45434c",
-      },
-    ],
   },
   manifest: "/favicon/site.webmanifest",
-  other: {
-    "msapplication-config": "/favicon/browserconfig.xml",
-  },
 };
 
 export const viewport: Viewport = {
@@ -71,12 +61,12 @@ export default function RootLayout({
             <div className="flex flex-col items-center gap-4 sm:items-start">
               <Image
                 src="/logo-full-white.svg"
-                alt="Sabertree"
+                alt="Isotope Careers"
                 width={180}
                 height={30}
               />
               <p className="text-sm text-white">
-                © {new Date().getFullYear()} Sabertree. All rights reserved.
+                © {new Date().getFullYear()} Isotope Careers. All rights reserved.
               </p>
             </div>
             <nav className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-6">
