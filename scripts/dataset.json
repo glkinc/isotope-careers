@@ -35,6 +35,18 @@
       "slug": "commercial-operations",
       "name": "Commercial, Logistics & Program Operations",
       "description": "Careers that get isotope products, projects, and partnerships across the finish line, from time-critical radioactive-material logistics to sales and program management."
+    },
+    {
+      "id": 7,
+      "slug": "business-technology",
+      "name": "Business & Technology",
+      "description": "Careers that keep nuclear and isotope organizations running on the business and technology side, from cybersecurity and data science to software development supporting engineering and operations teams."
+    },
+    {
+      "id": 8,
+      "slug": "engineering-environmental-services",
+      "name": "Engineering & Environmental Services",
+      "description": "Careers that design, build, and safely manage the physical and environmental side of nuclear and isotope facilities, from civil and mechanical engineering to environmental monitoring and radioactive waste management."
     }
   ],
   "careers": [
@@ -742,6 +754,412 @@
         "BWXT Medical",
         "McMaster Nuclear Reactor"
       ]
+    },
+    {
+      "id": 24,
+      "categoryId": 7,
+      "slug": "cybersecurity-analyst-nuclear",
+      "title": "Cybersecurity Analyst",
+      "summary": "Protects a nuclear/energy company's computer networks, plant control systems, and data from cyber threats.",
+      "description": "Cybersecurity analysts in the nuclear sector monitor networks and industrial control systems for intrusions, maintain security architecture and incident-response runbooks, and ensure compliance with regulatory cybersecurity requirements for critical infrastructure.",
+      "nocCode": "21220",
+      "salaryMin": 62000,
+      "salaryMax": 150000,
+      "responsibilities": [
+        "Monitor networks and control systems for security events and triage alerts",
+        "Maintain security architecture documentation, control standards, and threat models",
+        "Respond to and investigate cybersecurity incidents",
+        "Support vulnerability assessments and patching for IT/OT systems",
+        "Ensure compliance with nuclear-sector cybersecurity regulations"
+      ],
+      "dayToDay": "Reviewing security alerts and logs, updating documentation, running vulnerability scans, and coordinating with IT/engineering teams on system hardening.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/297999/ON",
+        "https://www.services.labour.gov.on.ca/labourmarket-ui/jobProfile?nocCode=21220"
+      ],
+      "topEmployers": [
+        "Kinectrics",
+        "Ontario Power Generation (OPG)",
+        "Bruce Power",
+        "Canadian Nuclear Laboratories (CNL)"
+      ]
+    },
+    {
+      "id": 25,
+      "categoryId": 7,
+      "slug": "data-scientist-energy",
+      "title": "Data Scientist",
+      "summary": "Builds statistical models and analytics tools that turn plant, engineering, and business data into decision support.",
+      "description": "Data scientists in the nuclear/energy sector analyze operational, safety, and business data (such as outage data and testing results) to build predictive models, pipelines, and dashboards. Kinectrics and OPG both run co-op streams for business/commerce and computer science students in this space.",
+      "nocCode": "21211",
+      "salaryMin": 65000,
+      "salaryMax": 149000,
+      "responsibilities": [
+        "Clean, model, and analyze large operational or business datasets",
+        "Build predictive/statistical models, dashboards, and analytics pipelines",
+        "Communicate findings to engineering and business stakeholders",
+        "Support automation of recurring reporting and analytics workflows"
+      ],
+      "dayToDay": "Writing analysis scripts (Python/R/SQL), building visualizations and data pipelines, and presenting insights to project teams.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/227147/ON"
+      ],
+      "topEmployers": [
+        "Kinectrics",
+        "Ontario Power Generation (OPG)",
+        "Bruce Power"
+      ]
+    },
+    {
+      "id": 26,
+      "categoryId": 7,
+      "slug": "software-developer-nuclear",
+      "title": "Software Developer",
+      "summary": "Designs and builds software used for nuclear plant engineering, testing, and business systems.",
+      "description": "Software developers at nuclear engineering firms build internal tools, simulation software, and testing/data-acquisition applications used by engineering and operations teams.",
+      "nocCode": "21232",
+      "salaryMin": 63000,
+      "salaryMax": 161000,
+      "responsibilities": [
+        "Design, code, and test software applications",
+        "Support engineering tools and data-acquisition software",
+        "Debug and maintain existing codebases",
+        "Collaborate with engineers on tool requirements"
+      ],
+      "dayToDay": "Writing and reviewing code, running tests, fixing bugs, and meeting with engineering teams on feature requirements.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/22548/ON"
+      ],
+      "topEmployers": [
+        "Kinectrics",
+        "Ontario Power Generation (OPG)",
+        "Bruce Power",
+        "Canadian Nuclear Laboratories (CNL)"
+      ]
+    },
+    {
+      "id": 27,
+      "categoryId": 6,
+      "slug": "supply-chain-analyst-nuclear",
+      "title": "Supply Chain Analyst (Procurement)",
+      "summary": "Analyzes sourcing, procurement, and inventory data to keep nuclear projects and facilities supplied on cost and schedule.",
+      "description": "Supply chain analysts in the nuclear sector track vendor performance, procurement costs, and material availability for major projects such as refurbishments and waste-management contracts, combining supply chain, analytics, and economics skills.",
+      "nocCode": "12102",
+      "salaryMin": 52000,
+      "salaryMax": 122000,
+      "responsibilities": [
+        "Analyze procurement spend, vendor performance, and lead times",
+        "Support sourcing decisions and cost/economic modelling for projects",
+        "Track inventory and material availability",
+        "Prepare supply chain reports for project managers"
+      ],
+      "dayToDay": "Pulling procurement data, building spend/vendor reports, and liaising with buyers and project teams.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/25830/ON"
+      ],
+      "topEmployers": [
+        "Kinectrics",
+        "Ontario Power Generation (OPG)",
+        "Bruce Power",
+        "Canadian Nuclear Laboratories (CNL)"
+      ]
+    },
+    {
+      "id": 28,
+      "categoryId": 8,
+      "slug": "engineer-in-training-development-program",
+      "title": "Engineer-in-Training / Graduate Engineer (Development Program)",
+      "summary": "An entry-level rotational engineering role that leads toward P.Eng. licensure at a nuclear engineering firm.",
+      "description": "Engineers-in-training rotate through mechanical, electrical, or nuclear engineering project teams while working toward professional engineering licensure, supporting design, analysis, and testing tasks under a licensed engineer's supervision.",
+      "nocCode": "21300",
+      "salaryMin": 63000,
+      "salaryMax": 150000,
+      "responsibilities": [
+        "Rotate through engineering project teams as a developing engineer",
+        "Support design, analysis, and testing tasks under a P.Eng.'s supervision",
+        "Complete technical training (e.g. CANDU systems, radiation safety)",
+        "Work toward professional engineering licensure"
+      ],
+      "dayToDay": "Assisting senior engineers with calculations, drawings, and site/lab work while completing structured training modules.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/22376/ON"
+      ],
+      "topEmployers": [
+        "Kinectrics",
+        "Ontario Power Generation (OPG)",
+        "Bruce Power",
+        "Canadian Nuclear Laboratories (CNL)"
+      ]
+    },
+    {
+      "id": 29,
+      "categoryId": 8,
+      "slug": "project-engineer-nuclear",
+      "title": "Project Engineer",
+      "summary": "Combines engineering and project-coordination duties to keep nuclear facility and construction projects on scope, schedule, and budget.",
+      "description": "Project engineers act as the technical lead within a project team, coordinating engineering deliverables, schedules, and budgets for nuclear plant, waste-management, or new-build projects.",
+      "nocCode": "21300",
+      "salaryMin": 63000,
+      "salaryMax": 150000,
+      "responsibilities": [
+        "Coordinate engineering deliverables against project schedule and budget",
+        "Liaise between design engineers, contractors, and clients",
+        "Track technical risks and change requests",
+        "Support project reporting and documentation"
+      ],
+      "dayToDay": "Reviewing engineering deliverables, attending project meetings, and tracking schedule/budget status.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/22376/ON"
+      ],
+      "topEmployers": [
+        "Kinectrics",
+        "Ontario Power Generation (OPG)",
+        "Bruce Power"
+      ]
+    },
+    {
+      "id": 30,
+      "categoryId": 8,
+      "slug": "civil-engineer-nuclear",
+      "title": "Civil Engineer",
+      "summary": "Designs and assesses structures, foundations, and civil works for nuclear generating stations and waste facilities.",
+      "description": "Civil engineers in the nuclear sector perform structural assessments, foundation analysis, and design work for reactor buildings, waste-management structures, and site infrastructure.",
+      "nocCode": "21300",
+      "salaryMin": 63000,
+      "salaryMax": 150000,
+      "responsibilities": [
+        "Perform structural and foundation analysis for nuclear facilities",
+        "Support civil design for waste-management and plant infrastructure",
+        "Conduct structural inspections and condition assessments",
+        "Prepare engineering drawings and technical reports"
+      ],
+      "dayToDay": "Running structural calculations and models, reviewing drawings, and occasionally inspecting site structures.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/22376/ON"
+      ],
+      "topEmployers": [
+        "Kinectrics",
+        "Ontario Power Generation (OPG)",
+        "Bruce Power",
+        "Canadian Nuclear Laboratories (CNL)"
+      ]
+    },
+    {
+      "id": 31,
+      "categoryId": 5,
+      "slug": "research-assistant-astroparticle-physics",
+      "title": "Research Assistant - Astroparticle Physics",
+      "summary": "Supports university/lab researchers on experiments studying neutrinos, dark matter, and cosmic particles, often with ties to nuclear/isotope facilities.",
+      "description": "Astroparticle physics research assistants (often funded via NSERC Undergraduate Student Research Awards) support faculty and lab scientists with data collection, detector maintenance, and analysis for experiments at facilities such as SNOLAB or TRIUMF. This is typically a term-based academic research role rather than a permanent occupation.",
+      "nocCode": "21100",
+      "salaryMin": 37000,
+      "salaryMax": 52000,
+      "responsibilities": [
+        "Assist with detector setup, calibration, and maintenance",
+        "Collect and process experimental data",
+        "Support statistical/computational analysis under a supervisor",
+        "Document experimental procedures and results"
+      ],
+      "dayToDay": "Running experiments or simulations in a lab, processing data, and meeting with the supervising physicist.",
+      "sources": [
+        "https://research.mcmaster.ca/funding/undergraduate-student-research-award-usra/",
+        "https://undergrad.engineering.utoronto.ca/experiential-learning/research-opportunities/nserc-usra/"
+      ],
+      "topEmployers": [
+        "SNOLAB",
+        "TRIUMF",
+        "Canadian Nuclear Laboratories (CNL)"
+      ]
+    },
+    {
+      "id": 32,
+      "categoryId": 5,
+      "slug": "research-assistant-medical-isotope-enrichment",
+      "title": "Research Assistant - Medical Isotope Enrichment",
+      "summary": "Supports chemistry/physics experiments developing and optimizing medical isotope enrichment and purification processes.",
+      "description": "This role supports process-development scientists on chemical purification and enrichment of isotopes, running experiments, calibrating lab equipment, and analyzing results for process optimization.",
+      "nocCode": "22101",
+      "salaryMin": 51000,
+      "salaryMax": 58500,
+      "responsibilities": [
+        "Set up and run chemical purification/enrichment experiments",
+        "Collect and analyze experimental data for process optimization",
+        "Calibrate and validate lab instruments",
+        "Follow radioactive-materials handling and contamination-control procedures"
+      ],
+      "dayToDay": "Working in a lab or contamination-control area on isotope purification experiments and recording results for process engineers.",
+      "sources": [
+        "https://nuclearjobscanada.ca/jobs/545660047-medical-isotopes-process-development-co-op-student"
+      ],
+      "topEmployers": [
+        "Kinectrics",
+        "Canadian Nuclear Laboratories (CNL)",
+        "BWXT Medical"
+      ]
+    },
+    {
+      "id": 33,
+      "categoryId": 5,
+      "slug": "radiobiologist",
+      "title": "Radiobiologist / Radiation Biology Research Assistant",
+      "summary": "Studies the biological effects of ionizing radiation to support radiation-protection standards and medical isotope safety research.",
+      "description": "Radiobiologists study how ionizing radiation affects living tissue, supporting dose-limit research, radiation-protection standards, and isotope safety assessments used across the nuclear and medical isotope industries.",
+      "nocCode": "21110",
+      "salaryMin": 51000,
+      "salaryMax": 144000,
+      "responsibilities": [
+        "Assist with experiments studying biological effects of radiation exposure",
+        "Support dosimetry and radiation-risk research",
+        "Analyze lab data and prepare technical summaries",
+        "Follow radiation safety protocols in lab settings"
+      ],
+      "dayToDay": "Working in a radiation biology lab, running assays and experiments, and analyzing results alongside health physicists.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/2621/ON",
+        "https://www.services.labour.gov.on.ca/labourmarket-ui/jobProfile?nocCode=21110"
+      ],
+      "topEmployers": [
+        "Canadian Nuclear Laboratories (CNL)",
+        "Health Canada",
+        "Nuclear Waste Management Organization (NWMO)"
+      ]
+    },
+    {
+      "id": 34,
+      "categoryId": 8,
+      "slug": "occupational-health-safety-officer",
+      "title": "Occupational Health and Safety Officer",
+      "summary": "Monitors workplace safety compliance and hazard controls at nuclear facilities and job sites.",
+      "description": "Occupational health and safety officers inspect worksites, track compliance with safety regulations, support incident investigations, and help develop safety procedures.",
+      "nocCode": "22232",
+      "salaryMin": 46000,
+      "salaryMax": 114000,
+      "responsibilities": [
+        "Conduct workplace safety inspections and audits",
+        "Track compliance with OHS regulations and site procedures",
+        "Support incident investigations and corrective actions",
+        "Help develop and deliver safety training and procedures"
+      ],
+      "dayToDay": "Walking job sites, completing inspection checklists, and logging and following up on safety observations.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/22668/ON"
+      ],
+      "topEmployers": [
+        "Kinectrics",
+        "Ontario Power Generation (OPG)",
+        "Bruce Power",
+        "Canadian Nuclear Laboratories (CNL)"
+      ]
+    },
+    {
+      "id": 35,
+      "categoryId": 8,
+      "slug": "environmental-technologist",
+      "title": "Environmental Technologist",
+      "summary": "Provides field and lab support for environmental monitoring and protection work at nuclear and waste-management sites.",
+      "description": "Environmental technologists support environmental monitoring programs for water, soil, and air around nuclear generating stations and waste facilities, collecting samples and helping ensure compliance with environmental regulations.",
+      "nocCode": "22110",
+      "salaryMin": 46000,
+      "salaryMax": 106000,
+      "responsibilities": [
+        "Collect and process environmental samples (water, soil, air)",
+        "Support environmental monitoring and compliance reporting",
+        "Maintain field and lab equipment",
+        "Assist with environmental assessments for site projects"
+      ],
+      "dayToDay": "Fieldwork collecting samples, lab processing, and data entry for environmental monitoring programs.",
+      "sources": [
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/17971/ON"
+      ],
+      "topEmployers": [
+        "Nuclear Waste Management Organization (NWMO)",
+        "Ontario Power Generation (OPG)",
+        "Bruce Power",
+        "Canadian Nuclear Laboratories (CNL)"
+      ]
+    },
+    {
+      "id": 36,
+      "categoryId": 6,
+      "slug": "stakeholder-relations-coordinator",
+      "title": "Stakeholder Relations / Indigenous Engagement Coordinator",
+      "summary": "Coordinates communication and engagement between a nuclear organization and local communities, Indigenous nations, and other stakeholders.",
+      "description": "Stakeholder relations coordinators support consultation and relationship-building with host communities, Indigenous nations, and interest groups - a core function at organizations like NWMO, which runs one of Canada's largest Indigenous engagement programs tied to its site-selection process.",
+      "nocCode": "41402",
+      "salaryMin": 58000,
+      "salaryMax": 144000,
+      "responsibilities": [
+        "Support community and Indigenous engagement events and consultations",
+        "Track stakeholder feedback and concerns",
+        "Prepare briefing materials and communications",
+        "Coordinate logistics for public and community meetings"
+      ],
+      "dayToDay": "Coordinating meetings, drafting engagement materials, and liaising with community and Indigenous partners.",
+      "sources": [
+        "https://www.nwmo.ca/en/reconciliation/indigenous-engagement",
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/3879/ca"
+      ],
+      "topEmployers": [
+        "Nuclear Waste Management Organization (NWMO)",
+        "Ontario Power Generation (OPG)",
+        "Bruce Power"
+      ]
+    },
+    {
+      "id": 37,
+      "categoryId": 8,
+      "slug": "waste-management-area-process-analyst",
+      "title": "Waste Management Area (WMA) Operations / Process Analyst",
+      "summary": "Analyzes and helps optimize operational processes within a facility's designated Waste Management Area(s) for handling radioactive or hazardous waste.",
+      "description": "This role supports the operational and process-improvement side of a site's Waste Management Area(s) - the on-site zones used to store and process radioactive or hazardous waste, as defined at facilities like Canadian Nuclear Laboratories' Chalk River site. Analysts track waste inventories, throughput, and process performance, and support compliance reporting.",
+      "nocCode": "21120",
+      "salaryMin": 65000,
+      "salaryMax": 137000,
+      "responsibilities": [
+        "Track waste inventory and throughput within designated Waste Management Areas",
+        "Analyze operational data to identify process improvements",
+        "Support compliance and regulatory reporting for waste handling",
+        "Coordinate with operations and radiation protection staff"
+      ],
+      "dayToDay": "Reviewing waste-handling operational data, updating tracking systems, and supporting process-improvement initiatives.",
+      "sources": [
+        "https://www.cnsc-ccsn.gc.ca/eng/resources/publications/reports/jointconvention/oct2008/5/",
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/22696/ON"
+      ],
+      "topEmployers": [
+        "Canadian Nuclear Laboratories (CNL)",
+        "Ontario Power Generation (OPG)",
+        "Nuclear Waste Management Organization (NWMO)",
+        "Kinectrics"
+      ]
+    },
+    {
+      "id": 38,
+      "categoryId": 8,
+      "slug": "radioactive-waste-management-technologist",
+      "title": "Radioactive Waste Management Technologist",
+      "summary": "Provides technical support for the characterization, processing, and safe storage of radioactive and hazardous waste.",
+      "description": "Waste management technologists characterize, package, process, and track radioactive and hazardous waste at facilities such as OPG's Western Waste Management Facility or Chalk River Laboratories, supporting compliance with CNSC waste-management regulations.",
+      "nocCode": "21120",
+      "salaryMin": 65000,
+      "salaryMax": 137000,
+      "responsibilities": [
+        "Characterize and classify radioactive/hazardous waste streams",
+        "Support waste packaging, processing, and storage operations",
+        "Maintain waste-tracking records for regulatory compliance",
+        "Support decommissioning and waste-minimization projects"
+      ],
+      "dayToDay": "Working on-site to characterize and track waste, coordinating with radiation protection and regulatory teams.",
+      "sources": [
+        "https://alis.alberta.ca/occinfo/occupations-in-alberta/occupation-profiles/hazardous-waste-management-technologist/",
+        "https://www.jobbank.gc.ca/marketreport/wages-occupation/22696/ON"
+      ],
+      "topEmployers": [
+        "Nuclear Waste Management Organization (NWMO)",
+        "Ontario Power Generation (OPG)",
+        "Canadian Nuclear Laboratories (CNL)",
+        "Kinectrics"
+      ]
     }
   ],
   "institutions": [
@@ -872,6 +1290,14 @@
       "province": "NL",
       "description": "Memorial's Faculty of Science offers Physics and Chemistry degree programs that provide foundational training relevant to radiation science and radiochemistry careers.",
       "website": "https://www.mun.ca"
+    },
+    {
+      "id": 17,
+      "name": "University of Toronto Scarborough",
+      "city": "Toronto",
+      "province": "ON",
+      "description": "UTSC is a campus of the University of Toronto offering Arts & Science Co-operative Education, placing students in paid work terms with nuclear-sector employers such as Kinectrics, Ontario Power Generation, and Bruce Power.",
+      "website": "https://www.utsc.utoronto.ca"
     }
   ],
   "educationPrograms": [
@@ -1179,6 +1605,22 @@
       "programUrl": "https://www.mun.ca/chem/undergraduates/chemistry-degree-options/chemistry-major/",
       "sources": [
         "https://www.mun.ca/chem/undergraduates/chemistry-degree-options/chemistry-major/"
+      ]
+    },
+    {
+      "id": 22,
+      "institutionId": 17,
+      "slug": "arts-science-coop-utsc",
+      "name": "Arts & Science Co-operative Education (Honours Bachelor of Arts / Honours Bachelor of Science)",
+      "level": "undergraduate",
+      "description": "UTSC's Arts & Science Co-op lets students in Specialist, Double Major, or Major-with-two-Minors combinations (across Computer Science, Life Sciences, Physical & Environmental Sciences, and related programs) alternate academic terms with paid, degree-relevant work terms. Students become eligible for their first work term after 3-4 academic terms, with placements at employers including Kinectrics, Ontario Power Generation, and Bruce Power.",
+      "duration": "Normally 8 four-month academic terms (the standard 4-year HBA/HBSc) plus 1-3 paid work terms, so most Co-op students take about 4.5-5 years to graduate.",
+      "requirements": "Direct-entry applicants choose the Co-op admission category on their OUAC application; UTSC's science streams generally expect English plus a mix of Advanced Functions, Calculus and Vectors, Chemistry, Physics, and/or Biology depending on the specific program, alongside the general HBA/HBSc requirement of 20.0 credits.",
+      "programUrl": "https://www.utsc.utoronto.ca/artscicoop/",
+      "sources": [
+        "https://www.utsc.utoronto.ca/artscicoop/",
+        "https://utsc.calendar.utoronto.ca/co-operative-programs",
+        "https://artsci.calendar.utoronto.ca/hbahbsc-requirements"
       ]
     }
   ],
@@ -1700,6 +2142,36 @@
       "programId": 21,
       "subjectId": 5,
       "minGrade": null
+    },
+    {
+      "programId": 22,
+      "subjectId": 1,
+      "minGrade": null
+    },
+    {
+      "programId": 22,
+      "subjectId": 2,
+      "minGrade": null
+    },
+    {
+      "programId": 22,
+      "subjectId": 3,
+      "minGrade": null
+    },
+    {
+      "programId": 22,
+      "subjectId": 4,
+      "minGrade": null
+    },
+    {
+      "programId": 22,
+      "subjectId": 5,
+      "minGrade": null
+    },
+    {
+      "programId": 22,
+      "subjectId": 6,
+      "minGrade": null
     }
   ],
   "careerEducationLinks": [
@@ -1970,6 +2442,90 @@
     {
       "careerSlug": "isotope-production-technician",
       "programSlug": "chemistry-bsc-mun"
+    },
+    {
+      "careerSlug": "cybersecurity-analyst-nuclear",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "data-scientist-energy",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "software-developer-nuclear",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "supply-chain-analyst-nuclear",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "engineer-in-training-development-program",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "project-engineer-nuclear",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "civil-engineer-nuclear",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "research-assistant-astroparticle-physics",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "research-assistant-medical-isotope-enrichment",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "radiobiologist",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "occupational-health-safety-officer",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "environmental-technologist",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "stakeholder-relations-coordinator",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "waste-management-area-process-analyst",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "radioactive-waste-management-technologist",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "isotope-production-technician",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "nuclear-engineer",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "radiation-safety-officer",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "regulatory-affairs-specialist",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "project-program-manager",
+      "programSlug": "arts-science-coop-utsc"
+    },
+    {
+      "careerSlug": "sales-account-manager",
+      "programSlug": "arts-science-coop-utsc"
     }
   ],
   "companies": [
@@ -2121,6 +2677,26 @@
     {
       "id": 33,
       "name": "Marken",
+      "website": null
+    },
+    {
+      "id": 34,
+      "name": "Kinectrics",
+      "website": null
+    },
+    {
+      "id": 35,
+      "name": "SNOLAB",
+      "website": null
+    },
+    {
+      "id": 36,
+      "name": "Nuclear Waste Management Organization (NWMO)",
+      "website": null
+    },
+    {
+      "id": 37,
+      "name": "Health Canada",
       "website": null
     }
   ]
