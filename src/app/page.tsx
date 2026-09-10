@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { Info, Sprout, ListChecks, MapPinned, Sparkles, BriefcaseBusiness } from "lucide-react";
-import { getCareerCategories, getCareers } from "@/data/queries";
+import { getCareerCategories } from "@/data/queries";
 import Button from "@/components/Button";
 import Pill from "@/components/Pill";
-import CareersMarquee from "@/components/CareersMarquee";
 
 const steps = [
   {
@@ -27,10 +26,7 @@ const steps = [
 ];
 
 export default async function HomePage() {
-  const [categories, careers] = await Promise.all([
-    getCareerCategories(),
-    getCareers(),
-  ]);
+  const categories = await getCareerCategories();
 
   return (
     <div>
@@ -46,7 +42,7 @@ export default async function HomePage() {
         <div className="relative mx-auto max-w-5xl px-6 py-12 sm:py-30">
           <div className="max-w-2xl text-center mx-auto">
             <Pill icon={BriefcaseBusiness}>Over 20+ career opportunities</Pill>
-
+            
             <h1 className="text-4xl sm:text-5xl font-semibold text-brand">
               Build a career in isotope production and use.
             </h1>
@@ -72,11 +68,6 @@ export default async function HomePage() {
               </Button>
             </div>
           </div>
-        </div>
-        <div className="relative mt-10 sm:mt-16">
-          <CareersMarquee
-            careers={careers.map(({ slug, title }) => ({ slug, title }))}
-          />
         </div>
       </section>
 
