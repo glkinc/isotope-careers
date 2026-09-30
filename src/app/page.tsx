@@ -41,10 +41,10 @@ export default async function HomePage() {
         />
         <div className="relative mx-auto max-w-5xl px-6 py-12 sm:py-30">
           <div className="max-w-2xl text-center mx-auto">
-            <Pill icon={BriefcaseBusiness}>Over 20+ career opportunities</Pill>
+            <Pill icon={BriefcaseBusiness}>Explore Careers</Pill>
             
-            <h1 className="text-4xl sm:text-5xl font-semibold text-brand">
-              Build a career in isotope production and use.
+            <h1 className="text-4xl sm:text-7xl font-semibold text-brand">
+              Build a career in isotopes.
             </h1>
             <p className="mt-6 max-w-xl mx-auto text-lg text-brand/80">
               A guide to the careers, education paths, and skills behind

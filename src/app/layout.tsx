@@ -60,10 +60,11 @@ export default function RootLayout({
           <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <div className="flex flex-col items-center gap-4 sm:items-start">
               <Image
-                src="/logo-full-white.svg"
+                src="/logo-white.svg"
                 alt="Isotope Careers"
-                width={180}
-                height={30}
+                width={160}
+                height={65}
+                priority
               />
               <p className="text-sm text-white">
                 © {new Date().getFullYear()} Isotope Careers. All rights reserved.

@@ -31,14 +31,14 @@ export default function Header({ navLinks }: { navLinks: NavLink[] }) {
   }, []);
 
   return (
-    <header className="relative z-50 mx-4 mt-4 rounded-full bg-brand print:hidden">
-      <div className="flex items-center justify-between px-6 py-4 md:px-8 lg:px-10">
+    <header className="relative z-50 mx-4 mt-4 rounded-lg bg-brand print:hidden">
+      <div className="flex items-center justify-between px-4 py-4 md:px-6 lg:px-8">
         <Link href="/" className="block" onClick={() => setOpen(false)}>
           <Image
-            src="/logo-full-white.svg"
+            src="/logo-white.svg"
             alt="Isotope Careers"
             width={160}
-            height={26}
+            height={65}
             priority
           />
         </Link>
